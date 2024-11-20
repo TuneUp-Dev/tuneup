@@ -5,10 +5,11 @@ import BirthdayCelebration from "./BirthdayCelebration";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        {/* <Router /> */}
-        <BirthdayCelebration />
-      </BrowserRouter>
+      {/* <BrowserRouter>
+        <Router /> 
+      </BrowserRouter> */}
+
+      <BirthdayCelebration />
     </>
   );
 }
