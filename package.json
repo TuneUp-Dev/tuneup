@@ -15,7 +15,6 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "antd": "^5.22.1",
-    "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.11.17",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
@@ -23,9 +22,7 @@
     "react-confetti": "^6.1.0",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "react-image-scroller": "^0.3.0",
     "react-lottie-player": "^2.1.0",
-    "react-modal": "^3.16.1",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
@@ -40,10 +37,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
-  },
-  "engines": {
-    "node": ">=16.x",
-    "npm": ">=8.x"
   },
   "eslintConfig": {
     "extends": [
@@ -63,11 +56,12 @@
       "last 1 safari version"
     ]
   },
+  "resolutions": {
+    "react-image-scroller/react": "^18.0.0"
+  },
   "devDependencies": {
     "@types/react-slick": "^0.23.13",
-    "file-loader": "^6.2.0",
     "svgo": "^3.3.2",
-    "svgo-loader": "^4.0.0",
     "tailwindcss": "^3.4.15",
     "url-loader": "^4.1.1"
   }
