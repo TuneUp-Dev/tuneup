@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { ReactComponent as Logo } from "../assets/icons/TuneUp_Icon3.svg";
+import { ReactComponent as Logo } from "../assets/icons/TuneUp_Icon.svg";
 import Screenshot1 from "../assets/screenshot1.png";
 
 const Services = () => {

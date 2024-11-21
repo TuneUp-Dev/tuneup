@@ -4,7 +4,7 @@ import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
 import Slack from "../assets/icons/Slack_Light_Icon.svg";
-import Logo from "../assets/icons/TuneUp_Favicon.svg";
+import Logo from "../assets/icons/TuneUp_Favicon.png";
 
 const Footer = () => {
   return (

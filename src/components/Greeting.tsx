@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import Greetings from "../assets/Greeting.webp";
 
@@ -17,7 +17,7 @@ const Greeting = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed h-screen w-full bg-black bg-opacity-60 top-0 left-0 flex justify-center items-center">
+        <div className="fixed z-[999999999] h-screen w-full bg-black bg-opacity-60 top-0 left-0 flex justify-center items-center">
           <div className="w-[920px] h-[366px] rounded-xl bg-white p-12 flex justify-between gap-x-12">
             <div className="w-full h-full text-blue-950 flex flex-col justify-between">
               <h1 className="nunito-extrabold text-[38px] leading-[45px]">
