@@ -40,6 +40,10 @@
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=8.x"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

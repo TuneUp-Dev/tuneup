@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "nodeVersion": "16.x",
+        "npmVersion": "8.x"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "build": {
+    "env": {
+      "NODE_VERSION": "16",
+      "NPM_FLAGS": "--legacy-peer-deps"
+    }
+  }
+}
