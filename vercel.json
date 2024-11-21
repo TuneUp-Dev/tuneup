@@ -3,17 +3,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node",
+      "use": "@vercel/static-build",
       "config": {
-        "nodeVersion": "20.x",
-        "npmVersion": "8.x"
+        "nodeVersion": "20.x"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
     }
   ],
   "rewrites": [
