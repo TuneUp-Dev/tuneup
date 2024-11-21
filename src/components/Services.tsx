@@ -33,7 +33,7 @@ const Services = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial calculation
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
