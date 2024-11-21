@@ -33,7 +33,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "postinstall": "npm install --legacy-peer-deps",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
@@ -58,6 +57,9 @@
   },
   "resolutions": {
     "react-image-scroller/react": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=20.x"
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.13",
