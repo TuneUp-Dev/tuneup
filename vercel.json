@@ -9,16 +9,10 @@
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
-  ],
-  "build": {
-    "env": {
-      "NODE_VERSION": "20",
-      "NPM_FLAGS": "--legacy-peer-deps"
-    }
-  }
+  ]
 }
