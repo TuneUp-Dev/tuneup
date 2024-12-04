@@ -81,14 +81,18 @@ const Contact = () => {
                     Speak to our friendly team via whatsapp chat.
                   </p>
                   <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
+                    <a href="">
                     <p className="flex gap-x-2">
-                      <img src={Whatsapp} alt="" className="w-[15px]" /> Start a
-                      live chat
+                      <img src={Whatsapp} alt="" className="w-[15px]" /> Join our a
+                      Whatsapp group
                     </p>
+                    </a>
+                    <a href="https://www.linkedin.com/company/tuneup-technologies">
                     <p className="flex gap-x-2">
-                      <img src={Slack} alt="" className="w-[15px]" /> Message us
+                      <img src={LinkedIn} alt="" className="w-[15px]" /> Message us
                       on linkedIn
                     </p>
+                    </a>
                   </div>
                 </div>
                 <div className="w-full mt-7">
@@ -110,7 +114,7 @@ const Contact = () => {
                   </p>
                   <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[11px]">
                     <Link
-                      to={""}
+                      to={"https://www.linkedin.com/company/tuneup-technologies"}
                       className="flex justify-start gap-x-2 w-[140px]"
                     >
                       <img src={LinkedIn} alt="" className="w-[15px]" /> TuneUp
@@ -118,20 +122,20 @@ const Contact = () => {
                     </Link>
                     <Link
                       to={""}
-                      className="flex justify-start gap-x-2 w-[120px]"
+                      className="flex justify-start gap-x-2 w-[150px]"
                     >
                       <img src={Instagram} alt="" className="w-[15px]" /> TuneUp
-                      Education
+                    Technologies
                     </Link>
                     <Link
-                      to={""}
+                      to={"https://github.com/TuneUp-Dev"}
                       className="flex justify-start gap-x-2 w-[90px]"
                     >
                       <img src={Github} alt="" className="w-[15px]" />{" "}
                       TuneUp-Dev
                     </Link>
                     <Link
-                      to={""}
+                      to={"info@tuneuptech.in"}
                       className="flex justify-start gap-x-2 w-[130px]"
                     >
                       <img src={Mail} alt="" className="w-[15px]" />{" "}

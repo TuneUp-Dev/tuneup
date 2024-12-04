@@ -40,10 +40,10 @@ const Services = () => {
   return (
     <>
       <div className="w-full h-[320px] bg-[#021734] text-white flex flex-col justify-center items-center">
-        <h1 className="inter-medium text-[48px]">Monitoring as Code</h1>
+        <h1 className="inter-medium text-[48px]">OUR SERVICES</h1>
         <p className="w-[500px] text-center text-white mt-4 text-opacity-70">
-          Transform your development workflow with a code-based monitoring
-          process that's programmable, fast, and dependable.
+        At TuneUp Technologies, we offer a comprehensive range of 
+        services to help businesses thrive in the digital landscape
         </p>
       </div>
       <div className="timeline-container -mt-10 relative bg-[#021734] px-28 flex gap-x-10 justify-between items-start">
@@ -64,14 +64,14 @@ const Services = () => {
             </span>
 
             <h1 className="text-[40px] inter-medium text-white leading-[40px] mt-3">
+              Custom <br />
               <span className="bg-clip-text mr-3 text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
-                Test
+              Software Development
               </span>
-              and verify your checks
             </h1>
             <p className="text-gray-300 text-opacity-85 mt-4">
-              Test your resources from your local machine or during deployment
-              in CI, all running on Checkly’s global infrastructure.
+            Tailored software solutions designed to meet your unique 
+            business requirements. 
             </p>
           </div>
           <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-[200px]">
@@ -91,13 +91,13 @@ const Services = () => {
 
             <h1 className="text-[40px] inter-medium text-white leading-[40px] mt-3">
               <span className="bg-clip-text mr-3 text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
-                Test
+              Web Application 
               </span>
-              and verify your checks
+              Development
             </h1>
             <p className="text-gray-300 text-opacity-85 mt-4">
-              Test your resources from your local machine or during deployment
-              in CI, all running on Checkly’s global infrastructure.
+            Responsive and feature-rich web applications that enhance   
+            your online presence.
             </p>
           </div>
           <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-[200px]">
@@ -117,13 +117,62 @@ const Services = () => {
 
             <h1 className="text-[40px] inter-medium text-white leading-[40px] mt-3">
               <span className="bg-clip-text mr-3 text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
-                Test
+              Mobile Application  
               </span>
-              and verify your checks
+              Development
             </h1>
             <p className="text-gray-300 text-opacity-85 mt-4">
-              Test your resources from your local machine or during deployment
-              in CI, all running on Checkly’s global infrastructure.
+            Intuitive and dynamic mobile apps for Android and iOS platforms. 
+            </p>
+          </div>
+          <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-[200px]">
+            <span className="bg-slate-50 bg-opacity-40 backdrop-blur-md group w-[30px] hover:w-[66px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-[11px] flex items-center justify-between space-x-1.5 overflow-hidden">
+              {/* "i" symbol */}
+              <span
+                className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                title="Information"
+              >
+                i
+              </span>
+              {/* "view" text */}
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                view
+              </span>
+            </span>
+
+            <h1 className="text-[40px] inter-medium text-white leading-[40px] mt-3">
+              <span className="bg-clip-text mr-3 text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
+              Digital Marketing  
+              </span>
+              Services
+            </h1>
+            <p className="text-gray-300 text-opacity-85 mt-4">
+            Comprehensive strategies for social media management, SEO and online branding. 
+            </p>
+          </div>
+          <div className="w-full h-[250px] overflow-hidden pt-0.5 mt-[200px]">
+            <span className="bg-slate-50 bg-opacity-40 backdrop-blur-md group w-[30px] hover:w-[66px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-[11px] flex items-center justify-between space-x-1.5 overflow-hidden">
+              {/* "i" symbol */}
+              <span
+                className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                title="Information"
+              >
+                i
+              </span>
+              {/* "view" text */}
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                view
+              </span>
+            </span>
+
+            <h1 className="text-[40px] inter-medium text-white leading-[40px] mt-3">
+              <span className="bg-clip-text mr-3 text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
+              Digital   
+              </span>
+              Support
+            </h1>
+            <p className="text-gray-300 text-opacity-85 mt-4">
+            Intuitive and dynamic mobile apps for Android and iOS platforms. 
             </p>
           </div>
         </div>

@@ -56,12 +56,13 @@ const AnimatedPath: React.FC = () => {
   return (
     <div className="animation-container bg-[#021734] min-h-[1000px] relative">
       <p className="text-[58px] text-white w-[700px] mx-auto text-center leading-[60px] pt-20 inter-medium">
-        Why can you choose us to TuneUp yourself
+      Transforming Technology into Possibilities: 
       </p>
       <p className="w-[600px] text-center mt-10 text-white mx-auto text-opacity-70">
-        Code-first synthetic monitoring for modern DevOps. Monitor your APIs and
-        apps at a fraction of the price of legacy providers. Powered by
-        Monitoring as Code and Playwright.
+      At TuneUp Technologies, what goes in as technology comes 
+out as opportunity, success, and growth. Together, let’s 
+redefine what’s possible in the digital world. Innovation starts 
+here.
       </p>
       <svg
         ref={svgRef}

@@ -66,6 +66,16 @@ const Navbar = () => {
           >
             Get Started
           </Button>
+
+
+          {/* <Button
+          color="primary"
+          className="rounded-[9px] w-[210px] h-[54px] mt-10 text-white text-[20px] bg-blue-600 nunito-medium"
+        >
+          Let's Start!
+          <img className="w-9 -ml-3 animate-left-right" src={Code} alt="" />
+        </Button> */}
+
         </div>
       </div>
 

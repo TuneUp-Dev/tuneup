@@ -240,13 +240,13 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="mx-auto md:mx-0 flex space-x-4">
-            <Link to="#" target="_blank">
+            <Link to="https://www.linkedin.com/company/tuneup-technologies" target="_blank">
               <img src={LinkedIn} alt="" className="w-7" />
             </Link>
-            <Link to="#" target="_blank">
+            <Link to="https://www.instagram.com/tuneup_technologies" target="_blank">
               <img src={Instagram} alt="" className="w-7" />
             </Link>
-            <Link to="#" target="_blank">
+            <Link to="https://github.com/TuneUp-Dev" target="_blank">
               <img src={Github} alt="" className="w-7" />
             </Link>
             <Link to="#" target="_blank">
