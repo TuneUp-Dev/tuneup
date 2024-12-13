@@ -180,16 +180,13 @@ const AnimatedPath: React.FC = () => {
           href={Logo}
           width="120"
           height="120"
-          x="725"
+          x="735"
           y="336"
           className="z-[99999]"
           style={{ pointerEvents: "none" }}
           filter="url(#shadow-filter)"
         />
       </svg>
-      <div className="fixed bg-red-900 w-full h-screen flex justify-center items-center">
-        <img src={Logo} width="100px" height="100px" alt="" />
-      </div>
     </div>
   );
 };

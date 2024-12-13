@@ -113,7 +113,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="max-w-full h-auto scroll-smooth transition-all duration-300 ease-in-out">
+      <div className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out">
         {/* <Greeting /> */}
         <Navbar />
         <Header />
