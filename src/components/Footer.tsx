@@ -233,8 +233,9 @@ const Footer = () => {
             <div className="md:block flex flex-col items-center justify-center text-center md:text-left w-full md:w-[410px]">
               <img className="w-12 cursor-pointer" src={Logo} alt="" />
               <p className="text-slate-200 text-[11px] lg:text-[12px] xl:text-[13px] font-light mt-3">
-                &copy; {new Date().getFullYear()} TuneUp Technologies, Inc. All
-                rights reserved.
+                &copy; {new Date().getFullYear()}{" "}
+                <b className="font-medium text-white">TuneUp Technologies</b>,
+                Inc. All rights reserved.
               </p>
             </div>
           </div>

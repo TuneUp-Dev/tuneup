@@ -54,7 +54,8 @@ const Header = () => {
             providing innovative digital solutions designed to empower startups
             and enterprises.
           </p>
-          <Link to="#about">
+          {/* Updated button with anchor link for smooth scroll */}
+          <a href="#about" className="block">
             <Button
               color="primary"
               className="rounded-full w-[210px] h-[56px] mt-10 text-blue-950 text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"
@@ -62,14 +63,14 @@ const Header = () => {
               Let's Start
               <img className="w-9 -ml-3 animate-left-right" src={Code} alt="" />
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
 
       {/* Second Container */}
       <div
         id="about"
-        className="absolute z-40 w-full h-[700px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[700px] pb-24 flex justify-center items-center"
+        className="absolute z-40 w-full h-[800px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[800px] pt-60 pb-52 flex justify-center items-center"
       >
         <div className="w-[1200px] shadow-md shadow-[#294770] text-white flex justify-between items-start h-[600px] bg-[#021734] bg-opacity-40 rounded-3xl pt-2 pb-10 px-9 gap-x-5">
           <div className="min-w-[700px] h-full flex flex-col justify-between items-start">
