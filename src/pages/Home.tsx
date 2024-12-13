@@ -114,7 +114,7 @@ const Home = () => {
   return (
     <>
       <div className="max-w-full h-auto scroll-smooth transition-all duration-300 ease-in-out">
-        <Greeting />
+        {/* <Greeting /> */}
         <Navbar />
         <Header />
         <Services
