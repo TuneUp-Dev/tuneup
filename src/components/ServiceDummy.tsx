@@ -1,20 +1,43 @@
+import { useRef, useEffect, useState } from "react";
 import { ReactComponent as Logo } from "../assets/icons/TuneUp_Favicon.svg";
 import Screenshot1 from "../assets/screenshot1.png";
 import React from "react";
 
-interface ServicesChildProps {
-  pathRef: React.RefObject<SVGPathElement>;
-  iconPosition: { x: number; y: number };
-  tailOffset: number;
-  tailLength: number;
-}
+const Services = () => {
+  const pathRef = useRef<SVGPathElement | null>(null);
+  const logoRef = useRef<SVGCircleElement | null>(null);
+  const [iconPosition, setIconPosition] = useState({ x: 0, y: 0 });
+  const [progress, setProgress] = useState(0);
 
-const Services: React.FC<ServicesChildProps> = ({
-  pathRef,
-  iconPosition,
-  tailOffset,
-  tailLength,
-}) => {
+  const handleScroll = () => {
+    if (pathRef.current) {
+      const pathLength = pathRef.current.getTotalLength();
+      const pathBoundingBox = pathRef.current.getBoundingClientRect();
+      const middleOfScreen = window.innerHeight / 2;
+
+      const relativeMiddle = middleOfScreen - pathBoundingBox.top;
+
+      if (relativeMiddle >= 0 && relativeMiddle <= pathBoundingBox.height) {
+        const progressRatio = Math.min(
+          Math.max(relativeMiddle / pathBoundingBox.height, 0),
+          1
+        );
+        setProgress(progressRatio);
+
+        const point = pathRef.current.getPointAtLength(
+          progressRatio * pathLength
+        );
+        setIconPosition({ x: point.x, y: point.y });
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div className="w-full h-[320px] bg-[#021734] text-white flex flex-col justify-center items-center">
@@ -162,20 +185,24 @@ const Services: React.FC<ServicesChildProps> = ({
             preserveAspectRatio="xMidYMid meet"
           >
             <defs>
-              <linearGradient id="tailGradient" x1="1" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="50%" stopColor="#2d68af" />
-                <stop offset="100%" stopColor="#ffffff" />
+              <linearGradient
+                id="gradient-tail"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="40%"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0%" stopColor="#021734" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="#1c375b" stopOpacity="1" />
+                <stop offset="100%" stopColor="#eff6ff" stopOpacity="1" />
               </linearGradient>
-              <mask id="fadeMask">
-                <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                <rect x="0" y="0" width="100%" height="150" fill="black" />
-              </mask>
             </defs>
 
+            {/* Main Timeline Path */}
             <path
               ref={pathRef}
-              d="M106.5 210 
+              d="M105 200 
               Q 125 300, 100 400 
               Q 75 500, 100 600 
               Q 125 700, 100 800 
@@ -192,8 +219,10 @@ const Services: React.FC<ServicesChildProps> = ({
               }}
             />
 
-            <path
-              d="M105 200 
+            {/* Tail Effect */}
+            {pathRef.current && (
+              <path
+                d="M105 200 
               Q 125 300, 100 400 
               Q 75 500, 100 600 
               Q 125 700, 100 800 
@@ -202,24 +231,28 @@ const Services: React.FC<ServicesChildProps> = ({
               Q 75 1300, 100 1400 
               Q 125 1500, 100 1600 
               Q 75 1700, 78 1700"
-              stroke="url(#tailGradient)"
-              strokeWidth={1.7}
-              fill="none"
-              strokeLinecap="round"
-              strokeDasharray={`${tailLength} ${
-                pathRef.current?.getTotalLength() || 0
-              }`}
-              strokeDashoffset={-tailOffset}
-              mask="url(#fadeMask)"
-            />
+                style={{
+                  fill: "none",
+                  stroke: "url(#gradient-tail)",
+                  strokeWidth: 1.7,
+                  strokeDasharray: `${
+                    progress * pathRef.current.getTotalLength()
+                  }, ${pathRef.current.getTotalLength()}`,
+                }}
+              />
+            )}
 
+            {/* Moving Logo */}
             <g
+              ref={logoRef}
               className="timeline-logo"
               style={{
                 transform: `translate(${iconPosition.x - 21}px, ${
                   iconPosition.y - 21
                 }px)`,
                 transformOrigin: "center center",
+                zIndex: 9999,
+                position: "absolute",
               }}
             >
               <Logo width={42} height={42} />

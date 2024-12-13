@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "../assets/icons/TuneUp_Favicon.png";
+import Logo from "../assets/icons/TuneUp_Icon.png";
 import Icon1 from "../assets/icons/32.svg";
 import Icon2 from "../assets/icons/33.svg";
 import Icon3 from "../assets/icons/34.svg";
@@ -55,14 +55,13 @@ const AnimatedPath: React.FC = () => {
 
   return (
     <div className="animation-container bg-[#021734] min-h-[1000px] relative">
-      <p className="text-[58px] text-white w-[700px] mx-auto text-center leading-[60px] pt-20 inter-medium">
-      Transforming Technology into Possibilities: 
+      <p className="text-[58px] text-white w-[700px] mx-auto text-center leading-[60px] pt-36 inter-medium">
+        Transforming Technology into Possibilities
       </p>
-      <p className="w-[600px] text-center mt-10 text-white mx-auto text-opacity-70">
-      At TuneUp Technologies, what goes in as technology comes 
-out as opportunity, success, and growth. Together, let’s 
-redefine what’s possible in the digital world. Innovation starts 
-here.
+      <p className="w-[700px] text-center mt-10 text-white mx-auto text-opacity-70">
+        At TuneUp Technologies, what goes in as technology comes out as
+        opportunity, success, and growth. Together, let’s redefine what’s
+        possible in the digital world. Innovation starts here.
       </p>
       <svg
         ref={svgRef}
@@ -70,7 +69,7 @@ here.
         height="1000px"
         viewBox="0 0 1590 1000"
         xmlns="http://www.w3.org/2000/svg"
-        className="scale-[0.95] -mt-10"
+        className="scale-[0.95] -mt-44"
       >
         {/* Define gradients */}
         <defs>
@@ -84,9 +83,9 @@ here.
               y2="0%"
             >
               <stop offset="0%" stopColor="#021734" />
-              <stop offset="20%" stopColor="#2676c9" />
-              <stop offset="50%" stopColor="#3886d7" />
-              <stop offset="80%" stopColor="#2676c9" />
+              <stop offset="20%" stopColor="#2267b2" />
+              <stop offset="50%" stopColor="#0e57a5" />
+              <stop offset="80%" stopColor="#2267b2" />
               <stop offset="100%" stopColor="#021734" />
             </linearGradient>
           ))}
@@ -178,16 +177,19 @@ here.
 
         {/* Add logo at the center */}
         <image
-          href={Logo} // Replace with your logo URL
+          href={Logo}
           width="120"
           height="120"
-          x="725" // Adjust the x position to center horizontally
-          y="336" // Adjust the y position to center vertically
-          className="z-[99999]" // Ensures the logo is above everything
-          style={{ pointerEvents: "none" }} // Prevent interactions with the logo
+          x="725"
+          y="336"
+          className="z-[99999]"
+          style={{ pointerEvents: "none" }}
           filter="url(#shadow-filter)"
         />
       </svg>
+      <div className="fixed bg-red-900 w-full h-screen flex justify-center items-center">
+        <img src={Logo} width="100px" height="100px" alt="" />
+      </div>
     </div>
   );
 };

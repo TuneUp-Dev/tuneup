@@ -1,10 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
 import Slack from "../assets/icons/Slack_Light_Icon.svg";
-import Logo from "../assets/icons/TuneUp_Favicon.png";
+import Logo from "../assets/icons/TuneUp_Icon.png";
 
 const Footer = () => {
   return (
@@ -143,7 +144,7 @@ const Footer = () => {
                 to="#"
                 className="text-slate-400 font-light hover:text-white"
               >
-                Twitter @ChecklyHQ
+                Twitter @TuneUp
               </Link>
             </li>
             <li>
@@ -240,20 +241,26 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="mx-auto md:mx-0 flex space-x-4">
-            <Link to="https://www.linkedin.com/company/tuneup-technologies" target="_blank">
-              <img src={LinkedIn} alt="" className="w-7" />
+            <Link
+              to="https://www.linkedin.com/company/tuneup-technologies"
+              target="_blank"
+            >
+              <img src={LinkedIn} alt="" className="w-5 hover:opacity-90" />
             </Link>
-            <Link to="https://www.instagram.com/tuneup_technologies" target="_blank">
-              <img src={Instagram} alt="" className="w-7" />
+            <Link
+              to="https://www.instagram.com/tuneup_technologies"
+              target="_blank"
+            >
+              <img src={Instagram} alt="" className="w-5 hover:opacity-90" />
             </Link>
             <Link to="https://github.com/TuneUp-Dev" target="_blank">
-              <img src={Github} alt="" className="w-7" />
+              <img src={Github} alt="" className="w-5 hover:opacity-90" />
             </Link>
             <Link to="#" target="_blank">
-              <img src={Slack} alt="" className="w-7" />
+              <img src={Slack} alt="" className="w-5 hover:opacity-90" />
             </Link>
             <Link to="#" target="_blank">
-              <img src={Mail} alt="" className="w-7" />
+              <img src={Mail} alt="" className="w-5 hover:opacity-90" />
             </Link>
           </div>
         </div>

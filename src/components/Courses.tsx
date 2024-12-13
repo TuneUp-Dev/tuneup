@@ -256,7 +256,7 @@ const Courses = () => {
                     <div className="">
                       <p className="poppins-medium text-[28px] w-full leading-9 flex flex-col justify-start items-start">
                         {data.beforeGradient}
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-600">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600">
                           {data.gradientText}
                         </span>
                         {data.afterGradient}

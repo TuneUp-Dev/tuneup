@@ -347,8 +347,24 @@ code {
   }
 }
 
+@keyframes rightLeft {
+  0% {
+    transform: translateX(7px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(7px);
+  }
+}
+
 .animate-left-right {
   animation: leftRight 2s ease-in-out infinite;
+}
+
+.animate-right-left {
+  animation: rightLeft 2s ease-in-out infinite;
 }
 
 /* About Component */
@@ -438,15 +454,16 @@ code {
 .timeline-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  height: 1500px;
+  height: 2800px;
+  /* height: 1500px; */
   position: relative;
   overflow: hidden;
 }
 
 .timeline-svg {
-  margin-top: 1000px;
+  /* margin-top: 1000px; */
   min-width: 400px;
   max-width: 400px;
   min-height: 3000px;
@@ -475,58 +492,68 @@ code {
   height: 500px;
 }
 
-/* src/BirthdayCelebration.css */
-
-.Overlay {
-  position: fixed;
+/* Top Gradient Effect */
+.Responsive-Navbar {
+  padding: 0;
+  width: 100%;
+  margin: auto;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1000;
+  min-height: 2500px;
+  overflow: hidden;
+  margin-top: -220px;
+  backdrop-filter: blur(0px);
 }
-
-.Modal {
+.Red-Gradient {
+  background-image: radial-gradient(closest-side, #0e57a5, #dbeafe);
+  min-width: 798px;
+  margin-left: -150px;
+  margin-top: 350px;
+  min-height: 478px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  transform: translate(-50%, -50%);
-  background: #fff5f8;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 500px;
-  width: 80%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 100%;
+}
+.Blue-Gradient {
+  background-image: radial-gradient(closest-side, #1066c1, #dbeafe);
+  margin-top: 550px;
+  min-width: 698px;
+  min-height: 378px;
+  position: absolute;
+  opacity: 100%;
+}
+.Yellow-Gradient {
+  background-image: radial-gradient(closest-side, #0e57a5, #dbeafe);
+  margin-right: -500px;
+  margin-top: 330px;
+  min-width: 698px;
+  min-height: 378px;
+  position: absolute;
+  opacity: 100%;
 }
 
-.Modal h1 {
-  color: #ff69b4;
-  margin-bottom: 1rem;
+@keyframes spin-clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.Modal p {
-  color: #333;
-  margin-bottom: 2rem;
+@keyframes spin-counterclockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
-.close-button {
-  background-color: #ff69b4;
-  border: none;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.close-button:hover {
-  background-color: #ff85c1;
+/* User Not Select */
+.noselect {
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-drag: none;
 }
