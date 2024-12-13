@@ -41,7 +41,7 @@ const Header = () => {
           </p>
           <h1 className="poppins-bold text-[#021734] text-[70px] mx-auto w-[850px] leading-[98px] mt-5">
             We make{" "}
-            <span className="bg-[#021734] bg-opacity-50 px-6 text-blue-50 rounded-full">
+            <span className="bg-[#021734] px-6 text-blue-50 rounded-full">
               Impossible
             </span>
             <br />
@@ -77,22 +77,22 @@ const Header = () => {
             <div className="flex flex-col justify-end items-start">
               <p className="poppins-medium">The solution we provide:</p>
               <span className="flex flex-wrap gap-x-3 gap-y-1.5 mt-4 w-[350px] text-[12px]">
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   Web Applications
                 </p>
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   Mobile Applications
                 </p>
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   IoT Projects
                 </p>
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   Digital Marketing
                 </p>
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   Content Creation
                 </p>
-                <p className="bg-[#021734] bg-opacity-50 backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
                   IT Support
                 </p>
               </span>
