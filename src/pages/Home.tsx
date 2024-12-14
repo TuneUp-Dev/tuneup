@@ -2,12 +2,12 @@ import React, { useRef, useEffect, useState } from "react";
 import AnimatedPath from "../components/Animation";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Greeting from "../components/Greeting";
+// import Greeting from "../components/Greeting";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Products from "../components/Products";
-import Services from "../components/Services";
 import WCU from "../components/WCU";
+import Services from "../components/Services";
+import Repositories from "../components/Repositories";
 
 const Home = () => {
   const pathRef = useRef<SVGPathElement | null>(null);
@@ -57,12 +57,10 @@ const Home = () => {
 
       let progressRatio = relativeMiddle / pathBoundingBox.height;
 
-      // Handle case where the scroll is beyond the start of the path (before it starts)
       if (relativeMiddle < 0) {
         progressRatio = 0;
       }
 
-      // Handle case where the scroll is beyond the end of the path (after it ends)
       if (relativeMiddle > pathBoundingBox.height) {
         progressRatio = 1;
       }
@@ -98,17 +96,42 @@ const Home = () => {
     animationFrameRef.current = requestAnimationFrame(handleScroll);
   };
 
+  // Store scroll position in sessionStorage
+  const storeScrollPosition = () => {
+    sessionStorage.setItem("scrollPosition", String(window.scrollY));
+  };
+
+  // Restore scroll position with smooth scrolling
+  const restoreScrollPosition = () => {
+    const storedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (storedScrollPosition) {
+      window.scrollTo(0, 0);
+
+      window.setTimeout(() => {
+        window.scrollTo({
+          top: Number(storedScrollPosition),
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  };
+
   useEffect(() => {
-    initializeIconPosition(); // Set the initial position of the logo from sessionStorage
+    initializeIconPosition();
+    restoreScrollPosition();
     window.addEventListener("scroll", optimizedHandleScroll);
-    handleScroll(); // Initialize scroll on mount
+    window.addEventListener("scroll", storeScrollPosition);
+
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", optimizedHandleScroll);
+      window.removeEventListener("scroll", storeScrollPosition);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -124,7 +147,7 @@ const Home = () => {
           tailLength={tailLength}
         />
         <WCU />
-        <Products />
+        <Repositories />
         <Contact />
         <AnimatedPath />
         <Footer />

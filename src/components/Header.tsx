@@ -11,7 +11,7 @@ import Slack from "../assets/icons/Slack_Light_Icon.svg";
 const Header = () => {
   return (
     <>
-      <div className="relative h-[1400px] overflow-hidden text-center pt-44">
+      <div className="relative h-[1120px] lg:h-[1298px] overflow-hidden text-center pt-32 md:pt-44">
         {/* Bg Gradient */}
         <div className="Responsive-Navbar z-20 gradient-background blur-[100px] opacity-40 mt-[-200px] absolute mx-[16%] w-[68%] flex justify-center px-auto">
           <div className="Blue-Gradient animate-spin-clockwise"></div>
@@ -32,75 +32,83 @@ const Header = () => {
         </div>
 
         {/* Dot Grid Background */}
-        <div className="absolute hidden w-full h-[1300px] inset-0 z-10 bg-dots"></div>
+        <div className="absolute hidden w-full h-[1120px] lg:h-[1300px] inset-0 z-10 bg-dots"></div>
 
         {/* Foreground Content */}
         <div className="relative z-50">
-          <p className="bg-slate-50 shadow-[0_3px_10px_-12px_rgba(0,0,0,0.3)] Geist-bold text-[13px] uppercase text-blue-950 mx-auto w-[260px] p-1.5 rounded-full">
+          <p className="bg-slate-50 shadow-[0_3px_10px_-12px_rgba(0,0,0,0.3)] Geist-bold text-[8px] md:text-[13px] w-[160px] md:w-[260px] uppercase text-blue-950 mx-auto p-1 pb-0.5 md:pb-1 md:p-1.5 rounded-full">
             Tune Up Yourself with TuneUp
           </p>
-          <h1 className="poppins-bold text-[#021734] text-[70px] mx-auto w-[850px] leading-[98px] mt-5">
+          <h1 className="poppins-bold text-[#021734] text-[22px] md:text-[70px] mx-auto w-[320px] md:w-[850px] md:leading-[98px] mt-2.5 md:mt-5">
             We make{" "}
-            <span className="bg-[#021734] px-6 text-blue-50 rounded-full">
+            <span className="bg-[#021734] px-4 md:px-6 py-[1.5px] md:py-0 text-blue-50 rounded-full">
               Impossible
             </span>
             <br />
-            <span className="ml-5 bg-[#021734] text-white px-6 rounded-full">
+            <span className="ml-5 py-[1.5px] md:py-0 bg-[#021734] text-white px-4 md:px-6 rounded-full">
               to I'm Possible.
             </span>
           </h1>
-          <p className="nunito-medium mt-5 w-[680px] mx-auto text-[#021734] text-[16px] leading-[26px]">
+          <p className="nunito-medium mt-5 w-[90vw] md:w-[680px] mx-auto text-[#021734] text-[12px] md:text-[16px] md:leading-[26px]">
             TuneUp Technologies is a dynamic SaaS product development company
             providing innovative digital solutions designed to empower startups
             and enterprises.
           </p>
           {/* Updated button with anchor link for smooth scroll */}
-          <a href="#about" className="block">
+          <a href="#about" className="block lg:hidden">
             <Button
               color="primary"
-              className="rounded-full w-[210px] h-[56px] mt-10 text-blue-950 text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"
+              className="rounded-full w-[150px] md:w-[210px] h-[40px] md:h-[56px] mt-10 text-blue-950 text-[14px] md:text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"
             >
-              Let's Start
-              <img className="w-9 -ml-3 animate-left-right" src={Code} alt="" />
+              Let's Tune
+              <img
+                className="w-5 md:w-9 -ml-2.5 md:-ml-3 animate-left-right"
+                src={Code}
+                alt=""
+              />
             </Button>
           </a>
+
+          {/* <div className="rounded-full w-[150px] md:w-[68vw] mx-auto h-[40px] md:h-[48px] mt-16 text-blue-950 text-[14px] md:text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"></div> */}
         </div>
       </div>
 
       {/* Second Container */}
       <div
         id="about"
-        className="absolute z-40 w-full h-[800px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[800px] pt-60 pb-52 flex justify-center items-center"
+        className="absolute z-40 w-full h-[860px] md:h-[800px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[765px] md:-mt-[800px] pt-14 md:pt-12 flex justify-center items-center"
       >
-        <div className="w-[1200px] shadow-md shadow-[#294770] text-white flex justify-between items-start h-[600px] bg-[#021734] bg-opacity-40 rounded-3xl pt-2 pb-10 px-9 gap-x-5">
-          <div className="min-w-[700px] h-full flex flex-col justify-between items-start">
-            <h1 className="text-[140px] poppins-medium uppercase">ABOUT US</h1>
+        <div className="w-[90vw] md:w-[1200px] shadow-md shadow-[#294770] text-white flex md:flex-row flex-col justify-between items-center md:justify-between md:items-start h-[730px] md:h-[600px] bg-[#021734] bg-opacity-40 rounded-3xl pt-2 pb-7 md:pb-10 px-9 gap-x-5">
+          <div className="w-full md:min-w-[700px] min-h-[620px] md:min-h-full flex flex-col justify-between items-center md:items-start text-center md:text-left gap-y-5 md:gap-y-0">
+            <h1 className="text-[50px] md:text-[140px] poppins-medium uppercase mx-auto">
+              ABOUT US
+            </h1>
             <div className="flex flex-col justify-end items-start">
               <p className="poppins-medium">The solution we provide:</p>
-              <span className="flex flex-wrap gap-x-3 gap-y-1.5 mt-4 w-[350px] text-[12px]">
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+              <span className="flex flex-wrap gap-x-3 gap-y-1.5 mt-2 md:mt-4 w-[277px] md:w-[350px] text-[11px] md:text-[12px]">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   Web Applications
                 </p>
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   Mobile Applications
                 </p>
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   IoT Projects
                 </p>
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   Digital Marketing
                 </p>
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   Content Creation
                 </p>
-                <p className="bg-[#021734] backdrop-blur-[20px] text-gray-300 Geist-medium px-3.5 py-1.5 rounded-full">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   IT Support
                 </p>
               </span>
             </div>
           </div>
-          <div className="relative w-full h-full flex flex-col justify-end items-end">
-            <p className="absolute min-w-full -left-[330px] top-60 Geist-normal text-slate-300 text-[15.5px]">
+          <div className="relative w-full h-full flex flex-col justify-end items-center md:items-end">
+            <p className="absolute min-w-full md:-left-[330px] -top-[520px] md:top-60 Geist-normal text-slate-300 text-[12.5px] md:text-[15.5px]">
               <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[216px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
                 Impossible to I'm Possible
               </h1>
@@ -117,7 +125,7 @@ const Header = () => {
               we build success.
             </p>
             <span className="flex justify-end items-end text-white">
-              <div className="mx-auto md:mx-0 flex space-x-4 bg-[#021734] bg-opacity-40 backdrop-blur-[5px] rounded-3xl py-2 px-3.5">
+              <div className="mx-auto md:mx-0 flex space-x-4 bg-[#021734] bg-opacity-80 backdrop-blur-[5px] rounded-3xl py-2 px-3.5">
                 <Link
                   to="https://www.linkedin.com/company/tuneup-technologies"
                   target="_blank"
