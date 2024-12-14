@@ -261,19 +261,19 @@ const Services = () => {
         </div>
         <div className="w-full h-full">
           <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-            <img src={Screenshot1} alt="" className="noselect" />
+            <img src={Screenshot1} alt="" className="unselect" />
           </div>
           <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-            <img src={Screenshot1} alt="" className="noselect" />
+            <img src={Screenshot1} alt="" className="unselect" />
           </div>
           <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-            <img src={Screenshot1} alt="" className="noselect" />
+            <img src={Screenshot1} alt="" className="unselect" />
           </div>
           <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-            <img src={Screenshot1} alt="" className="noselect" />
+            <img src={Screenshot1} alt="" className="unselect" />
           </div>
           <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-            <img src={Screenshot1} alt="" className="noselect" />
+            <img src={Screenshot1} alt="" className="unselect" />
           </div>
         </div>
       </div>

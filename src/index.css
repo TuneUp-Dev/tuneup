@@ -18,6 +18,18 @@ code {
     monospace;
 }
 
+/* Scrollbar UI */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #294770 #021734;
+}
+
+@media only screen and (max-width: 1024px) {
+  * {
+    scrollbar-width: none;
+  }
+}
+
 /* Tailwind Initialization */
 @tailwind base;
 @tailwind components;
@@ -554,11 +566,46 @@ code {
 }
 
 /* User Not Select */
-.noselect {
+.unselect {
   user-select: none;
   pointer-events: none;
   -webkit-user-drag: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-drag: none;
+}
+
+/* Navbar Link Designs */
+.active-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #021734; /* Match Tailwind's blue-500 */
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Button fading Animation */
+.button-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.button-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
