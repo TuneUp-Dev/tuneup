@@ -105,13 +105,9 @@ const Home = () => {
   const restoreScrollPosition = () => {
     const storedScrollPosition = sessionStorage.getItem("scrollPosition");
     if (storedScrollPosition) {
-      window.scrollTo(0, 0);
-
-      window.setTimeout(() => {
-        window.scrollTo({
-          top: Number(storedScrollPosition),
-          behavior: "smooth",
-        });
+      window.scrollTo({
+        top: Number(storedScrollPosition),
+        behavior: "smooth",
       });
     }
   };
@@ -136,7 +132,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out">
+      <div
+        id="top"
+        className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out"
+      >
         {/* <Greeting /> */}
         <Navbar />
         <Header />
