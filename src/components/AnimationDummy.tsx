@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "../assets/icons/TuneUp_Icon.png";
+import Logo from "../assets/icons/TuneUp_Icon.svg";
 import Icon1 from "../assets/icons/32.svg";
 import Icon2 from "../assets/icons/33.svg";
 import Icon3 from "../assets/icons/34.svg";

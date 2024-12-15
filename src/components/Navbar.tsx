@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@nextui-org/react";
 import Arrow from "../assets/icons/arrow.svg";
-import Logo from "../assets/logos/TuneUp_Logo.png";
+import Logo from "../assets/logos/Logo.svg";
 import Code from "../assets/icons/Code_DarkBlue.svg";
 import CodeLeft from "../assets/icons/Code_Left.svg";
 import React from "react";
@@ -146,7 +146,7 @@ const Navbar = () => {
       <div className="w-full max-h-[50px] md:max-h-[68px] flex items-center justify-between px-5 md:px-36">
         {/* Logo Section */}
         <div
-          className={`w-[110px] md:w-[130px] max-h-[50px] md:max-h-[64px] py-1 md:py-1.5 px-1.5 md:px-3 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+          className={`w-[110px] md:w-[130px] max-h-[50px] md:max-h-[44px] py-1 md:py-1.5 px-1.5 md:px-3 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
         >
           <img
             className="w-full h-auto object-contain brightness-[90%]"
