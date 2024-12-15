@@ -17,7 +17,10 @@ const Services: React.FC<ServicesChildProps> = ({
 }) => {
   return (
     <>
-      <div id="services" className="mt-[50px] lg:mt-0 pt-28 bg-[#021734]">
+      <div
+        id="services"
+        className="mt-[50px] lg:mt-64 xl:mt-0 pt-28 lg:pb-28 bg-[#021734]"
+      >
         <div className="w-full h-[140px] lg:h-[190px] text-white flex flex-col justify-start items-center">
           <h1 className="inter-medium text-[32px] lg:text-[48px]">
             OUR SERVICES
@@ -27,178 +30,192 @@ const Services: React.FC<ServicesChildProps> = ({
             to help businesses thrive in the digital landscape
           </p>
         </div>
-        <div className="timeline-container -mt-10 relative mx-auto max-w-[90vw] lg:w-full h-auto max-h-[2560px] lg:max-h-[2500px] lg:px-10 flex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start">
+        <div
+          id="timeline-services"
+          className="timeline-container -mt-10 relative mx-auto max-w-[90vw] lg:w-full h-auto max-h-[2900px] sm:max-h-[1500px] md:max-h-[1700px] lg:min-h-[2060px] xl:min-h-[2360px] lg:max-h-[2060px] xl:max-h-[2360px] lg:px-10 sm:gap-x-5lex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start"
+        >
           <div className="w-full h-full">
-            <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
-              <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
-                {/* "i" symbol */}
-                <span
-                  className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
-                  title="Information"
-                >
-                  i
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[200px]">
+              <div className="">
+                <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
+                  {/* "i" symbol */}
+                  <span
+                    className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                    title="Information"
+                  >
+                    i
+                  </span>
+                  {/* "view" text */}
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    view
+                  </span>
                 </span>
-                {/* "view" text */}
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                  view
-                </span>
-              </span>
 
-              <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
-                Custom <br />
-                <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                  Software Development
-                </span>
-              </h1>
-              <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                Tailored software solutions designed to meet your unique
-                business requirements.
-              </p>
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  Custom <br />
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Software Development
+                  </span>
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                  Tailored software solutions designed to meet your unique
+                  business requirements.
+                </p>
+              </div>
 
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
                   src={Screenshot1}
                   alt=""
-                  className="unselect w-full h-full"
+                  className="unselect w-full h-ful lg:pl-0l"
                 />
               </div>
             </div>
-            <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
-              <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
-                {/* "i" symbol */}
-                <span
-                  className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
-                  title="Information"
-                >
-                  i
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[200px]">
+              <div className="">
+                <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
+                  {/* "i" symbol */}
+                  <span
+                    className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                    title="Information"
+                  >
+                    i
+                  </span>
+                  {/* "view" text */}
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    view
+                  </span>
                 </span>
-                {/* "view" text */}
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                  view
-                </span>
-              </span>
 
-              <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
-                <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                  Web Application
-                </span>
-                Development
-              </h1>
-              <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                Responsive and feature-rich web applications that enhance your
-                online presence.
-              </p>
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Web Application
+                  </span>
+                  Development
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                  Responsive and feature-rich web applications that enhance your
+                  online presence.
+                </p>
+              </div>
 
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
                   src={Screenshot1}
                   alt=""
-                  className="unselect w-full h-full"
+                  className="unselect w-full h-ful lg:pl-0l"
                 />
               </div>
             </div>
-            <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
-              <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
-                {/* "i" symbol */}
-                <span
-                  className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
-                  title="Information"
-                >
-                  i
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[200px]">
+              <div className="">
+                <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
+                  {/* "i" symbol */}
+                  <span
+                    className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                    title="Information"
+                  >
+                    i
+                  </span>
+                  {/* "view" text */}
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    view
+                  </span>
                 </span>
-                {/* "view" text */}
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                  view
-                </span>
-              </span>
 
-              <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
-                <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                  Mobile Application
-                </span>
-                Development
-              </h1>
-              <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                Intuitive and dynamic mobile apps for Android and iOS platforms.
-              </p>
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Mobile Application
+                  </span>
+                  Development
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                  Intuitive and dynamic mobile apps for Android and iOS
+                  platforms.
+                </p>
+              </div>
 
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
                   src={Screenshot1}
                   alt=""
-                  className="unselect w-full h-full"
+                  className="unselect w-full h-ful lg:pl-0l"
                 />
               </div>
             </div>
-            <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
-              <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
-                {/* "i" symbol */}
-                <span
-                  className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
-                  title="Information"
-                >
-                  i
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[200px]">
+              <div className="">
+                <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
+                  {/* "i" symbol */}
+                  <span
+                    className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                    title="Information"
+                  >
+                    i
+                  </span>
+                  {/* "view" text */}
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    view
+                  </span>
                 </span>
-                {/* "view" text */}
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                  view
-                </span>
-              </span>
 
-              <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
-                <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                  Digital Marketing
-                </span>
-                Services
-              </h1>
-              <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                Comprehensive strategies for social media management, SEO and
-                online branding.
-              </p>
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Digital Marketing
+                  </span>
+                  Services
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                  Comprehensive strategies for social media management, SEO and
+                  online branding.
+                </p>
+              </div>
 
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
                   src={Screenshot1}
                   alt=""
-                  className="unselect w-full h-full"
+                  className="unselect w-full h-ful lg:pl-0l"
                 />
               </div>
             </div>
-            <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
-              <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
-                {/* "i" symbol */}
-                <span
-                  className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
-                  title="Information"
-                >
-                  i
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[200px]">
+              <div className="">
+                <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
+                  {/* "i" symbol */}
+                  <span
+                    className="flex items-center justify-center min-w-3.5 h-3.5 rounded-full border-[1.1px] border-white text-white text-[10px]"
+                    title="Information"
+                  >
+                    i
+                  </span>
+                  {/* "view" text */}
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    view
+                  </span>
                 </span>
-                {/* "view" text */}
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                  view
-                </span>
-              </span>
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Digital
+                  </span>
+                  Support
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                  Intuitive and dynamic mobile apps for Android and iOS
+                  platforms.
+                </p>
+              </div>
 
-              <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
-                <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                  Digital
-                </span>
-                Support
-              </h1>
-              <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                Intuitive and dynamic mobile apps for Android and iOS platforms.
-              </p>
-
-              <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
                   src={Screenshot1}
                   alt=""
-                  className="unselect w-full pl-10"
+                  className="unselect w-full xl:pl-10"
                 />
               </div>
             </div>
           </div>
-          <div className="hidden lg:flex overflow-hidden select-none h-[2700px] min-w-[260px] max-w-[260px] -mt-[260px] justify-center">
+          <div className="hidden xl:flex overflow-hidden select-none h-[2700px] min-w-[260px] max-w-[260px] -mt-[260px] justify-center">
             <svg
               className="timeline-svg"
               viewBox="0 0 200 2000"
@@ -269,21 +286,41 @@ const Services: React.FC<ServicesChildProps> = ({
               </g>
             </svg>
           </div>
-          <div className="w-full h-full hidden lg:block">
+          <div className="w-full h-full hidden xl:block">
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
+              <img
+                src={Screenshot1}
+                alt=""
+                className="unselect w-full xl:pl-10"
+              />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
+              <img
+                src={Screenshot1}
+                alt=""
+                className="unselect w-full xl:pl-10"
+              />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
+              <img
+                src={Screenshot1}
+                alt=""
+                className="unselect w-full xl:pl-10"
+              />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
+              <img
+                src={Screenshot1}
+                alt=""
+                className="unselect w-full xl:pl-10"
+              />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
+              <img
+                src={Screenshot1}
+                alt=""
+                className="unselect w-full xl:pl-10"
+              />
             </div>
           </div>
         </div>
