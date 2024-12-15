@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react";
 import Code from "../assets/icons/Code.svg";
 import PlayIcon from "../assets/icons/Play.svg";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import React from "react";
 
 const Repositories = () => {
@@ -21,7 +21,7 @@ const Repositories = () => {
     },
     {
       videoSrc:
-        "https://videos.pexels.com/video-files/4043936/4043936-sd_640_360_24fps.mp4",
+        "https://videos.pexels.com/video-files/3191420/3191420-sd_640_360_25fps.mp4",
       thumbnail:
         "https://imgs.search.brave.com/pOaBQnGdotrnHtF_0NMASNCS6LazIYQ19AmbcrWTQmE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVjaHNtaXRoLmNv/bS9ibG9nL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzAyL1RT/Qy10aHVtYm5haWwt/ZXhhbXBsZS0xMDI0/eDU3Ni5wbmc",
     },
@@ -31,6 +31,8 @@ const Repositories = () => {
   const [isPlaying, setIsPlaying] = useState<boolean[]>(
     Array(videoData.length).fill(false)
   );
+
+  const [videoCount, setVideoCount] = useState<number>(1); // Default to 1 video
 
   // Refs for each video
   const videoRefs = useRef<HTMLVideoElement[]>([]);
@@ -57,21 +59,43 @@ const Repositories = () => {
     setIsPlaying(updatedPlaying);
   };
 
-  // Detect screen width
-  const isMobile = window.innerWidth <= 768;
+  // Update videoCount based on screen size
+  const updateVideoCount = useCallback(() => {
+    const width = window.innerWidth;
+    console.log("Window Width:", width);
+    if (width < 620) {
+      setVideoCount(1); // Mobile view
+    } else if (width < 1024) {
+      setVideoCount(2); // Tablet view
+    } else {
+      setVideoCount(3); // Desktop view
+    }
+    console.log("Video Count:", videoCount);
+  }, []);
+
+  useEffect(() => {
+    updateVideoCount();
+    window.addEventListener("resize", updateVideoCount);
+    return () => {
+      window.removeEventListener("resize", updateVideoCount);
+    };
+  }, [updateVideoCount]);
 
   return (
     <>
-      <div id="repos" className="relative pt-24 pb-5 lg:pt-28 w-full h-auto">
+      <div
+        id="repos"
+        className="relative md:-mt-5 lg:mt-0 pt-24 pb-5 lg:pt-28 w-full h-auto"
+      >
         {/* Container */}
-        <div className="w-[94vw] lg:w-[1320px] overflow-hidden h-[450px] lg:h-[700px] mx-auto rounded-[30px] relative">
+        <div className="w-[94vw] lg:w-[94vw] overflow-hidden h-[450px] sm:h-[430px] lg:h-[580px] xl:h-[650px] mx-auto rounded-[30px] relative">
           <img
             src="https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/66017f425a91654f12e4b20c_template-section-bg.webp"
             alt=""
-            className="w-auto lg:h-auto lg:w-full h-full"
+            className="w-auto sm:h-auto sm:w-full h-full"
             style={{ filter: "hue-rotate(-5deg) saturate(1.3)" }}
           />
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-start p-4 lg:p-14 bg-black bg-opacity-50">
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-start p-4 lg:p-8 xl:p-14 bg-[#021734] bg-opacity-50">
             <span className="bg-blue-400 bg-opacity-30 backdrop-blur-sm rounded-full lg:rounded-lg px-2.5 lg:px-3 py-1 lg:py-1.5 mt-6 lg:mt-8 text-white text-[10px] lg:text-[13px] font-medium lg:font-semibold uppercase">
               Repositories
             </span>
@@ -91,9 +115,12 @@ const Repositories = () => {
             </Button>
 
             {/* Video List */}
-            <div className="w-full h-full mt-12 lg:mt-16 flex flex-col lg:flex-row justify-between items-center gap-x-8">
-              {(isMobile ? [videoData[0]] : videoData).map((data, index) => (
-                <div className="w-full h-full" key={index}>
+            <div className="w-full h-full mt-12 lg:mt-16 flex flex-wrap justify-center items-center gap-x-8">
+              {videoData.slice(0, videoCount).map((data, index) => (
+                <div
+                  className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-full"
+                  key={index}
+                >
                   <div className="relative group">
                     {/* Thumbnail */}
                     {!isPlaying[index] && (
@@ -131,8 +158,8 @@ const Repositories = () => {
                           className="relative overflow-hidden max-w-0 group-hover:max-w-xs transition-all duration-1000 ease-in-out"
                           style={{ width: "fit-content" }}
                         >
-                          <span className="text-md font-semibold pl-3 pr-4 whitespace-nowrap">
-                            Click to play
+                          <span className="px-2.5 text-sm font-bold text-slate-800">
+                            Play
                           </span>
                         </div>
                       </button>

@@ -10,7 +10,7 @@ import Logo from "../assets/icons/TuneUp_Icon.svg";
 const Footer = () => {
   return (
     <>
-      <footer className="w-full bg-[#021734] lg:pt-10">
+      <footer className="w-full bg-[#021734] lg:pt-10 -mt-3">
         <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
           {/* Product Section */}
           <div>

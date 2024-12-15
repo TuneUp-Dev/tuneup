@@ -112,7 +112,7 @@ const Home = () => {
           top: Number(storedScrollPosition),
           behavior: "smooth",
         });
-      }, 100);
+      });
     }
   };
 
