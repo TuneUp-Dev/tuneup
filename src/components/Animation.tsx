@@ -132,10 +132,10 @@ const AnimatedPath: React.FC = () => {
 
   return (
     <div className="animation-container bg-[#021734] h-auto lg:min-h-[1000px] relative">
-      <p className="text-[26px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 lg:leading-[60px] pt-14 lg:pt-36 inter-medium">
+      <p className="text-[26px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 lg:leading-[60px] pt-14 sm:pt-20 lg:pt-28 xl:pt-36 inter-medium">
         Transforming Technology into Possibilities
       </p>
-      <p className="w-[90vw] lg:w-[700px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
+      <p className="w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
         At TuneUp Technologies, what goes in as technology comes out as
         opportunity, success, and growth. Together, let’s redefine what’s
         possible in the digital world. Innovation starts here.
@@ -146,7 +146,7 @@ const AnimatedPath: React.FC = () => {
         height="1000px"
         viewBox="0 0 1590 1000"
         xmlns="http://www.w3.org/2000/svg"
-        className="scale-[0.95] -mt-80 lg:-mt-44"
+        className="scale-[0.95] -mt-80 sm:-mt-68 md:-mt-[280px] lg:-mt-44"
       >
         {/* Define gradients */}
         <defs>

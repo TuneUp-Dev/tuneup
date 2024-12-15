@@ -141,68 +141,96 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`fixed top-5 z-[99999] w-full flex flex-col items-center`}>
-      {/* Top Section */}
-      <div className="w-full max-h-[50px] md:max-h-[68px] flex items-center justify-between px-5 md:px-36">
-        {/* Logo Section */}
-        <div
-          className={`w-[110px] md:w-[130px] max-h-[50px] md:max-h-[44px] py-1 md:py-1.5 px-1.5 md:px-3 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
-        >
-          <img
-            className="w-full h-auto object-contain brightness-[90%]"
-            src={Logo}
-            alt="Logo"
-          />
-        </div>
-        {/* Menu Icon (Hamburger) */}
-        <div
-          className={`lg:hidden py-0.5 pl-0.5 pr-1 flex justify-center items-center backdrop-blur-[10px] ${bgColor} rounded-2xl border-[1.5px] border-opacity-10 border-blue-500`}
-          onClick={toggleMenu}
-        >
-          <button className="flex items-center">
-            <img src={Arrow} className="w-9" alt="" />
-            <p
-              className={`-ml-1.5 mr-2 text-[12px] text-blue-500 nunito-extrabold transition-all duration-500 ${
-                showMenuText ? "block translate-x-0" : "hidden -translate-x-2"
-              }`}
-            >
-              Menu
-            </p>
-          </button>
-        </div>
-        {/* Navigation Links (Visible when menu is open on mobile) */}
-        <ul
-          className={`lg:flex lg:flex-row lg:h-auto flex-col h-full gap-y-1.5 lg:gap-y-0 lg:gap-x-9 ml-12 py-10 lg:py-2.5 px-5 lg:px-8 rounded-l-3xl lg:rounded-full transition-all duration-300 ease-in-out ${bgColor} border-[1.5px] border-opacity-10 border-blue-500 ${
-            isMenuOpen
-              ? "fixed top-0 right-0 w-48 h-full flex flex-col justify-start py-5 shadow-lg transform translate-x-0"
-              : "fixed top-0 right-0 w-0 h-full flex flex-col justify-start py-5 shadow-lg transform translate-x-full"
-          }`}
-        >
-          {/* Menu Icon (Close) */}
-          <div className="h-[60px]">
-            <div
-              className={`lg:hidden py-[5px] px-2 flex justify-center items-center backdrop-blur-[10px] bg-white rounded-full border-[1.5px] border-opacity-10 border-blue-500`}
-              onClick={toggleMenu}
-            >
-              <button className="text-1xl nunito-bold text-blue-500">
-                close
-              </button>
-              <div
-                className={`absolute h-[28px] right-[4px] shadow-sm w-[28px] rounded-full ${bgColor} border-[1px] border-opacity-10 border-blue-500 flex justify-center items-center`}
+    <>
+      <div
+        className={`fixed top-5 md:top-7 lg:top-5 z-[99999] w-full flex flex-col items-center`}
+      >
+        {/* Top Section */}
+        <div className="w-full max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
+          {/* Logo Section */}
+          <div
+            className={`w-[110px] lg:w-[130px] max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+          >
+            <img
+              className="w-full h-auto object-contain brightness-[90%]"
+              src={Logo}
+              alt="Logo"
+            />
+          </div>
+          {/* Menu Icon (Hamburger) */}
+          <div
+            className={`lg:hidden py-0.5 pl-0.5 pr-1 flex justify-center items-center backdrop-blur-[10px] ${bgColor} rounded-2xl border-[1.5px] border-opacity-10 border-blue-500`}
+            onClick={toggleMenu}
+          >
+            <button className="flex items-center">
+              <img src={Arrow} className="w-9" alt="" />
+              <p
+                className={`-ml-1.5 mr-2 text-[12px] text-blue-500 nunito-extrabold transition-all duration-500 ${
+                  showMenuText ? "block translate-x-0" : "hidden -translate-x-2"
+                }`}
               >
-                <img src={Arrow} className="w-9 rotate-180 -mr-0.5" alt="" />
+                Menu
+              </p>
+            </button>
+          </div>
+          {/* Navigation Links (Visible when menu is open on mobile) */}
+          <ul
+            className={`lg:flex lg:flex-row lg:h-auto flex-col h-full gap-y-1.5 lg:gap-y-0 lg:gap-x-9 ml-12 py-10 md:py-7 lg:py-2.5 px-5 lg:px-8 rounded-l-3xl lg:rounded-full transition-all duration-300 ease-in-out ${bgColor} border-[1.5px] border-opacity-10 border-blue-500 ${
+              isMenuOpen
+                ? "fixed top-0 right-0 w-48 h-full flex flex-col justify-start py-5 shadow-lg transform translate-x-0"
+                : "fixed top-0 right-0 w-0 h-full flex flex-col justify-start py-5 shadow-lg transform translate-x-full"
+            }`}
+          >
+            {/* Menu Icon (Close) */}
+            <div className="h-[60px]">
+              <div
+                className={`lg:hidden py-[5px] px-2 flex justify-center items-center backdrop-blur-[10px] bg-white rounded-full border-[1.5px] border-opacity-10 border-blue-500`}
+                onClick={toggleMenu}
+              >
+                <button className="text-1xl nunito-bold text-blue-500">
+                  close
+                </button>
+                <div
+                  className={`absolute h-[28px] right-[4px] shadow-sm w-[28px] rounded-full ${bgColor} border-[1px] border-opacity-10 border-blue-500 flex justify-center items-center`}
+                >
+                  <img src={Arrow} className="w-9 rotate-180 -mr-0.5" alt="" />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Navigation Links */}
-          <div className="flex flex-col flex-grow space-y-5 mt-6">
+            {/* Navigation Links */}
+            <div className="flex flex-col flex-grow space-y-5 mt-6">
+              {links.map((link) => (
+                <li
+                  key={link.id}
+                  className={`relative pl-4 hover:text-black transition-colors text-slate-600 nunito-bold lg:nunito-medium cursor-pointer ${
+                    activeSection === link.id
+                      ? "text-black border-l-2 border-[#021734]"
+                      : ""
+                  }`}
+                  onClick={() => handleScrollToSection(link.id)}
+                >
+                  {link.name}
+                </li>
+              ))}
+            </div>
+
+            {/* Quote Container */}
+            <div className="w-full mt-auto text-black nunito-bold text-[14px] text-center">
+              Let's Tune Yourself! ✨
+            </div>
+          </ul>
+
+          {/* Desktop View Nav Link */}
+          <ul
+            className={`hidden lg:flex gap-x-9 ml-12 py-2 px-8 rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+          >
             {links.map((link) => (
               <li
                 key={link.id}
-                className={`relative pl-4 hover:text-black transition-colors text-slate-600 nunito-bold lg:nunito-medium cursor-pointer ${
+                className={`hover:text-black transition-colors text-slate-600 nunito-medium cursor-pointer ${
                   activeSection === link.id
-                    ? "text-black border-l-2 border-[#021734]"
+                    ? "border-b-1.5 border-[#021734] text-black"
                     : ""
                 }`}
                 onClick={() => handleScrollToSection(link.id)}
@@ -210,49 +238,26 @@ const Navbar = () => {
                 {link.name}
               </li>
             ))}
-          </div>
-
-          {/* Quote Container */}
-          <div className="w-full mt-auto text-black nunito-bold text-[14px] text-center">
-            Let's Tune Yourself! ✨
-          </div>
-        </ul>
-        {/* Desktop View Nav Link */}
-        <ul
-          className={`hidden lg:flex gap-x-9 ml-12 py-2 px-8 rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
-        >
-          {links.map((link) => (
-            <li
-              key={link.id}
-              className={`hover:text-black transition-colors text-slate-600 nunito-medium cursor-pointer ${
-                activeSection === link.id
-                  ? "border-b-1.5 border-[#021734] text-black"
-                  : ""
-              }`}
-              onClick={() => handleScrollToSection(link.id)}
+          </ul>
+          {/* Button Section */}
+          <a href="#about" className="hidden lg:block">
+            <Button
+              color="primary"
+              variant="bordered"
+              className={`rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
             >
-              {link.name}
-            </li>
-          ))}
-        </ul>
-        {/* Button Section */}
-        <a href="#about" className="hidden lg:block">
-          <Button
-            color="primary"
-            variant="bordered"
-            className={`rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
-          >
-            <img
-              className="w-6 -ml-3 animate-right-left"
-              src={CodeLeft}
-              alt=""
-            />
-            Let's Tune!
-            <img className="w-6 -ml-3 animate-left-right" src={Code} alt="" />
-          </Button>
-        </a>
+              <img
+                className="w-6 -ml-3 animate-right-left"
+                src={CodeLeft}
+                alt=""
+              />
+              Let's Tune!
+              <img className="w-6 -ml-3 animate-left-right" src={Code} alt="" />
+            </Button>
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
