@@ -120,6 +120,7 @@ const Navbar = () => {
     });
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       Object.values(sectionRefs.current).forEach((section) => {
         if (section) {
           serviceObserver.unobserve(section);
