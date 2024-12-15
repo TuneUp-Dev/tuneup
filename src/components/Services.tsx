@@ -27,7 +27,7 @@ const Services: React.FC<ServicesChildProps> = ({
             to help businesses thrive in the digital landscape
           </p>
         </div>
-        <div className="timeline-container -mt-10 relative mx-auto max-w-[90vw] lg:w-full h-auto max-h-[2560px] lg:max-h-[2500px] lg:px-28 flex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start">
+        <div className="timeline-container -mt-10 relative mx-auto max-w-[90vw] lg:w-full h-auto max-h-[2560px] lg:max-h-[2500px] lg:px-10 flex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start">
           <div className="w-full h-full">
             <div className="w-full h-auto lg:h-[250px] overflow-hidden pt-0.5 mt-16 lg:mt-[200px]">
               <span className="bg-slate-50 bg-opacity-20 backdrop-blur-md group w-[30px] hover:w-[69px] cursor-pointer transition-all duration-300 ease-in-out text-[15px] border-[0.5px] border-blue-100 border-opacity-20 px-2 py-1 rounded-xl flex items-center justify-start space-x-1.5 overflow-hidden">
@@ -190,7 +190,11 @@ const Services: React.FC<ServicesChildProps> = ({
               </p>
 
               <div className="w-full h-auto rounded-xl overflow-hidden mt-5 lg:hidden">
-                <img src={Screenshot1} alt="" className="unselect" />
+                <img
+                  src={Screenshot1}
+                  alt=""
+                  className="unselect w-full pl-10"
+                />
               </div>
             </div>
           </div>
@@ -267,19 +271,19 @@ const Services: React.FC<ServicesChildProps> = ({
           </div>
           <div className="w-full h-full hidden lg:block">
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
-              <img src={Screenshot1} alt="" className="unselect" />
+              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect" />
+              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect" />
+              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect" />
+              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
-              <img src={Screenshot1} alt="" className="unselect" />
+              <img src={Screenshot1} alt="" className="unselect w-full pl-10" />
             </div>
           </div>
         </div>
