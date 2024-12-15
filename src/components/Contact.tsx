@@ -10,7 +10,7 @@ import Mail from "../assets/icons/Mail_Icon.svg";
 import Whatsapp from "../assets/icons/Whatsapp_Icon.svg";
 // import Slack from "../assets/icons/Slack_Icon.svg";
 import Call from "../assets/icons/Call_Icon.svg";
-import Logo from "../assets/logos/TuneUp_Logo.svg";
+import Logo from "../assets/logos/Logo.svg";
 import Close from "../assets/icons/close.svg";
 import Arrow2 from "../assets/icons/arrowDown2.svg";
 import { Link } from "react-router-dom";

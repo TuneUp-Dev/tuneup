@@ -11,7 +11,7 @@ import Slack from "../assets/icons/Slack_Light_Icon.svg";
 const Header = () => {
   return (
     <>
-      <div className="relative h-[1120px] lg:h-[1298px] overflow-hidden text-center pt-32 md:pt-44">
+      <div className="relative h-[1020px] lg:h-[1298px] overflow-hidden text-center pt-32 md:pt-44">
         {/* Bg Gradient */}
         <div className="Responsive-Navbar z-20 gradient-background blur-[100px] opacity-40 mt-[-200px] absolute mx-[16%] w-[68%] flex justify-center px-auto">
           <div className="Blue-Gradient animate-spin-clockwise"></div>
@@ -76,16 +76,16 @@ const Header = () => {
       {/* Second Container */}
       <div
         id="about"
-        className="absolute z-40 w-full h-[860px] md:h-[800px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[765px] md:-mt-[800px] pt-14 md:pt-12 flex justify-center items-center"
+        className="absolute z-40 w-full h-auto md:h-[800px] bg-gradient-to-t from-[#021734] via-[#294770] to-transparent -mt-[670px] md:-mt-[800px] pt-28 pb-5 md:pt-12 flex justify-center items-center"
       >
-        <div className="w-[90vw] md:w-[1200px] shadow-md shadow-[#294770] text-white flex md:flex-row flex-col justify-between items-center md:justify-between md:items-start h-[730px] md:h-[600px] bg-[#021734] bg-opacity-40 rounded-3xl pt-2 pb-7 md:pb-10 px-9 gap-x-5">
-          <div className="w-full md:min-w-[700px] min-h-[620px] md:min-h-full flex flex-col justify-between items-center md:items-start text-center md:text-left gap-y-5 md:gap-y-0">
-            <h1 className="text-[50px] md:text-[140px] poppins-medium uppercase mx-auto">
+        <div className="w-[90vw] md:w-[1200px] shadow-md shadow-[#294770] text-white flex md:flex-row flex-col justify-start items-center md:justify-between md:items-start h-auto lg::h-[600px] bg-[#021734] bg-opacity-40 rounded-3xl pt-2 pb-8 md:pb-10 px-5 lg:px-9 gap-x-5">
+          <div className="w-full md:min-w-[700px] h-auto md:min-h-full flex flex-col justify-start items-center md:items-start text-center md:text-left gap-y-5 md:gap-y-0">
+            <h1 className="text-[43px] md:text-[140px] poppins-medium uppercase mx-auto">
               ABOUT US
             </h1>
-            <div className="flex flex-col justify-end items-start">
+            <div className="flex-col justify-end hidden lg:flex items-start">
               <p className="poppins-medium">The solution we provide:</p>
-              <span className="flex flex-wrap gap-x-3 gap-y-1.5 mt-2 md:mt-4 w-[277px] md:w-[350px] text-[11px] md:text-[12px]">
+              <span className="flex lg:justify-center flex-wrap gap-x-3 gap-y-1.5 mt-2 md:mt-4 w-[277px] md:w-[350px] text-[11px] md:text-[12px]">
                 <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
                   Web Applications
                 </p>
@@ -107,8 +107,8 @@ const Header = () => {
               </span>
             </div>
           </div>
-          <div className="relative w-full h-full flex flex-col justify-end items-center md:items-end">
-            <p className="absolute min-w-full md:-left-[330px] -top-[520px] md:top-60 Geist-normal text-slate-300 text-[12.5px] md:text-[15.5px]">
+          <div className="relative w-full h-full flex flex-col justify-end items-center md:items-end top-5 lg:top-0">
+            <p className="lg:absolute min-w-full md:-left-[330px] lg:top-60 Geist-normal text-slate-300 text-[12px] md:text-[15.5px]">
               <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[216px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
                 Impossible to I'm Possible
               </h1>
@@ -124,7 +124,32 @@ const Header = () => {
               solutions. At TuneUp Technologies, we don’t just build software;
               we build success.
             </p>
-            <span className="flex justify-end items-end text-white">
+
+            <div className="flex flex-col justify-end items-start lg:hidden mt-10 lg:mt-0">
+              <p className="poppins-medium">The solution we provide:</p>
+              <span className="flex lg:justify-center flex-wrap gap-x-3 gap-y-1.5 mt-2 md:mt-4 w-full md:w-[350px] text-[11px] md:text-[12px]">
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  Web Applications
+                </p>
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  Mobile Applications
+                </p>
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  IoT Projects
+                </p>
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  Digital Marketing
+                </p>
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  Content Creation
+                </p>
+                <p className="bg-[#021734] backdrop-blur-[20px] bg-opacity-80 text-gray-300 Geist-medium px-3 md:px-3.5 py-1.5 rounded-full">
+                  IT Support
+                </p>
+              </span>
+            </div>
+
+            <span className="flex justify-end items-end text-white lg:hidden mt-7">
               <div className="mx-auto md:mx-0 flex space-x-4 bg-[#021734] bg-opacity-80 backdrop-blur-[5px] rounded-3xl py-2 px-3.5">
                 <Link
                   to="https://www.linkedin.com/company/tuneup-technologies"
