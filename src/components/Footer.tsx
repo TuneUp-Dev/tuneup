@@ -4,7 +4,6 @@ import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
-import Slack from "../assets/icons/Slack_Light_Icon.svg";
 import Logo from "../assets/icons/TuneUp_Icon.svg";
 
 const Footer = () => {
@@ -257,9 +256,6 @@ const Footer = () => {
               </Link>
               <Link to="https://github.com/TuneUp-Dev" target="_blank">
                 <img src={Github} alt="" className="w-5 hover:opacity-90" />
-              </Link>
-              <Link to="#" target="_blank">
-                <img src={Slack} alt="" className="w-5 hover:opacity-90" />
               </Link>
               <Link to="#" target="_blank">
                 <img src={Mail} alt="" className="w-5 hover:opacity-90" />

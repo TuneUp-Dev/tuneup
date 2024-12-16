@@ -201,8 +201,9 @@ const Services: React.FC<ServicesChildProps> = ({
                   Support
                 </h1>
                 <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
-                  Intuitive and dynamic mobile apps for Android and iOS
-                  platforms.
+                At TuneUp Technologies, we offer expert content creation support for aspiring creators,
+                 helping you bring your vision to life. From strategy to execution,
+                  we guide you on every step of your content creation journey.
                 </p>
               </div>
 

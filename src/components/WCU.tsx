@@ -9,8 +9,8 @@ const WCU = () => {
           Why choose us
         </span>
         <p className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[40px] lg:text-[52px] lg:w-[700px] leading-[41px] lg:leading-[60px] mt-4 inter-bold">
-          Why can you choose us{" "}
-          <span className="hidden lg:block">to TuneUp yourself</span>
+        Choose TuneUp,{" "}
+          <span className="hidden lg:block"> Choose Growth!</span>
         </p>
         <span className="lg:hidden text-[16px] bg-clip-text text-transparent bg-gradient-to-r from-[#2c4464] to-[#021734] inter-bold">
           to TuneUp yourself

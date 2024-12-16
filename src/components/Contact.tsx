@@ -143,13 +143,12 @@ const Contact = () => {
                 <div className="w-full mt-4 lg:mt-5">
                   <h1 className="Geist-bold">Chat with us</h1>
                   <p className="text-[11px] font-medium text-neutral-500">
-                    Speak to our friendly team via whatsapp chat.
+                    Speak to our friendly team via chat.
                   </p>
                   <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
                     <Link to="">
                       <p className="flex gap-x-2">
-                        <img src={Whatsapp} alt="" className="w-[15px]" /> Join
-                        our a Whatsapp group
+                        <img src={Whatsapp} alt="" className="w-[15px]"/> Start the Conversation
                       </p>
                     </Link>
                     <Link to="https://www.linkedin.com/company/tuneup-technologies">
@@ -188,7 +187,7 @@ const Contact = () => {
                       Technologies
                     </Link>
                     <Link
-                      to={""}
+                      to={"https://www.instagram.com/tuneup_technologies"}
                       className="flex justify-start gap-x-2 w-[150px]"
                     >
                       <img src={Instagram} alt="" className="w-[15px]" /> TuneUp

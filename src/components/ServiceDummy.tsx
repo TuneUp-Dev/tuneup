@@ -174,8 +174,8 @@ const Services = () => {
               Support
             </h1>
             <p className="text-gray-300 text-opacity-85 mt-4">
-              Intuitive and dynamic mobile apps for Android and iOS platforms.
-            </p>
+            At TuneUp Technologies, we offer expert content creation support for aspiring creators, helping you bring your vision to life. From strategy to execution, we guide you on every step of your content creation journey.
+</p>
           </div>
         </div>
         <div className="overflow-hidden select-none h-[2700px] min-w-[260px] max-w-[260px] -mt-[260px] flex justify-center">

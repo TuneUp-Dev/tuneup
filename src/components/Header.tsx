@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
-import Mail from "../assets/icons/Mail_Light_Icon.svg";
-import Slack from "../assets/icons/Slack_Light_Icon.svg";
+import Mail from "../assets/icons/Mail_Light_Icon.svg";s
 
 const Header = () => {
   return (
@@ -23,7 +22,7 @@ const Header = () => {
         </div>
 
         {/* BG Image */}
-        <div className="absolute w-full h-[300px] z-10 bg-opacity-15 top-0 bg-gradient-to-b from-white to-transparent">
+        <div className="absolute w-full h-[300px] z-10 bg-opacit  y-15 top-0 bg-gradient-to-b from-white to-transparent">
           <div className="background-image-container">
             <img
               src="https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/66436f06a1016be8fae136f3_Hero-Module.svg"
@@ -39,8 +38,8 @@ const Header = () => {
 
         {/* Foreground Content */}
         <div className="relative z-50">
-          <p className="bg-slate-50 shadow-[0_3px_10px_-12px_rgba(0,0,0,0.3)] Geist-bold text-[8px] sm:text-[9px] lg:text-[13px] w-[160px] sm:w-[180px] lg:w-[260px] uppercase text-blue-950 mx-auto p-1 pb-0.5 sm:pb-1 lg:pb-1 lg:p-1.5 rounded-full">
-            Tune Up Yourself with TuneUp
+          <p className="bg-slate-50 shadow-[0_3px_10px_-12px_rgba(0,0,0,0.3)] Geist-bold text-[8px] sm:text-[9px] lg:text-[13px] w-[160px] sm:w-[180px] lg:w-[260px] text-blue-950 mx-auto p-1 pb-0.5 sm:pb-1 lg:pb-1 lg:p-1.5 rounded-full">
+          TurnUp your SaaS dream with  <br /> TuneUp Technologies
           </p>
           <h1 className="poppins-bold text-[#021734] text-[22px] sm:text-[30px] lg:text-[60px] mx-auto w-[320px] sm:w-[400px] lg:w-[850px] lg:leading-[83px] mt-2.5 sm:mt-3 lg:mt-5">
             We make{" "}
@@ -49,13 +48,13 @@ const Header = () => {
             </span>
             <br />
             <span className="ml-5 py-[1.5px] lg:py-0 bg-[#021734] text-white px-4 lg:px-6 rounded-full">
-              to I'm Possible.
+              to I'm Possible
             </span>
           </h1>
           <p className="nunito-medium mt-5 w-[90vw] sm:w-[80vw] lg:w-[680px] mx-auto text-[#021734] text-[12px] lg:text-[16px] lg:leading-[26px]">
-            TuneUp Technologies is a dynamic SaaS product development company
-            providing innovative digital solutions designed to empower startups
-            and enterprises.
+            TuneUp Technologies is a dynamic SaaS company
+            By embracing innovation, precision, and advancement, TuneUp Technologies builds transformative SaaS solutions for the next generation of business.
+
           </p>
           {/* Updated button with anchor link for smooth scroll */}
           <a href="#about" className="block lg:hidden">
@@ -113,19 +112,15 @@ const Header = () => {
           <div className="relative w-full h-full flex flex-col justify-end items-center sm:items-start lg:items-end top-5 lg:top-0">
             <p className="lg:absolute min-w-full lg:-left-[380px] xl:-left-[330px] lg:top-56 xl:top-60 Geist-normal text-slate-300 text-[12px] lg:text-[15.5px]">
               <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[216px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
-                Impossible to I'm Possible
-              </h1>
-              At TuneUp Technologies, we are a leading software development
-              company dedicated to delivering innovative, scalable, and
-              user-focused solutions that empower businesses to thrive in the
-              digital era. Specializing in custom software development, SaaS
-              products, and web and mobile applications, we blend creativity and
-              technical expertise to craft software that meets the unique needs
-              of startups and enterprises alike. With a commitment to quality,
-              security, and continuous innovation, our team partners with
-              clients to transform ideas into impactful, future-ready digital
-              solutions. At TuneUp Technologies, we don’t just build software;
-              we build success.
+              Our Vision in Action
+              </h1>At TuneUp Technologies, we specialize in crafting bespoke SaaS solutions ,
+               Web and Mobile Applications  that enable businesses to thrive in the digital era.
+               Specializing in custom software development, SaaS products, and web and mobile applications,
+                we blend creativity and technical expertise to craft software
+                 that meets the unique needs of startups and enterprises alike. With a commitment to quality,
+                  security, and continuous innovation, our team partners with clients to transform ideas into impactful,
+                   future-ready digital solutions.At TuneUp Technologies, we don’t just build software; we build success.
+
             </p>
 
             <div className="flex flex-col justify-end items-start lg:hidden mt-10 lg:mt-0">
@@ -168,9 +163,6 @@ const Header = () => {
                 </Link>
                 <Link to="https://github.com/TuneUp-Dev" target="_blank">
                   <img src={Github} alt="" className="w-5" />
-                </Link>
-                <Link to="#" target="_blank">
-                  <img src={Slack} alt="" className="w-5" />
                 </Link>
                 <Link to="#" target="_blank">
                   <img src={Mail} alt="" className="w-5" />
