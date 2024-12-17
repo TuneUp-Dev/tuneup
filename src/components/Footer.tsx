@@ -8,6 +8,56 @@ import Logo from "../assets/icons/TuneUp_Icon.svg";
 
 const Footer = () => {
   return (
+    <footer className="w-full bg-[#021734] pt-10 mt-10 md:mt-0">
+      <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
+      
+        <div>
+          <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
+            Product
+          </h4>
+          <ul className="space-y-1.5 text-[15px]">
+            <li>
+              <Link
+                to="#"
+                className="text-slate-400 font-light hover:text-white"
+              >
+                Monitoring as Code
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="text-slate-400 font-light hover:text-white"
+              >
+                Synthetic Monitoring
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="text-slate-400 font-light hover:text-white"
+              >
+                API Monitoring
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="text-slate-400 font-light hover:text-white"
+              >
+                Alerting
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="text-slate-400 font-light hover:text-white"
+              >
+                Private Locations
+              </Link>
+            </li>
+          </ul>
+        </div>
     <>
       <footer className="w-full bg-[#021734] lg:pt-10 -mt-3">
         <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
