@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import Greetings from "../assets/Greeting.webp";
+import React from "react";
 
 const Greeting = () => {
   // Check if the "isGreetingSeen" item exists in localStorage to determine visibility
