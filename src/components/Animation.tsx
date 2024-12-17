@@ -190,6 +190,7 @@ const AnimatedPath: React.FC = () => {
                     ? iconUrls[(index + 10) % iconUrls.length]
                     : iconUrls[index % iconUrls.length]
                 } // Swap icons after 15 seconds for each individual icon
+                className="unselect"
                 width="100"
                 height="100"
               >
@@ -252,7 +253,7 @@ const AnimatedPath: React.FC = () => {
           height="140"
           x="735"
           y="325"
-          className="z-[99999] opacity-100"
+          className="z-[99999] opacity-100 unselect"
           style={{ pointerEvents: "none" }}
         />
       </svg>

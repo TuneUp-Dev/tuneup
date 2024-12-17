@@ -151,7 +151,7 @@ const Navbar = () => {
         className={`fixed top-5 md:top-7 lg:top-5 z-[99999] w-full flex flex-col items-center`}
       >
         {/* Top Section */}
-        <div className="w-full max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
+        <div className="w-full max-w-[1440px] mx-auto max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
           {/* Logo Section */}
           <div
             className={`w-[110px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
@@ -163,6 +163,7 @@ const Navbar = () => {
               alt="Logo"
             />
           </div>
+
           {/* Menu Icon (Hamburger) */}
           <div
             className={`lg:hidden py-0.5 pl-0.5 pr-1 flex justify-center items-center backdrop-blur-[10px] ${bgColor} rounded-2xl border-[1.5px] border-opacity-10 border-blue-500`}
@@ -179,6 +180,7 @@ const Navbar = () => {
               </p>
             </button>
           </div>
+
           {/* Navigation Links (Visible when menu is open on mobile) */}
           <ul
             className={`lg:flex lg:flex-row lg:h-auto flex-col h-full gap-y-1.5 lg:gap-y-0 lg:gap-x-9 ml-12 py-10 md:py-7 lg:py-2.5 px-5 lg:px-8 rounded-l-3xl lg:rounded-full transition-all duration-300 ease-in-out ${bgColor} border-[1.5px] border-opacity-10 border-blue-500 ${
@@ -245,6 +247,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
           {/* Button Section */}
           <a href="#about" className="hidden lg:block">
             <Button

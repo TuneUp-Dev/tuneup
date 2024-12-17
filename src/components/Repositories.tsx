@@ -71,7 +71,7 @@ const Repositories = () => {
       setVideoCount(3); // Desktop view
     }
     console.log("Video Count:", videoCount);
-  }, []);
+  }, [videoCount]);
 
   useEffect(() => {
     updateVideoCount();
@@ -85,10 +85,10 @@ const Repositories = () => {
     <>
       <div
         id="repos"
-        className="relative md:-mt-5 lg:mt-0 pt-24 pb-5 lg:pt-28 w-full h-auto"
+        className="relative bg-white md:-mt-5 lg:mt-0 pt-24 pb-5 lg:pt-28 w-full h-auto"
       >
         {/* Container */}
-        <div className="w-[94vw] lg:w-[94vw] overflow-hidden h-[450px] sm:h-[430px] lg:h-[580px] xl:h-[650px] mx-auto rounded-[30px] relative">
+        <div className="w-[94vw] lg:w-[94vw] max-w-[1440px] overflow-hidden h-[450px] sm:h-[430px] lg:h-[580px] xl:h-[650px] mx-auto rounded-[30px] relative">
           <img
             src="https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/66017f425a91654f12e4b20c_template-section-bg.webp"
             alt=""
