@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
-import Slack from "../assets/icons/Slack_Light_Icon.svg";
+import Facebook from "../assets/icons/facebook.svg";
+// import Youtube from "../assets/icons/Youtube.svg";
 import Logo from "../assets/icons/TuneUp_Icon.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,48 +16,33 @@ const Footer = () => {
           {/* Product Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
-              Product
+              Products In
             </h4>
             <ul className="space-y-1.5 mt-1.5 text-[13px] lg:text-[15px]">
               <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Monitoring as Code
-                </Link>
+                <p className="text-slate-400 font-light hover:text-white">
+                  Flutter Development
+                </p>
               </li>
               <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Synthetic Monitoring
-                </Link>
+                <p className="text-slate-400 font-light hover:text-white">
+                  MERN Stack Web Development
+                </p>
               </li>
               <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  API Monitoring
-                </Link>
+                <p className="text-slate-400 font-light hover:text-white">
+                  Digital Marketing
+                </p>
               </li>
               <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Alerting
-                </Link>
+                <p className="text-slate-400 font-light hover:text-white">
+                  UI & UX Designing
+                </p>
               </li>
               <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Private Locations
-                </Link>
+                <p className="text-slate-400 font-light hover:text-white">
+                  Media Support
+                </p>
               </li>
             </ul>
           </div>
@@ -68,44 +54,44 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1.5 mt-1.5 text-[13px] lg:text-[15px]">
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#about"
                   className="text-slate-400 font-light hover:text-white"
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#services"
+                  className="text-slate-400 font-light hover:text-white"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#career"
                   className="text-slate-400 font-light hover:text-white"
                 >
                   Careers
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#terms"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Blog
-                </Link>
+                  Terms and Conditions
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#privacy"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Security
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Terms of Use
-                </Link>
+                  Privacy Policy
+                </a>
               </li>
             </ul>
           </div>
@@ -117,40 +103,44 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1.5 mt-1.5 text-[13px] lg:text-[15px]">
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#contact"
                   className="text-slate-400 font-light hover:text-white"
                 >
                   Contact Us
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
-                  to="#"
+                  to={"https://github.com/TuneUp-Dev"}
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Support
+                  Github
                 </Link>
               </li>
               <li>
                 <Link
-                  to="#"
+                  to={"https://www.instagram.com/tuneup_technologies/"}
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Slack Community
+                  Instagram
                 </Link>
               </li>
               <li>
                 <Link
-                  to="#"
+                  to={
+                    "https://www.facebook.com/profile.php?id=61559713994436&sk=about"
+                  }
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Twitter @TuneUp
+                  Facebook
                 </Link>
               </li>
               <li>
                 <Link
-                  to="#"
+                  to={
+                    "https://www.linkedin.com/company/tuneup-technologies/posts/?feedView=all"
+                  }
                   className="text-slate-400 font-light hover:text-white"
                 >
                   LinkedIn
@@ -166,28 +156,28 @@ const Footer = () => {
             </h4>
             <ul className="space-y-1.5 mt-1.5 text-[13px] lg:text-[15px]">
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#docs"
                   className="text-slate-400 font-light hover:text-white"
                 >
                   Docs
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#courses"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Checkly Guides
-                </Link>
+                  Courses
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#guides"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Playwright Tips
-                </Link>
+                  TuneUp Guides
+                </a>
               </li>
             </ul>
           </div>
@@ -195,32 +185,24 @@ const Footer = () => {
           {/* Alternatives Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
-              Alternatives
+              Career
             </h4>
             <ul className="space-y-1.5 mt-1.5 text-[13px] lg:text-[15px]">
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#team"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Alternative to Datadog
-                </Link>
+                  Join Our Team
+                </a>
               </li>
               <li>
-                <Link
-                  to="#"
+                <a
+                  href="#internship"
                   className="text-slate-400 font-light hover:text-white"
                 >
-                  Alternative to New Relic
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-slate-400 font-light hover:text-white"
-                >
-                  Alternative to Dynatrace
-                </Link>
+                  Internship
+                </a>
               </li>
             </ul>
           </div>
@@ -244,26 +226,32 @@ const Footer = () => {
             {/* Social Links */}
             <div className="mx-auto md:mx-0 flex space-x-4 bg-[#294770] backdrop-blur-[20px] bg-opacity-20 px-3.5 md:px-4 py-2 rounded-full">
               <Link
-                to="https://www.linkedin.com/company/tuneup-technologies"
+                to={"https://www.linkedin.com/company/tuneup-technologies"}
                 target="_blank"
               >
                 <img src={LinkedIn} alt="" className="w-5 hover:opacity-90" />
               </Link>
               <Link
-                to="https://www.instagram.com/tuneup_technologies"
+                to={"https://www.instagram.com/tuneup_technologies"}
                 target="_blank"
               >
                 <img src={Instagram} alt="" className="w-5 hover:opacity-90" />
               </Link>
-              <Link to="https://github.com/TuneUp-Dev" target="_blank">
+              <Link
+                to={"https://www.instagram.com/tuneup_technologies"}
+                target="_blank"
+              >
+                <img src={Facebook} alt="" className="w-5 hover:opacity-90" />
+              </Link>
+              <Link to={"https://github.com/TuneUp-Dev"} target="_blank">
                 <img src={Github} alt="" className="w-5 hover:opacity-90" />
               </Link>
-              <Link to="#" target="_blank">
-                <img src={Slack} alt="" className="w-5 hover:opacity-90" />
-              </Link>
-              <Link to="#" target="_blank">
+              <Link to={"mailto:info@tuneuptech.in"} target="_blank">
                 <img src={Mail} alt="" className="w-5 hover:opacity-90" />
               </Link>
+              {/* <Link to={"https://www.youtube.com/@TuneUpedu"} target="_blank">
+                <img src={Youtube} alt="" className="w-5 hover:opacity-90" />
+              </Link> */}
             </div>
           </div>
         </div>

@@ -8,57 +8,35 @@ import Instagram from "../assets/icons/Instagram_Icon.svg";
 import Github from "../assets/icons/Github_Icon.svg";
 import Mail from "../assets/icons/Mail_Icon.svg";
 import Whatsapp from "../assets/icons/Whatsapp_Icon.svg";
-// import Slack from "../assets/icons/Slack_Icon.svg";
 import Call from "../assets/icons/Call_Icon.svg";
 import Logo from "../assets/logos/Logo.svg";
 import Close from "../assets/icons/close.svg";
-import Arrow2 from "../assets/icons/arrowDown2.svg";
 import { Link } from "react-router-dom";
 import React from "react";
 
 const Contact = () => {
   const [showForm, setShowForm] = useState(false);
-  const [showArrow, setShowArrow] = useState(true);
   const [fadeClass, setFadeClass] = useState("fade-in");
-  const [buttonFade, setButtonFade] = useState("button-in");
-  const formRef = useRef(null);
-
-  const scrollToForm = () => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
-      setShowArrow(false);
-    }
-  };
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     let timer;
     if (showForm) {
       setFadeClass("fade-in");
-      // Start the timer when the form is opened
-      timer = setTimeout(() => {
-        setShowArrow(false);
-        setButtonFade("button-out");
-      }, 5000);
     } else {
-      // Trigger fade-out animation when closing
       setFadeClass("fade-out");
-      setShowArrow(true);
     }
 
-    // Cleanup: Clear the timer if the form is closed or the component is unmounted
     return () => clearTimeout(timer);
   }, [showForm]);
 
   useEffect(() => {
     if (showForm) {
-      // Add no-scroll class to body when the popup is open
       document.body.classList.add("no-scroll");
     } else {
-      // Remove no-scroll class when the popup is closed
       document.body.classList.remove("no-scroll");
     }
     return () => {
-      // Cleanup: Ensure no-scroll class is removed on component unmount
       document.body.classList.remove("no-scroll");
     };
   }, [showForm]);
@@ -74,10 +52,10 @@ const Contact = () => {
         </span>
         <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
           <div className="w-full flex flex-col md:justify-start mt-4 items-start">
-            <p className="h-14 md:h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[52px] w-full leading-[46px] md:leading-0 lg:leading-[60px] inter-bold">
+            <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
               Let’s work together
             </p>
-            <p className="text-[13.5px] lg:text-[18px] open-sans-normal text-slate-600 mt-3 lg:mt-2 w-full">
+            <p className="mt-4 lg:mt-3 lg:w-[900px] text-[14px] lg:text-[16px]">
               Want to discuss an opportunity to create something great? I’m
               ready when you are.
             </p>
@@ -116,20 +94,6 @@ const Contact = () => {
             >
               <img src={Close} className="w-3" alt="" />
             </button>
-
-            {showArrow && (
-              <div
-                className={`w-full h-auto flex justify-end items-end transition-all duration-1000 ease-in-out ${buttonFade}`}
-              >
-                <button
-                  className="sm:hidden absolute z-50 bottom-4 right-4 text-slate-500 px-3 gap-x-0.5 min-w-10 max-w-[200px] h-9 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-blue-50 bg-opacity-80 hover:text-slate-800"
-                  onClick={scrollToForm}
-                >
-                  <img src={Arrow2} className="w-5" alt="Scroll Down" />
-                  <p className="">Scroll</p>
-                </button>
-              </div>
-            )}
 
             <div className="w-full h-full rounded-t-2xl rounded-b-lg flex flex-col sm:flex-row justify-between items-center overflow-y-auto scroll-smooth transition-all duration-500 ease-linear gap-y-10 gap-x-6">
               <div className="w-full lg:min-w-[280px] h-full rounded-2xl p-3 pb-5 bg-slate-100">

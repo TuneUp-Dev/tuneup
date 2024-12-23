@@ -2,12 +2,11 @@ import React, { useRef, useEffect, useState } from "react";
 import AnimatedPath from "../components/Animation";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-// import Greeting from "../components/Greeting";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import WCU from "../components/WCU";
+import Internship from "../components/Internship";
 import Services from "../components/Services";
-import Repositories from "../components/Repositories";
 
 const Home = () => {
   const pathRef = useRef<SVGPathElement | null>(null);
@@ -136,7 +135,6 @@ const Home = () => {
         id="top"
         className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out"
       >
-        {/* <Greeting /> */}
         <Navbar />
         <Header />
         <Services
@@ -146,7 +144,7 @@ const Home = () => {
           tailLength={tailLength}
         />
         <WCU />
-        <Repositories />
+        <Internship />
         <Contact />
         <AnimatedPath />
         <Footer />

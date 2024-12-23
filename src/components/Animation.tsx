@@ -23,20 +23,33 @@ import Icon18 from "../assets/icons/49.svg";
 import Icon19 from "../assets/icons/50.svg";
 import Icon20 from "../assets/icons/51.svg";
 
-const pathData = [
-  "M0,0 C400,504 1200,504 1590,0",
-  "M0,100 C400,476 1200,476 1590,100",
-  "M0,200 C400,448 1200,448 1590,200",
-  "M0,300 C400,420 1200,420 1590,300",
-  "M0,370 C400,402 1200,402 1590,370",
-  "M0,430 C400,387 1200,387 1590,430",
-  "M0,500 C400,369 1200,369 1590,500",
-  "M0,600 C400,341 1200,341 1590,600",
-  "M0,700 C400,313 1200,313 1590,700",
-  "M0,800 C400,285 1200,285 1590,800",
+const pathData1 = [
+  "M0,0 C200,252 600,422 795,432",
+  "M0,100 C200,310 600,426 795,436",
+  "M0,200 C200,360 600,430 795,440",
+  "M0,300 C200,410 600,434 795,444",
+  "M0,400 C200,460 600,438 795,448",
+  "M0,500 C200,510 600,442 795,452",
+  "M0,600 C200,560 600,446 795,456",
+  "M0,700 C200,610 600,450 795,460",
+  "M0,800 C200,660 600,454 795,464",
+  "M0,900 C200,710 600,458 795,468",
 ];
 
-const iconUrls = [
+const pathData2 = [
+  "M795,432 C990,420 1400,252 1590,0",
+  "M795,436 C990,426 1400,310 1590,100",
+  "M795,440 C990,430 1400,360 1590,200",
+  "M795,444 C990,434 1400,410 1590,300",
+  "M795,448 C990,438 1400,460 1590,400",
+  "M795,452 C990,442 1400,510 1590,500",
+  "M795,456 C990,446 1400,560 1590,600",
+  "M795,460 C990,450 1400,610 1590,700",
+  "M795,464 C990,454 1400,660 1590,800",
+  "M795,468 C990,458 1400,710 1590,900",
+];
+
+const iconUrls1 = [
   Icon1,
   Icon2,
   Icon3,
@@ -47,6 +60,8 @@ const iconUrls = [
   Icon8,
   Icon9,
   Icon10,
+];
+const iconUrls2 = [
   Icon11,
   Icon12,
   Icon13,
@@ -59,74 +74,34 @@ const iconUrls = [
   Icon20,
 ];
 
-const iconOrder = [0, 9, 2, 6, 1, 7, 3, 8, 4, 5];
+const iconOrder = [0, 2, 7, 4, 1, 3, 8, 6, 9, 5];
 
 const AnimatedPath: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [pathLengths, setPathLengths] = useState<number[]>([]);
-  const [swappedIcons, setSwappedIcons] = useState<boolean[]>(
-    new Array(iconUrls.length).fill(false)
-  );
+  const [pathLengths1, setPathLengths1] = useState<number[]>([]);
+  const [pathLengths2, setPathLengths2] = useState<number[]>([]);
 
   useEffect(() => {
-    const totalDelayReduction = 50;
-
-    // Start the icon swapping immediately
-    iconOrder.forEach((index, i) => {
-      setTimeout(() => {
-        setSwappedIcons((prev) => {
-          const newSwappedIcons = [...prev];
-          newSwappedIcons[index] = true; // Swap this specific icon
-          return newSwappedIcons;
-        });
-      }, i * 3000 + 0 - totalDelayReduction); // Delay each icon swap by i * 3000 ms, plus 15 seconds
-
-      // Revert the icon back after 30 seconds
-      setTimeout(() => {
-        setSwappedIcons((prev) => {
-          const newSwappedIcons = [...prev];
-          newSwappedIcons[index] = false; // Revert to the original icon
-          return newSwappedIcons;
-        });
-      }, i * 3000 + 15000 - totalDelayReduction); // Revert after 30 seconds
-    });
-
-    // Repeat the process every 30 seconds (including the initial immediate swap)
-    const intervalId = setInterval(() => {
-      iconOrder.forEach((index, i) => {
-        setTimeout(() => {
-          setSwappedIcons((prev) => {
-            const newSwappedIcons = [...prev];
-            newSwappedIcons[index] = true; // Swap this specific icon
-            return newSwappedIcons;
-          });
-        }, i * 3000 + 0 - totalDelayReduction); // Delay each icon swap by i * 3000 ms, plus 15 seconds
-
-        // Revert the icon back after 30 seconds
-        setTimeout(() => {
-          setSwappedIcons((prev) => {
-            const newSwappedIcons = [...prev];
-            newSwappedIcons[index] = false; // Revert to the original icon
-            return newSwappedIcons;
-          });
-        }, i * 3000 + 15000 - totalDelayReduction); // Revert after 30 seconds
+    if (svgRef.current) {
+      const lengths1 = pathData1.map((_, index) => {
+        const path1 = svgRef.current?.querySelector(
+          `#path1-${index}`
+        ) as SVGPathElement;
+        return path1?.getTotalLength() || 0;
       });
-    }, 30000); // Repeat every 30 seconds
-
-    return () => {
-      clearInterval(intervalId); // Cleanup the interval on unmount
-    };
+      setPathLengths1(lengths1);
+    }
   }, []);
 
   useEffect(() => {
     if (svgRef.current) {
-      const lengths = pathData.map((_, index) => {
-        const path = svgRef.current?.querySelector(
-          `#path-${index}`
+      const lengths2 = pathData2.map((_, index) => {
+        const path2 = svgRef.current?.querySelector(
+          `#path2-${index}`
         ) as SVGPathElement;
-        return path?.getTotalLength() || 0;
+        return path2?.getTotalLength() || 0;
       });
-      setPathLengths(lengths);
+      setPathLengths2(lengths2);
     }
   }, []);
 
@@ -140,6 +115,8 @@ const AnimatedPath: React.FC = () => {
         opportunity, success, and growth. Together, let’s redefine what’s
         possible in the digital world. Innovation starts here.
       </p>
+
+      <div className="absolute z-40 right-0 top-20 w-32 h-full bg-gradient-to-l from-[#021734] to-transparent"></div>
       <svg
         ref={svgRef}
         width="100%"
@@ -150,7 +127,7 @@ const AnimatedPath: React.FC = () => {
       >
         {/* Define gradients */}
         <defs>
-          {pathData.map((_, index) => (
+          {pathData1.map((_, index) => (
             <linearGradient
               key={`gradient-${index}`}
               id={`gradient-${index}`}
@@ -169,11 +146,23 @@ const AnimatedPath: React.FC = () => {
         </defs>
 
         {/* Draw the paths first */}
-        {pathData.map((path, index) => (
+        {pathData1.map((path1, index) => (
           <path
-            key={`path-${index}`}
-            id={`path-${index}`}
-            d={path}
+            key={`path1-${index}`}
+            id={`path1-${index}`}
+            d={path1}
+            fill="transparent"
+            stroke={`url(#gradient-${index})`}
+            strokeWidth="2.5"
+          />
+        ))}
+
+        {/* Draw the paths Second */}
+        {pathData2.map((path2, index) => (
+          <path
+            key={`path2-${index}`}
+            id={`path2-${index}`}
+            d={path2}
             fill="transparent"
             stroke={`url(#gradient-${index})`}
             strokeWidth="2.5"
@@ -183,60 +172,109 @@ const AnimatedPath: React.FC = () => {
         {/* Render icons with the transition */}
         {iconOrder.map((index, i) => {
           return (
-            <g key={`icon-${index}`}>
+            <g key={`icon1-${index}`}>
               <image
-                href={
-                  swappedIcons[index]
-                    ? iconUrls[(index + 10) % iconUrls.length]
-                    : iconUrls[index % iconUrls.length]
-                } // Swap icons after 15 seconds for each individual icon
+                href={iconUrls1[index % iconUrls1.length]}
                 width="100"
                 height="100"
               >
-                {pathLengths.length > 0 && (
+                {pathLengths1.length > 0 && (
                   <>
                     <animateMotion
                       dur="30s"
                       repeatCount="indefinite"
-                      begin={`${i * 3 - 45}s`}
+                      begin={`${i * 3.5 - 45}s`}
                       rotate="auto"
                     >
-                      <mpath href={`#path-${index}`} />
+                      <mpath href={`#path1-${index}`} />
                     </animateMotion>
 
                     {/* Animate the width */}
                     <animate
                       attributeName="width"
-                      values="50;100;25;100;50"
-                      keyTimes="0;0.25;0.5;0.75;1"
+                      values="40;120;10"
+                      keyTimes="0;0.5;1"
                       dur="30s"
                       repeatCount="indefinite"
-                      begin={`${i * 3 - 45}s`}
+                      begin={`${i * 3.5 - 45}s`}
                     />
 
                     {/* Animate the height */}
                     <animate
                       attributeName="height"
-                      values="50;100;25;100;50"
-                      keyTimes="0;0.25;0.5;0.75;1"
+                      values="40;120;10"
+                      keyTimes="0;0.5;1"
                       dur="30s"
                       repeatCount="indefinite"
-                      begin={`${i * 3 - 45}s`}
+                      begin={`${i * 3.5 - 45}s`}
                     />
 
                     {/* Adjust vertical position of the images */}
                     <animateTransform
                       attributeName="transform"
                       type="translate"
-                      values={
-                        i === 0
-                          ? "0 -25;0 -50; 0 -13; 0 -50;0 -25"
-                          : "0 -25;0 -45; 0 -12.5; 0 -45;0 -25"
-                      }
-                      keyTimes="0;0.25;0.5;0.75;1"
+                      values={"0 -20; 0 -60; 0 -5"}
+                      keyTimes="0;0.5;1"
                       dur="30s"
                       repeatCount="indefinite"
-                      begin={`${i * 3 - 45}s`}
+                      begin={`${i * 3.5 - 45}s`}
+                    />
+                  </>
+                )}
+              </image>
+            </g>
+          );
+        })}
+
+        {/* Render icons with the transition */}
+        {iconOrder.map((index, i) => {
+          return (
+            <g key={`icon2-${index}`}>
+              <image
+                href={iconUrls2[index % iconUrls2.length]}
+                width="100"
+                height="100"
+              >
+                {pathLengths2.length > 0 && (
+                  <>
+                    <animateMotion
+                      dur="30s"
+                      repeatCount="indefinite"
+                      begin={`${i * 3.5 - 45}s`}
+                      rotate="auto"
+                    >
+                      <mpath href={`#path2-${index}`} />
+                    </animateMotion>
+
+                    {/* Animate the width */}
+                    <animate
+                      attributeName="width"
+                      values="10;120;40"
+                      keyTimes="0;0.5;1"
+                      dur="30s"
+                      repeatCount="indefinite"
+                      begin={`${i * 3.5 - 45}s`}
+                    />
+
+                    {/* Animate the height */}
+                    <animate
+                      attributeName="height"
+                      values="10;120;40"
+                      keyTimes="0;0.5;1"
+                      dur="30s"
+                      repeatCount="indefinite"
+                      begin={`${i * 3.5 - 45}s`}
+                    />
+
+                    {/* Adjust vertical position of the images */}
+                    <animateTransform
+                      attributeName="transform"
+                      type="translate"
+                      values={"0 -5; 0 -60; 0 -20"}
+                      keyTimes="0;0.5;1"
+                      dur="30s"
+                      repeatCount="indefinite"
+                      begin={`${i * 3.5 - 45}s`}
                     />
                   </>
                 )}
@@ -250,12 +288,13 @@ const AnimatedPath: React.FC = () => {
           href={Logo}
           width="140"
           height="140"
-          x="735"
-          y="325"
+          x="725"
+          y="375"
           className="z-[99999] opacity-100"
           style={{ pointerEvents: "none" }}
         />
       </svg>
+      <div className="absolute z-40 left-0 top-20 w-32 h-full bg-gradient-to-r from-[#021734] to-transparent"></div>
     </div>
   );
 };

@@ -6,7 +6,8 @@ import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
-import Slack from "../assets/icons/Slack_Light_Icon.svg";
+import Facebook from "../assets/icons/facebook.svg";
+// import Youtube from "../assets/icons/Youtube.svg";
 
 const Header = () => {
   return (
@@ -155,26 +156,36 @@ const Header = () => {
             <span className="sm:w-full flex justify-end items-end text-white mt-7">
               <div className="mx-auto sm:mx-0 lg:mx-0 flex space-x-4 bg-[#021734] bg-opacity-80 backdrop-blur-[5px] rounded-3xl py-2 px-3.5">
                 <Link
-                  to="https://www.linkedin.com/company/tuneup-technologies"
+                  to={"https://www.linkedin.com/company/tuneup-technologies"}
                   target="_blank"
                 >
-                  <img src={LinkedIn} alt="" className="w-5" />
+                  <img src={LinkedIn} alt="" className="w-5 hover:opacity-90" />
                 </Link>
                 <Link
-                  to="https://www.instagram.com/tuneup_technologies"
+                  to={"https://www.instagram.com/tuneup_technologies"}
                   target="_blank"
                 >
-                  <img src={Instagram} alt="" className="w-5" />
+                  <img
+                    src={Instagram}
+                    alt=""
+                    className="w-5 hover:opacity-90"
+                  />
                 </Link>
-                <Link to="https://github.com/TuneUp-Dev" target="_blank">
-                  <img src={Github} alt="" className="w-5" />
+                <Link
+                  to={"https://www.instagram.com/tuneup_technologies"}
+                  target="_blank"
+                >
+                  <img src={Facebook} alt="" className="w-5 hover:opacity-90" />
                 </Link>
-                <Link to="#" target="_blank">
-                  <img src={Slack} alt="" className="w-5" />
+                <Link to={"https://github.com/TuneUp-Dev"} target="_blank">
+                  <img src={Github} alt="" className="w-5 hover:opacity-90" />
                 </Link>
-                <Link to="#" target="_blank">
-                  <img src={Mail} alt="" className="w-5" />
+                <Link to={"mailto:info@tuneuptech.in"} target="_blank">
+                  <img src={Mail} alt="" className="w-5 hover:opacity-90" />
                 </Link>
+                {/* <Link to={"https://www.youtube.com/@TuneUpedu"} target="_blank">
+                  <img src={Youtube} alt="" className="w-5 hover:opacity-90" />
+                </Link> */}
               </div>
             </span>
           </div>
