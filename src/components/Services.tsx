@@ -1,5 +1,4 @@
 import { ReactComponent as Logo } from "../assets/icons/TuneUp_Favicon.svg";
-import Screenshot1 from "../assets/screenshot1.png";
 import React from "react";
 
 interface ServicesChildProps {
@@ -66,7 +65,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
               <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
-                  src={Screenshot1}
+                  src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                   alt=""
                   className="unselect w-full h-ful lg:pl-0l"
                 />
@@ -102,7 +101,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
               <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
-                  src={Screenshot1}
+                  src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                   alt=""
                   className="unselect w-full h-ful lg:pl-0l"
                 />
@@ -138,7 +137,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
               <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
-                  src={Screenshot1}
+                  src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                   alt=""
                   className="unselect w-full h-ful lg:pl-0l"
                 />
@@ -174,7 +173,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
               <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
-                  src={Screenshot1}
+                  src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                   alt=""
                   className="unselect w-full h-ful lg:pl-0l"
                 />
@@ -209,7 +208,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
               <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
                 <img
-                  src={Screenshot1}
+                  src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                   alt=""
                   className="unselect w-full xl:pl-10"
                 />
@@ -292,35 +291,35 @@ const Services: React.FC<ServicesChildProps> = ({
           <div className="w-full h-full hidden xl:block">
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
               <img
-                src={Screenshot1}
+                src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                 alt=""
                 className="unselect w-full xl:pl-10"
               />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
               <img
-                src={Screenshot1}
+                src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                 alt=""
                 className="unselect w-full xl:pl-10"
               />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
               <img
-                src={Screenshot1}
+                src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                 alt=""
                 className="unselect w-full xl:pl-10"
               />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
               <img
-                src={Screenshot1}
+                src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                 alt=""
                 className="unselect w-full xl:pl-10"
               />
             </div>
             <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
               <img
-                src={Screenshot1}
+                src={"https://i.ibb.co/4KWh1pH/screenshot1.png"}
                 alt=""
                 className="unselect w-full xl:pl-10"
               />
