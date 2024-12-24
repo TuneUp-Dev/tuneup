@@ -74,7 +74,7 @@ const iconUrls2 = [
   Icon20,
 ];
 
-const iconOrder = [0, 2, 7, 4, 1, 3, 8, 6, 9, 5];
+const iconOrder = [0, 2, 4, 1, 3, 8, 6, 5, 7, 9];
 
 const AnimatedPath: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
