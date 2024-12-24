@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMenuText, setShowMenuText] = useState(true);
   const [activeSection, setActiveSection] = useState("");
-  const sectionRefs = useRef({});
+  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const links = [
@@ -147,9 +147,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        className={`fixed top-5 md:top-7 lg:top-5 z-[99999] w-full flex flex-col items-center`}
-      >
+      <div className={`fixed top-5 md:top-7 lg:top-5 z-[99999] w-full`}>
         {/* Top Section */}
         <div className="w-full max-w-[1440px] mx-auto max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
           {/* Logo Section */}
@@ -231,7 +229,7 @@ const Navbar = () => {
 
           {/* Desktop View Nav Link */}
           <ul
-            className={`hidden lg:flex gap-x-9 ml-12 py-2 px-8 rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+            className={`hidden lg:flex gap-x-9 lg:ml-4 py-2 px-8 rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
           >
             {links.map((link) => (
               <li
