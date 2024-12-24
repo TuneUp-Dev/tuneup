@@ -52,10 +52,10 @@ const Contact = () => {
         </span>
         <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
           <div className="w-full flex flex-col md:justify-start mt-4 items-start">
-            <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
+            <p className="h-14 md:h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[52px] w-full leading-[46px] md:leading-0 lg:leading-[60px] inter-bold">
               Let’s work together
             </p>
-            <p className="mt-4 lg:mt-3 lg:w-[900px] text-[14px] lg:text-[16px]">
+            <p className="text-[13.5px] lg:text-[18px] open-sans-normal text-slate-600 mt-3 lg:mt-2 w-full">
               Want to discuss an opportunity to create something great? I’m
               ready when you are.
             </p>
@@ -95,161 +95,176 @@ const Contact = () => {
               <img src={Close} className="w-3" alt="" />
             </button>
 
-            <div className="w-full h-full rounded-t-2xl rounded-b-lg flex flex-col sm:flex-row justify-between items-center overflow-y-auto scroll-smooth transition-all duration-500 ease-linear gap-y-10 gap-x-6">
-              <div className="w-full lg:min-w-[280px] h-full rounded-2xl p-3 pb-5 bg-slate-100">
-                <div className="w-full h-[40px] overflow-hidden flex items-center justify-start">
-                  <img
-                    className="w-[120px] brightness-[90%]"
-                    src={Logo}
-                    alt=""
-                  />
-                </div>
-                <div className="w-full mt-4 lg:mt-5">
-                  <h1 className="Geist-bold">Chat with us</h1>
-                  <p className="text-[11px] font-medium text-neutral-500">
-                    Speak to our friendly team via whatsapp chat.
-                  </p>
-                  <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
-                    <Link to="">
-                      <p className="flex gap-x-2">
-                        <img src={Whatsapp} alt="" className="w-[15px]" /> Join
-                        our a Whatsapp group
-                      </p>
-                    </Link>
-                    <Link to="https://www.linkedin.com/company/tuneup-technologies">
-                      <p className="flex gap-x-2">
-                        <img src={LinkedIn} alt="" className="w-[15px]" />{" "}
-                        Message us on linkedIn
-                      </p>
-                    </Link>
-                  </div>
-                </div>
-                <div className="w-full mt-5 lg:mt-7">
-                  <h1 className="Geist-bold">Call us</h1>
-                  <p className="text-[11px] font-medium text-neutral-500">
-                    Call our team Mon-Fri from 10am to 6pm.
-                  </p>
-                  <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
-                    <p className="flex gap-x-2">
-                      <img src={Call} alt="" className="w-[15px]" /> +91
-                      9944500207
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-5 lg:mt-7">
-                  <h1 className="Geist-bold">Connect with us</h1>
-                  <p className="text-[11px] font-medium text-neutral-500">
-                    Connect with our team on social platforms.
-                  </p>
-                  <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[11px]">
-                    <Link
-                      to={
-                        "https://www.linkedin.com/company/tuneup-technologies"
-                      }
-                      className="flex justify-start gap-x-2 w-[140px]"
-                    >
-                      <img src={LinkedIn} alt="" className="w-[15px]" /> TuneUp
-                      Technologies
-                    </Link>
-                    <Link
-                      to={""}
-                      className="flex justify-start gap-x-2 w-[150px]"
-                    >
-                      <img src={Instagram} alt="" className="w-[15px]" /> TuneUp
-                      Technologies
-                    </Link>
-                    <Link
-                      to={"https://github.com/TuneUp-Dev"}
-                      className="flex justify-start gap-x-2 w-[90px]"
-                    >
-                      <img src={Github} alt="" className="w-[15px]" />{" "}
-                      TuneUp-Dev
-                    </Link>
-                    <Link
-                      to={"info@tuneuptech.in"}
-                      className="flex justify-start gap-x-2 w-[130px]"
-                    >
-                      <img src={Mail} alt="" className="w-[15px]" />{" "}
-                      info@tuneuptech.in
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <form
-                ref={formRef}
-                className="lg:p-4 w-full flex flex-col gap-y-4"
+            {showArrow && (
+              <div
+                className={`w-full h-auto flex justify-end items-end transition-all duration-1000 ease-in-out ${buttonFade}`}
               >
-                <div className="flex flex-col gap-y-1">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-semibold text-gray-700"
-                  >
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your name"
-                    className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-1">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-semibold text-gray-700"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-1">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-semibold text-gray-700"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    placeholder="Enter your phone number"
-                    className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
-                  />
-                </div>
-                <div className="flex flex-col gap-y-1">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-semibold text-gray-700"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    placeholder="Write message here"
-                    className="px-3 lg:px-4 py-2 lg:py-3 h-[100px] lg:h-[130px] text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all resize-none"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full mt-3 py-3 bg-gradient-to-r text-[17px] sm:text-[15px] lg:text-[17px] from-blue-500 via-[#021734] to-blue-500 text-white rounded-lg shadow-md hover:opacity-90 transition-all"
+                <button
+                  className="sm:hidden absolute z-50 bottom-4 right-4 text-slate-500 px-3 gap-x-0.5 min-w-10 max-w-[200px] h-9 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-blue-50 bg-opacity-80 hover:text-slate-800"
+                  onClick={scrollToForm}
                 >
-                  Submit
-                  <img
-                    className="w-7 -ml-3 animate-left-right"
-                    src={Code}
-                    alt=""
-                  />
-                </Button>
-              </form>
+                  <img src={Arrow2} className="w-5" alt="Scroll Down" />
+                  <p className="">Scroll</p>
+                </button>
+              </div>
+            )}
+
+              <div className="w-full h-full rounded-t-2xl rounded-b-lg flex flex-col sm:flex-row justify-between items-center overflow-y-auto scroll-smooth transition-all duration-500 ease-linear gap-y-10 gap-x-6">
+                <div className="w-full lg:min-w-[280px] h-full rounded-2xl p-3 pb-5 bg-slate-100">
+                  <div className="w-full h-[40px] overflow-hidden flex items-center justify-start">
+                    <img
+                      className="w-[120px] brightness-[90%]"
+                      src={Logo}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-full mt-4 lg:mt-5">
+                    <h1 className="Geist-bold">Chat with us</h1>
+                    <p className="text-[11px] font-medium text-neutral-500">
+                      Speak to our friendly team via chat.
+                    </p>
+                    <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
+                      <Link to="">
+                        <p className="flex gap-x-2">
+                          <img src={Whatsapp} alt="" className="w-[15px]" />{" "}
+                          Start the Conversation
+                        </p>
+                      </Link>
+                      <Link to="https://www.linkedin.com/company/tuneup-technologies">
+                        <p className="flex gap-x-2">
+                          <img src={LinkedIn} alt="" className="w-[15px]" />{" "}
+                          Message us on linkedIn
+                        </p>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="w-full mt-5 lg:mt-7">
+                    <h1 className="Geist-bold">Call us</h1>
+                    <p className="text-[11px] font-medium text-neutral-500">
+                      Call our team Mon-Fri from 10am to 6pm.
+                    </p>
+                    <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
+                      <p className="flex gap-x-2">
+                        <img src={Call} alt="" className="w-[15px]" /> +91
+                        9944500207
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-5 lg:mt-7">
+                    <h1 className="Geist-bold">Connect with us</h1>
+                    <p className="text-[11px] font-medium text-neutral-500">
+                      Connect with our team on social platforms.
+                    </p>
+                    <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[11px]">
+                      <Link
+                        to={
+                          "https://www.linkedin.com/company/tuneup-technologies"
+                        }
+                        className="flex justify-start gap-x-2 w-[140px]"
+                      >
+                        <img src={LinkedIn} alt="" className="w-[15px]" />{" "}
+                        TuneUp Technologies
+                      </Link>
+                      <Link
+                        to={"https://www.instagram.com/tuneup_technologies"}
+                        className="flex justify-start gap-x-2 w-[150px]"
+                      >
+                        <img src={Instagram} alt="" className="w-[15px]" />{" "}
+                        TuneUp Technologies
+                      </Link>
+                      <Link
+                        to={"https://github.com/TuneUp-Dev"}
+                        className="flex justify-start gap-x-2 w-[90px]"
+                      >
+                        <img src={Github} alt="" className="w-[15px]" />{" "}
+                        TuneUp-Dev
+                      </Link>
+                      <Link
+                        to={"info@tuneuptech.in"}
+                        className="flex justify-start gap-x-2 w-[130px]"
+                      >
+                        <img src={Mail} alt="" className="w-[15px]" />{" "}
+                        info@tuneuptech.in
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <form
+                  ref={formRef}
+                  className="lg:p-4 w-full flex flex-col gap-y-4"
+                >
+                  <div className="flex flex-col gap-y-1">
+                    <label
+                      htmlFor="name"
+                      className="text-sm font-semibold text-gray-700"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Enter your name"
+                      className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-y-1">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-semibold text-gray-700"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-y-1">
+                    <label
+                      htmlFor="phone"
+                      className="text-sm font-semibold text-gray-700"
+                    >
+                      Phone
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-y-1">
+                    <label
+                      htmlFor="phone"
+                      className="text-sm font-semibold text-gray-700"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      placeholder="Write message here"
+                      className="px-3 lg:px-4 py-2 lg:py-3 h-[100px] lg:h-[130px] text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all resize-none"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    className="w-full mt-3 py-3 bg-gradient-to-r text-[17px] sm:text-[15px] lg:text-[17px] from-blue-500 via-[#021734] to-blue-500 text-white rounded-lg shadow-md hover:opacity-90 transition-all"
+                  >
+                    Submit
+                    <img
+                      className="w-7 -ml-3 animate-left-right"
+                      src={Code}
+                      alt=""
+                    />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 };
