@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 import Code from "../assets/icons/Code_DarkBlue.svg";
 import React from "react";
 
-const Header = () => {
+const Header = ({ hapticFeedback }) => {
   return (
     <>
       <div
@@ -52,19 +52,24 @@ const Header = () => {
             and enterprises.
           </p>
           {/* Updated button with anchor link for smooth scroll */}
-          <a href="#about" className="block lg:hidden">
-            <Button
-              color="primary"
-              className="rounded-full w-[150px] lg:w-[210px] h-[40px] lg:h-[56px] mt-10 text-blue-950 text-[14px] lg:text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"
-            >
-              Let's Tune
-              <img
-                className="unselect w-5 lg:w-9 -ml-2.5 lg:-ml-3 animate-left-right"
-                src={Code}
-                alt=""
-              />
-            </Button>
-          </a>
+
+          <Button
+            color="primary"
+            onClick={() => {
+              hapticFeedback();
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="lg:hidden rounded-full w-[150px] lg:w-[210px] h-[40px] lg:h-[56px] mt-10 text-blue-950 text-[14px] lg:text-[20px] bg-blue-50 bg-opacity-10 border-[1.5px] border-blue-500 border-opacity-20 backdrop-blur-[10px] nunito-medium cursor-pointer"
+          >
+            Let's Tune
+            <img
+              className="unselect w-5 lg:w-9 -ml-2.5 lg:-ml-3 animate-left-right"
+              src={Code}
+              alt=""
+            />
+          </Button>
         </div>
       </div>
     </>

@@ -131,43 +131,39 @@ const Home = () => {
   }, []);
 
   // Haptic Feedback
-  const hapticFeedback = () => {
-    const clickSound = new Audio(
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754240/iknggfs6ed1jir5cv5bq.mp3"
-    );
-    clickSound.load();
-    clickSound.volume = 1;
-    clickSound.play();
+  const playAudioWithVibration = (audioUrl: string, volume: number = 1) => {
+    const audio = new Audio(audioUrl);
+    audio.load();
+    audio.volume = volume;
+    audio.play();
 
     if (navigator.vibrate) {
-      navigator.vibrate(100);
+      navigator.vibrate(30);
     }
+  };
+
+  const hapticFeedback = () => {
+    const storedAudio = localStorage.getItem("hapticFeedbackAudio");
+    const audioUrl =
+      storedAudio ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754240/iknggfs6ed1jir5cv5bq.mp3";
+    playAudioWithVibration(audioUrl);
   };
 
   const logoFeedback = () => {
-    const clickSound = new Audio(
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754823/lmuj0al8mbadtaaacgoo.wav"
-    );
-    clickSound.load();
-    clickSound.volume = 0.5;
-    clickSound.play();
-
-    if (navigator.vibrate) {
-      navigator.vibrate(100);
-    }
+    const storedAudio = localStorage.getItem("logoFeedbackAudio");
+    const audioUrl =
+      storedAudio ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754823/lmuj0al8mbadtaaacgoo.wav";
+    playAudioWithVibration(audioUrl, 0.5);
   };
 
   const linkFeedback = () => {
-    const clickSound = new Audio(
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754239/q0buu5k7pssyejpomxhd.mp3"
-    );
-    clickSound.load();
-    clickSound.volume = 0.5;
-    clickSound.play();
-
-    if (navigator.vibrate) {
-      navigator.vibrate(100);
-    }
+    const storedAudio = localStorage.getItem("linkFeedbackAudio");
+    const audioUrl =
+      storedAudio ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754239/q0buu5k7pssyejpomxhd.mp3";
+    playAudioWithVibration(audioUrl, 0.5);
   };
 
   return (
@@ -177,7 +173,7 @@ const Home = () => {
         className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out"
       >
         <Navbar hapticFeedback={hapticFeedback} logoFeedback={logoFeedback} />
-        <Header />
+        <Header hapticFeedback={hapticFeedback} />
         <About linkFeedback={linkFeedback} />
         <Services
           pathRef={pathRef}

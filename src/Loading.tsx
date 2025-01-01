@@ -28,10 +28,10 @@ const Loading = ({ videoRef }) => {
   if (isMobile) {
     return (
       <>
-        <div className="fixed w-full h-screen bg-black flex justify-center items-center">
+        <div className="fixed w-full h-full bg-black flex justify-center items-center overflow-hidden">
           <video
             ref={videoRef}
-            className="block md:hidden w-auto h-full max-h-screen object-cover cursor-pointer"
+            className="block md:hidden w-auto h-full max-h-full object-cover cursor-pointer"
             autoPlay
             muted={isMuted}
             onClick={handleMuteToggle}
@@ -40,7 +40,6 @@ const Loading = ({ videoRef }) => {
               src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
               type="video/mp4"
             />
-            Your browser does not support the video tag.
           </video>
         </div>
       </>
@@ -48,10 +47,10 @@ const Loading = ({ videoRef }) => {
   } else {
     return (
       <>
-        <div className="fixed w-full h-screen bg-black flex justify-center items-center">
+        <div className="fixed w-full h-full bg-black flex justify-center items-center">
           <video
             ref={videoRef}
-            className="hidden md:block w-full h-auto max-h-screen object-cover cursor-pointer"
+            className="hidden md:block w-full h-auto max-h-full object-cover cursor-pointer"
             autoPlay
             muted={isMuted}
             onClick={handleMuteToggle}
@@ -60,7 +59,6 @@ const Loading = ({ videoRef }) => {
               src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735649009/keovvbakhnlhuwyfqolv.mp4"
               type="video/mp4"
             />
-            Your browser does not support the video tag.
           </video>
         </div>
       </>

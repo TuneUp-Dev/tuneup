@@ -80,11 +80,11 @@ const Internship = ({ hapticFeedback }) => {
 
   return (
     <>
-      <div
-        id="internship"
-        className="px-[16px] pt-24 sm:px-[24px] md:px-[40px] lg:px-[50px] xl:px-[66px]"
-      >
-        <div className="bg-[#021734] rounded-3xl py-8 sm:py-10 md:py-12 lg:py-14">
+      <div className="px-[16px] pt-24 sm:px-[24px] md:px-[40px] lg:px-[50px] xl:px-[66px]">
+        <div
+          id="internship"
+          className="bg-[#021734] rounded-3xl py-8 sm:py-10 md:py-12 lg:py-14"
+        >
           <div className="mx-auto w-full px-4 md:px-8 lg:px-10 xl:px-12">
             <div className="w-auto mx-auto flex flex-col lg:flex-row justify-between gap-y-6">
               <div className="pt-2 text-center md:text-start">
