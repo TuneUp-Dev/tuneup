@@ -6,7 +6,7 @@ import Code from "../assets/icons/Code_DarkBlue.svg";
 import CodeLeft from "../assets/icons/Code_Left.svg";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ hapticFeedback, logoFeedback }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMenuText, setShowMenuText] = useState(true);
   const [activeSection, setActiveSection] = useState("");
@@ -151,16 +151,18 @@ const Navbar = () => {
         {/* Top Section */}
         <div className="w-full max-w-[1440px] mx-auto max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
           {/* Logo Section */}
-          <div
-            className={`w-[110px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
-            onClick={scrollToTop}
-          >
-            <img
-              className="unselect w-full h-auto object-contain brightness-[90%]"
-              src={Logo}
-              alt="Logo"
-            />
-          </div>
+          <span onClick={logoFeedback}>
+            <div
+              className={`w-[110px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+              onClick={scrollToTop}
+            >
+              <img
+                className="unselect w-full h-auto object-contain brightness-[90%]"
+                src={Logo}
+                alt="Logo"
+              />
+            </div>{" "}
+          </span>
 
           {/* Menu Icon (Hamburger) */}
           <div
@@ -220,7 +222,7 @@ const Navbar = () => {
                   }`}
                   onClick={() => handleScrollToSection(link.id)}
                 >
-                  {link.name}
+                  <span onClick={hapticFeedback}>{link.name}</span>
                 </li>
               ))}
             </div>
@@ -245,7 +247,7 @@ const Navbar = () => {
                 }`}
                 onClick={() => handleScrollToSection(link.id)}
               >
-                {link.name}
+                <span onClick={hapticFeedback}>{link.name}</span>
               </li>
             ))}
           </ul>
@@ -255,6 +257,7 @@ const Navbar = () => {
             <Button
               color="primary"
               variant="bordered"
+              onClick={hapticFeedback}
               className={`rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
             >
               <img

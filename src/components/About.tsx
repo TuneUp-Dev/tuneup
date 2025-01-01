@@ -6,7 +6,7 @@ import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
 // import Youtube from "../assets/icons/Youtube.svg";
 
-const About = () => {
+const About = ({ linkFeedback }) => {
   return (
     <>
       {/* Second Container */}
@@ -90,6 +90,7 @@ const About = () => {
                 <Link
                   to={"https://www.linkedin.com/company/tuneup-technologies"}
                   target="_blank"
+                  onClick={linkFeedback}
                 >
                   <img
                     src={LinkedIn}
@@ -100,6 +101,7 @@ const About = () => {
                 <Link
                   to={"https://www.instagram.com/tuneup_technologies"}
                   target="_blank"
+                  onClick={linkFeedback}
                 >
                   <img
                     src={Instagram}
@@ -107,21 +109,29 @@ const About = () => {
                     className="unselect w-5 hover:opacity-90"
                   />
                 </Link>
-                <Link to={"https://github.com/TuneUp-Dev"} target="_blank">
+                <Link
+                  to={"https://github.com/TuneUp-Dev"}
+                  target="_blank"
+                  onClick={linkFeedback}
+                >
                   <img
                     src={Github}
                     alt=""
                     className="unselect w-5 hover:opacity-90"
                   />
                 </Link>
-                <Link to={"mailto:info@tuneuptech.in"} target="_blank">
+                <Link
+                  to={"mailto:info@tuneuptech.in"}
+                  target="_blank"
+                  onClick={linkFeedback}
+                >
                   <img
                     src={Mail}
                     alt=""
                     className="unselect w-5 hover:opacity-90"
                   />
                 </Link>
-                {/* <Link to={"https://www.youtube.com/@TuneUpedu"} target="_blank">
+                {/* <Link to={"https://www.youtube.com/@TuneUpedu"} target="_blank" onClick={linkFeedback}>
                   <img src={Youtube} alt="" className="unselect w-5 hover:opacity-90" />
                 </Link> */}
               </div>
