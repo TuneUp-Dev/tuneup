@@ -40,7 +40,7 @@ function App() {
       {!isVideoPlayed ? (
         <Loading videoRef={videoRef} />
       ) : isLoading ? (
-        <div className="fixed z-[999999999] w-full h-screen flex justify-center items-center bg-[#d7e1ef]">
+        <div className="fixed z-[999999999] w-full h-full flex justify-center items-center bg-[#d7e1ef]">
           <Spinner size="md" color="primary" className="brightness-[40%]" />
         </div>
       ) : (

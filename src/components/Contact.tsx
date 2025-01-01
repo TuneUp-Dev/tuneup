@@ -59,24 +59,21 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
               Want to discuss an opportunity to create something great? I’m
               ready when you are.
             </p>
-            <span onClick={hapticFeedback}>
-              <Button
-                className="bg-white px-0 border-[1.5px] border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
-                onClick={() => setShowForm(true)}
-              >
-                <span
-                  className="w-full h-full flex justify-center items-center py-3 gap-x-2"
-                  onClick={hapticFeedback}
-                >
-                  Get in touch
-                  <img
-                    className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
-                    src={Code}
-                    alt=""
-                  />
-                </span>
-              </Button>
-            </span>
+
+            <Button
+              className="bg-white border-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
+              onClick={() => {
+                setShowForm(true);
+                hapticFeedback();
+              }}
+            >
+              Get in touch
+              <img
+                className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
+                src={Code}
+                alt=""
+              />
+            </Button>
           </div>
           <div className="relative mx-auto w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-350px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-200px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
             <Lottie
@@ -95,14 +92,15 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
           className={`fixed inset-0 z-[99999] flex flex-col sm:flex-row items-center justify-center bg-black bg-opacity-50 ${fadeClass}`}
         >
           <div className="bg-white p-4 lg:p-5 rounded-2xl lg:rounded-3xl shadow-lg relative w-[90vw] lg:w-[900px] max-h-[88%] lg:max-h-[72vh] h-auto lg:min-h-[570px] lg:h-[570px]">
-            <span onClick={hapticFeedback}>
-              <button
-                className="absolute top-2.5 right-2.5 lg:top-4 lg:right-5 text-slate-500 w-6 h-6 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-slate-100 hover:text-slate-800"
-                onClick={() => setShowForm(false)}
-              >
-                <img src={Close} className="unselect w-3" alt="" />
-              </button>
-            </span>
+            <button
+              className="absolute top-2.5 right-2.5 lg:top-4 lg:right-5 text-slate-500 w-6 h-6 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-slate-100 hover:text-slate-800"
+              onClick={() => {
+                setShowForm(false);
+                hapticFeedback();
+              }}
+            >
+              <img src={Close} className="unselect w-3" alt="" />
+            </button>
 
             <div className="w-full h-full rounded-t-2xl rounded-b-lg flex flex-col sm:flex-row justify-between items-center overflow-y-auto scroll-smooth transition-all duration-500 ease-linear gap-y-10 gap-x-6">
               <div className="w-full lg:min-w-[280px] h-full rounded-2xl p-3 pb-5 bg-slate-100">
@@ -283,19 +281,14 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
 
                 <Button
                   type="submit"
-                  className="w-full mt-3 px-0 bg-gradient-to-r text-[17px] sm:text-[15px] lg:text-[17px] from-blue-500 via-[#021734] to-blue-500 text-white rounded-lg shadow-md hover:opacity-90 transition-all duration-500 ease-linear"
+                  className="w-full mt-3 py-3 bg-gradient-to-r text-[17px] sm:text-[15px] lg:text-[17px] from-blue-500 via-[#021734] to-blue-500 text-white rounded-lg shadow-md hover:opacity-90 transition-all duration-500 ease-linear"
                 >
-                  <span
-                    className="w-full h-full flex justify-center items-center py-3"
-                    onClick={hapticFeedback}
-                  >
-                    Submit
-                    <img
-                      className="unselect w-7 -ml-3 animate-left-right"
-                      src={Code}
-                      alt=""
-                    />
-                  </span>
+                  Submit
+                  <img
+                    className="unselect w-7 -ml-3 animate-left-right"
+                    src={Code}
+                    alt=""
+                  />
                 </Button>
               </form>
             </div>
