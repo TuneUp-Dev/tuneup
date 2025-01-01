@@ -1,15 +1,71 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Loading = () => {
-  return (
-    <div className="fixed bg-black w-full h-screen overflow-hidden flex justify-center items-center">
-      <video
-        src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735649009/keovvbakhnlhuwyfqolv.mp4"
-        autoPlay
-        className="w-full unselect brightness-[90%] hue-rotate-[-5deg] saturate-[95%]"
-      />
-    </div>
-  );
+const Loading = ({ videoRef }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const handleMuteToggle = () => {
+    setIsMuted((prevState) => !prevState);
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+    }
+  };
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
+  if (isMobile) {
+    return (
+      <>
+        <div className="fixed w-full h-screen bg-black flex justify-center items-center">
+          <video
+            ref={videoRef}
+            className="block md:hidden w-auto h-full max-h-screen object-cover cursor-pointer"
+            autoPlay
+            muted={isMuted}
+            onClick={handleMuteToggle}
+          >
+            <source
+              src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="fixed w-full h-screen bg-black flex justify-center items-center">
+          <video
+            ref={videoRef}
+            className="hidden md:block w-full h-auto max-h-screen object-cover cursor-pointer"
+            autoPlay
+            muted={isMuted}
+            onClick={handleMuteToggle}
+          >
+            <source
+              src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735649009/keovvbakhnlhuwyfqolv.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </>
+    );
+  }
 };
 
 export default Loading;

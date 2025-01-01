@@ -130,15 +130,55 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Haptic Feedback
+  const hapticFeedback = () => {
+    const clickSound = new Audio(
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754240/iknggfs6ed1jir5cv5bq.mp3"
+    );
+    clickSound.load();
+    clickSound.volume = 1;
+    clickSound.play();
+
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+  };
+
+  const logoFeedback = () => {
+    const clickSound = new Audio(
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754823/lmuj0al8mbadtaaacgoo.wav"
+    );
+    clickSound.load();
+    clickSound.volume = 0.5;
+    clickSound.play();
+
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+  };
+
+  const linkFeedback = () => {
+    const clickSound = new Audio(
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754239/q0buu5k7pssyejpomxhd.mp3"
+    );
+    clickSound.load();
+    clickSound.volume = 0.5;
+    clickSound.play();
+
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+  };
+
   return (
     <>
       <div
         id="top"
         className="max-w-full h-auto scroll-smooth transition-all duration-500 ease-in-out"
       >
-        <Navbar />
+        <Navbar hapticFeedback={hapticFeedback} logoFeedback={logoFeedback} />
         <Header />
-        <About />
+        <About linkFeedback={linkFeedback} />
         <Services
           pathRef={pathRef}
           iconPosition={iconPosition}
@@ -146,8 +186,8 @@ const Home = () => {
           tailLength={tailLength}
         />
         <WCU />
-        <Internship />
-        <Contact />
+        <Internship hapticFeedback={hapticFeedback} />
+        <Contact hapticFeedback={hapticFeedback} linkFeedback={linkFeedback} />
         <AnimatedPath />
         <Footer />
       </div>

@@ -3,7 +3,6 @@ import LinkedIn from "../assets/icons/LikedIn_Light_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Light_Icon.svg";
 import Github from "../assets/icons/Github_Light_Icon.svg";
 import Mail from "../assets/icons/Mail_Light_Icon.svg";
-import Facebook from "../assets/icons/facebook.svg";
 // import Youtube from "../assets/icons/Youtube.svg";
 import Logo from "../assets/icons/TuneUp_Icon.svg";
 import { Link } from "react-router-dom";
@@ -205,7 +204,7 @@ const Footer = () => {
         </div> */}
 
         {/* Text */}
-        <h1 className="hidden md:block md:-mt-36 lg:-mt-52 xl:-mt-52 md:text-[140px] lg:text-[200px] xl:text-[280px] text-white text-opacity-[7%] text-center montserrat-bold">
+        <h1 className="hidden md:block md:-mt-36 lg:-mt-52 xl:-mt-52 md:text-[140px] lg:text-[200px] xl:text-[260px] text-white text-opacity-[7%] text-center montserrat-bold">
           TuneUp
         </h1>
 
@@ -246,16 +245,6 @@ const Footer = () => {
               >
                 <img
                   src={Instagram}
-                  alt=""
-                  className="unselect w-5 hover:opacity-90"
-                />
-              </Link>
-              <Link
-                to={"https://www.instagram.com/tuneup_technologies"}
-                target="_blank"
-              >
-                <img
-                  src={Facebook}
                   alt=""
                   className="unselect w-5 hover:opacity-90"
                 />

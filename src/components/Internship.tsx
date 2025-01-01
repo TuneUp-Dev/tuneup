@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Code from "../assets/icons/Code_Blue.svg";
 import { Link } from "react-router-dom";
 
-const Internship = () => {
+const Internship = ({ hapticFeedback }) => {
   // Video data
   const videoData = [
     {
@@ -37,7 +37,7 @@ const Internship = () => {
     },
     {
       thumbnail:
-        "https://imgs.search.brave.com/pOaBQnGdotrnHtF_0NMASNCS6LazIYQ19AmbcrWTQmE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVjaHNtaXRoLmNv/bS9ibG9nL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzAyL1RT/Qy10aHVtYm5haWwt/ZXhhbXBsZS0xMDI0/eDU3Ni5wbmc",
+        "https://imgs.search.brave.com/BgCQBKiXf9HRy_UdSx-UwllEKoeXlkBKmPch_pAsb9o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3RmYXNzZXRz/Lm5ldC9oNmdvbzln/dzFoaDYvNjdrZVVo/UFhvY0p5dXd5QnJ3/bm1Qcy9lZmRlYzll/NTMzNzkyZjEyMzY0/NzAxM2FkZWJmMDU1/ZC9Zb3VUdWJlLVRo/dW1ibmFpbC1TaXpl/LTAzLmpwZz93PTE2/MDAmaD05MDAmZmw9/cHJvZ3Jlc3NpdmUm/cT03MCZmbT1qcGc",
       gradientText: "Digital",
       afterGradient: "Marketing",
       description:
@@ -126,7 +126,7 @@ const Internship = () => {
             {/* Infinite Card Scroller */}
             <div className="relative mt-8 sm:mt-10 md:mt-10">
               {/* Scroll Container */}
-              <div className="flex gap-x-7 overflow-x-scroll overflow-hidden custom-scrollbar cursor-grab snap-mandatory snap-x pb-5 rounded-lg">
+              <div className="flex gap-x-7 overflow-x-scroll overflow-hidden custom-scrollbar snap-mandatory snap-x pb-5 rounded-lg">
                 {/* Card Items */}
                 {[...Array(1)].map((_, index) => (
                   <>
@@ -157,10 +157,11 @@ const Internship = () => {
                             </p>
                           </div>
                           <Link
+                            onClick={hapticFeedback}
                             to={data.link}
                             className="text-blue-500 text-[15px] group-hover:underline group-hover:text-[#021734] flex gap-x-3 items-center poppins-medium transition-all duration-500 ease-in-out"
                           >
-                            Learn more
+                            Register Now
                             <img
                               className="unselect w-7 -ml-3 group-hover:brightness-0 group-hover:animate-left-right transition-all duration-500 ease-in-out"
                               src={Code}
