@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import WCU from "../components/WCU";
 import Internship from "../components/Internship";
 import Services from "../components/Services";
+import About from "../components/About";
 
 const Home = () => {
   const pathRef = useRef<SVGPathElement | null>(null);
@@ -137,6 +138,7 @@ const Home = () => {
       >
         <Navbar />
         <Header />
+        <About />
         <Services
           pathRef={pathRef}
           iconPosition={iconPosition}
