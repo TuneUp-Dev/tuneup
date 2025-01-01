@@ -1,29 +1,27 @@
 // eslint-disable-next-line
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.tsx", // Entry point of your app
+  entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "build"), // Output directory
-    filename: "bundle.js", // Output bundle file
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"], // Automatically resolve these extensions
-    fallback: {
-      process: require.resolve("process/browser"), // Provide a browser polyfill for process
-    },
+    extensions: [".tsx", ".ts", ".js"],
   },
-  mode: "production", // Change to 'development' if debugging
-  devtool: false, // Disable source maps; set to 'source-map' if debugging
+  mode: "production",
+  devtool: false,
   stats: {
-    warnings: false, // Suppress all warnings in the console
+    warnings: false,
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/, // Match .ts and .tsx files
-        exclude: /node_modules/, // Exclude node_modules
-        use: "ts-loader", // Use ts-loader for TypeScript
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: "ts-loader",
       },
       {
         test: /\.css$/,
@@ -31,11 +29,16 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/, // Exclude node_modules
+        exclude: /node_modules/,
         use: {
-          loader: "babel-loader", // Babel loader for JavaScript (optional)
+          loader: "babel-loader",
         },
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
+  ],
 };

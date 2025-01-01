@@ -16,7 +16,7 @@ const Navbar = () => {
   const links = [
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Repos", id: "repos" },
+    { name: "Intern", id: "internship" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -156,7 +156,7 @@ const Navbar = () => {
             onClick={scrollToTop}
           >
             <img
-              className="w-full h-auto object-contain brightness-[90%]"
+              className="unselect w-full h-auto object-contain brightness-[90%]"
               src={Logo}
               alt="Logo"
             />
@@ -168,7 +168,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <button className="flex items-center">
-              <img src={Arrow} className="w-9" alt="" />
+              <img src={Arrow} className="unselect w-9" alt="" />
               <p
                 className={`-ml-1.5 mr-2 text-[12px] text-blue-500 nunito-extrabold transition-all duration-500 ${
                   showMenuText ? "block translate-x-0" : "hidden -translate-x-2"
@@ -199,7 +199,11 @@ const Navbar = () => {
                 <div
                   className={`absolute h-[28px] right-[4px] shadow-sm w-[28px] rounded-full ${bgColor} border-[1px] border-opacity-10 border-blue-500 flex justify-center items-center`}
                 >
-                  <img src={Arrow} className="w-9 rotate-180 -mr-0.5" alt="" />
+                  <img
+                    src={Arrow}
+                    className="unselect w-9 rotate-180 -mr-0.5"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -254,12 +258,16 @@ const Navbar = () => {
               className={`rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
             >
               <img
-                className="w-6 -ml-3 animate-right-left"
+                className="unselect w-6 -ml-3 animate-right-left"
                 src={CodeLeft}
                 alt=""
               />
               Let's Tune!
-              <img className="w-6 -ml-3 animate-left-right" src={Code} alt="" />
+              <img
+                className="unselect w-6 -ml-3 animate-left-right"
+                src={Code}
+                alt=""
+              />
             </Button>
           </a>
         </div>

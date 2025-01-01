@@ -23,7 +23,7 @@ const WCU = () => {
           </p>
           <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[180px] flex flex-col lg:flex-row justify-between lg:items-start items-center gap-y-5 gap-x-7">
             <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
-              <img className="w-7 lg:w-9" src={Verified} alt="" />
+              <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   Expertise and Innovation{" "}
@@ -36,7 +36,7 @@ const WCU = () => {
               </div>
             </div>
             <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
-              <img className="w-7 lg:w-9" src={Verified} alt="" />
+              <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   Customized Approach
@@ -49,7 +49,7 @@ const WCU = () => {
               </div>
             </div>
             <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
-              <img className="w-7 lg:w-9" src={Verified} alt="" />
+              <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   End-to-End Support

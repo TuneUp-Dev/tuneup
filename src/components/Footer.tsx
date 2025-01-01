@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <>
       <footer className="w-full bg-[#021734] lg:pt-10 -mt-3">
-        <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
-          {/* Product Section */}
+        {/* Links and Pages */}
+        {/* <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Products In
@@ -47,7 +47,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Company
@@ -96,7 +95,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Connect Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Connect
@@ -149,7 +147,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Learn Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Learn
@@ -182,7 +179,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Alternatives Section */}
           <div>
             <h4 className="font-medium text-white lg:mb-1.5 xl:mb-2 text-[15px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Career
@@ -206,15 +202,24 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
+
+        {/* Text */}
+        <h1 className="hidden md:block md:-mt-36 lg:-mt-52 xl:-mt-52 md:text-[140px] lg:text-[200px] xl:text-[280px] text-white text-opacity-[7%] text-center montserrat-bold">
+          TuneUp
+        </h1>
 
         {/* Copyright and Social Links */}
-        <div className="w-full mt-6 lg:mt-0 pb-10 lg:pb-14">
-          <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start">
+        <div className="w-full pb-10 pt-10 lg:pb-14">
+          <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-end">
             {/* Logo and Caption */}
             <div className="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
               <div className="md:block flex flex-col items-center justify-center text-center md:text-left w-full md:w-[410px]">
-                <img className="w-12 cursor-pointer" src={Logo} alt="" />
+                <img
+                  className="unselect w-12 cursor-pointer"
+                  src={Logo}
+                  alt=""
+                />
                 <p className="text-slate-200 text-[11px] lg:text-[12px] xl:text-[13px] font-light mt-3">
                   ©{new Date().getFullYear()}{" "}
                   <b className="font-medium text-white">TuneUp Technologies</b>,
@@ -229,28 +234,48 @@ const Footer = () => {
                 to={"https://www.linkedin.com/company/tuneup-technologies"}
                 target="_blank"
               >
-                <img src={LinkedIn} alt="" className="w-5 hover:opacity-90" />
+                <img
+                  src={LinkedIn}
+                  alt=""
+                  className="unselect w-5 hover:opacity-90"
+                />
               </Link>
               <Link
                 to={"https://www.instagram.com/tuneup_technologies"}
                 target="_blank"
               >
-                <img src={Instagram} alt="" className="w-5 hover:opacity-90" />
+                <img
+                  src={Instagram}
+                  alt=""
+                  className="unselect w-5 hover:opacity-90"
+                />
               </Link>
               <Link
                 to={"https://www.instagram.com/tuneup_technologies"}
                 target="_blank"
               >
-                <img src={Facebook} alt="" className="w-5 hover:opacity-90" />
+                <img
+                  src={Facebook}
+                  alt=""
+                  className="unselect w-5 hover:opacity-90"
+                />
               </Link>
               <Link to={"https://github.com/TuneUp-Dev"} target="_blank">
-                <img src={Github} alt="" className="w-5 hover:opacity-90" />
+                <img
+                  src={Github}
+                  alt=""
+                  className="unselect w-5 hover:opacity-90"
+                />
               </Link>
               <Link to={"mailto:info@tuneuptech.in"} target="_blank">
-                <img src={Mail} alt="" className="w-5 hover:opacity-90" />
+                <img
+                  src={Mail}
+                  alt=""
+                  className="unselect w-5 hover:opacity-90"
+                />
               </Link>
               {/* <Link to={"https://www.youtube.com/@TuneUpedu"} target="_blank">
-                <img src={Youtube} alt="" className="w-5 hover:opacity-90" />
+                <img src={Youtube} alt="" className="unselect w-5 hover:opacity-90" />
               </Link> */}
             </div>
           </div>

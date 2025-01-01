@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@nextui-org/react";
 import Lottie from "react-lottie-player";
-import animationData from "../animations/Animation3.json";
+import animationData from "../animations/Animation.json";
 import Code from "../assets/icons/Code.svg";
 import LinkedIn from "../assets/icons/LikedIn_Icon.svg";
 import Instagram from "../assets/icons/Instagram_Icon.svg";
@@ -52,26 +52,26 @@ const Contact = () => {
         </span>
         <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
           <div className="w-full flex flex-col md:justify-start mt-4 items-start">
-            <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
+            <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[45px] xl:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
               Let’s work together
             </p>
-            <p className="mt-4 lg:mt-3 lg:w-[900px] text-[14px] lg:text-[16px]">
+            <p className="mt-4 lg:mt-2 xl:mt-3 lg:w-[900px] text-[14px] lg:text-[13px] xl:text-[16px]">
               Want to discuss an opportunity to create something great? I’m
               ready when you are.
             </p>
             <Button
-              className="bg-white border-[1.5px] border-slate-200 rounded-lg text-[13.5px] lg:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
+              className="bg-white border-[1.5px] border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
               onClick={() => setShowForm(true)}
             >
               Get in touch
               <img
-                className="w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
+                className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
                 src={Code}
                 alt=""
               />
             </Button>
           </div>
-          <div className="relative mx-auto w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:w-[800px] md:h-[100px] lg:h-[180px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
+          <div className="relative mx-auto w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-350px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-200px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
             <Lottie
               loop
               animationData={animationData}
@@ -92,14 +92,14 @@ const Contact = () => {
               className="absolute top-2.5 right-2.5 lg:top-4 lg:right-5 text-slate-500 w-6 h-6 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-slate-100 hover:text-slate-800"
               onClick={() => setShowForm(false)}
             >
-              <img src={Close} className="w-3" alt="" />
+              <img src={Close} className="unselect w-3" alt="" />
             </button>
 
             <div className="w-full h-full rounded-t-2xl rounded-b-lg flex flex-col sm:flex-row justify-between items-center overflow-y-auto scroll-smooth transition-all duration-500 ease-linear gap-y-10 gap-x-6">
               <div className="w-full lg:min-w-[280px] h-full rounded-2xl p-3 pb-5 bg-slate-100">
                 <div className="w-full h-[40px] overflow-hidden flex items-center justify-start">
                   <img
-                    className="w-[120px] brightness-[90%]"
+                    className="unselect w-[120px] brightness-[90%]"
                     src={Logo}
                     alt=""
                   />
@@ -112,13 +112,21 @@ const Contact = () => {
                   <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
                     <Link to="">
                       <p className="flex gap-x-2">
-                        <img src={Whatsapp} alt="" className="w-[15px]" /> Join
-                        our a Whatsapp group
+                        <img
+                          src={Whatsapp}
+                          alt=""
+                          className="unselect w-[15px]"
+                        />{" "}
+                        Join our a Whatsapp group
                       </p>
                     </Link>
                     <Link to="https://www.linkedin.com/company/tuneup-technologies">
                       <p className="flex gap-x-2">
-                        <img src={LinkedIn} alt="" className="w-[15px]" />{" "}
+                        <img
+                          src={LinkedIn}
+                          alt=""
+                          className="unselect w-[15px]"
+                        />{" "}
                         Message us on linkedIn
                       </p>
                     </Link>
@@ -131,8 +139,8 @@ const Contact = () => {
                   </p>
                   <div className="Geist-bold mt-3 flex flex-col gap-y-1 justify-start text-[12px]">
                     <p className="flex gap-x-2">
-                      <img src={Call} alt="" className="w-[15px]" /> +91
-                      9944500207
+                      <img src={Call} alt="" className="unselect w-[15px]" />{" "}
+                      +91 9944500207
                     </p>
                   </div>
                 </div>
@@ -148,28 +156,36 @@ const Contact = () => {
                       }
                       className="flex justify-start gap-x-2 w-[140px]"
                     >
-                      <img src={LinkedIn} alt="" className="w-[15px]" /> TuneUp
-                      Technologies
+                      <img
+                        src={LinkedIn}
+                        alt=""
+                        className="unselect w-[15px]"
+                      />{" "}
+                      TuneUp Technologies
                     </Link>
                     <Link
                       to={""}
                       className="flex justify-start gap-x-2 w-[150px]"
                     >
-                      <img src={Instagram} alt="" className="w-[15px]" /> TuneUp
-                      Technologies
+                      <img
+                        src={Instagram}
+                        alt=""
+                        className="unselect w-[15px]"
+                      />{" "}
+                      TuneUp Technologies
                     </Link>
                     <Link
                       to={"https://github.com/TuneUp-Dev"}
                       className="flex justify-start gap-x-2 w-[90px]"
                     >
-                      <img src={Github} alt="" className="w-[15px]" />{" "}
+                      <img src={Github} alt="" className="unselect w-[15px]" />{" "}
                       TuneUp-Dev
                     </Link>
                     <Link
                       to={"info@tuneuptech.in"}
                       className="flex justify-start gap-x-2 w-[130px]"
                     >
-                      <img src={Mail} alt="" className="w-[15px]" />{" "}
+                      <img src={Mail} alt="" className="unselect w-[15px]" />{" "}
                       info@tuneuptech.in
                     </Link>
                   </div>
@@ -240,7 +256,7 @@ const Contact = () => {
                 >
                   Submit
                   <img
-                    className="w-7 -ml-3 animate-left-right"
+                    className="unselect w-7 -ml-3 animate-left-right"
                     src={Code}
                     alt=""
                   />

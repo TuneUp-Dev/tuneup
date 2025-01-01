@@ -106,195 +106,199 @@ const AnimatedPath: React.FC = () => {
   }, []);
 
   return (
-    <div className="animation-container bg-[#021734] h-auto lg:min-h-[1000px] relative">
-      <p className="text-[26px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 lg:leading-[60px] pt-14 sm:pt-20 lg:pt-28 xl:pt-36 inter-medium">
-        Transforming Technology into Possibilities
-      </p>
-      <p className="w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
-        At TuneUp Technologies, what goes in as technology comes out as
-        opportunity, success, and growth. Together, let’s redefine what’s
-        possible in the digital world. Innovation starts here.
-      </p>
+    <div className="bg-[#021734] h-auto sm:min-h-[550px] md:min-h-[600px] lg:min-h-[1000px]">
+      <div className="z-10">
+        <p className="text-[24px] sm:text-[34px] md:text-[40px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 sm:leading-10 md:leading-[50px] lg:leading-[60px] pt-14 sm:pt-20 lg:pt-28 xl:pt-36 inter-bold">
+          Transforming Technology into Possibilities
+        </p>
+        <p className="w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
+          At TuneUp Technologies, what goes in as technology comes out as
+          opportunity, success, and growth. Together, let’s redefine what’s
+          possible in the digital world. Innovation starts here.
+        </p>
+      </div>
 
-      <div className="absolute z-40 right-0 top-20 w-32 h-full bg-gradient-to-l from-[#021734] to-transparent"></div>
-      <svg
-        ref={svgRef}
-        width="100%"
-        height="1000px"
-        viewBox="0 0 1590 1000"
-        xmlns="http://www.w3.org/2000/svg"
-        className="scale-[0.95] -mt-80 sm:-mt-68 md:-mt-[280px] lg:-mt-44"
-      >
-        {/* Define gradients */}
-        <defs>
-          {pathData1.map((_, index) => (
-            <linearGradient
-              key={`gradient-${index}`}
-              id={`gradient-${index}`}
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-            >
-              <stop offset="0%" stopColor="#021734" />
-              <stop offset="20%" stopColor="#2267b2" />
-              <stop offset="50%" stopColor="#0e57a5" />
-              <stop offset="80%" stopColor="#2267b2" />
-              <stop offset="100%" stopColor="#021734" />
-            </linearGradient>
+      <div className="relative lg:-mt-20 xl:-mt-32 w-full h-[260px] sm:h-[440px] md:h-[600px] lg:h-[700px] xl:h-[900px] overflow-hidden">
+        <div className="absolute z-40 right-0 top-0 w-32 h-full bg-gradient-to-l from-[#021734] to-transparent"></div>
+        <svg
+          ref={svgRef}
+          width="100%"
+          height="1000px"
+          viewBox="0 0 1590 1000"
+          xmlns="http://www.w3.org/2000/svg"
+          className="scale-[0.95] -mt-[360px] sm:-mt-[260px] md:-mt-[180px] lg:-mt-28 xl:mt-0"
+        >
+          {/* Define gradients */}
+          <defs>
+            {pathData1.map((_, index) => (
+              <linearGradient
+                key={`gradient-${index}`}
+                id={`gradient-${index}`}
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stopColor="#021734" />
+                <stop offset="20%" stopColor="#2267b2" />
+                <stop offset="50%" stopColor="#0e57a5" />
+                <stop offset="80%" stopColor="#2267b2" />
+                <stop offset="100%" stopColor="#021734" />
+              </linearGradient>
+            ))}
+          </defs>
+
+          {/* Draw the paths first */}
+          {pathData1.map((path1, index) => (
+            <path
+              key={`path1-${index}`}
+              id={`path1-${index}`}
+              d={path1}
+              fill="transparent"
+              stroke={`url(#gradient-${index})`}
+              strokeWidth="2.5"
+            />
           ))}
-        </defs>
 
-        {/* Draw the paths first */}
-        {pathData1.map((path1, index) => (
-          <path
-            key={`path1-${index}`}
-            id={`path1-${index}`}
-            d={path1}
-            fill="transparent"
-            stroke={`url(#gradient-${index})`}
-            strokeWidth="2.5"
+          {/* Draw the paths Second */}
+          {pathData2.map((path2, index) => (
+            <path
+              key={`path2-${index}`}
+              id={`path2-${index}`}
+              d={path2}
+              fill="transparent"
+              stroke={`url(#gradient-${index})`}
+              strokeWidth="2.5"
+            />
+          ))}
+
+          {/* Render icons with the transition */}
+          {iconOrder.map((index, i) => {
+            return (
+              <g key={`icon1-${index}`}>
+                <image
+                  href={iconUrls1[index % iconUrls1.length]}
+                  width="100"
+                  height="100"
+                >
+                  {pathLengths1.length > 0 && (
+                    <>
+                      <animateMotion
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                        rotate="auto"
+                      >
+                        <mpath href={`#path1-${index}`} />
+                      </animateMotion>
+
+                      {/* Animate the width */}
+                      <animate
+                        attributeName="width"
+                        values="40;100;10"
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+
+                      {/* Animate the height */}
+                      <animate
+                        attributeName="height"
+                        values="40;100;10"
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+
+                      {/* Adjust vertical position of the images */}
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values={"0 -20; 0 -50; 0 -5"}
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+                    </>
+                  )}
+                </image>
+              </g>
+            );
+          })}
+
+          {/* Render icons with the transition */}
+          {iconOrder.map((index, i) => {
+            return (
+              <g key={`icon2-${index}`}>
+                <image
+                  href={iconUrls2[index % iconUrls2.length]}
+                  width="100"
+                  height="100"
+                >
+                  {pathLengths2.length > 0 && (
+                    <>
+                      <animateMotion
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                        rotate="auto"
+                      >
+                        <mpath href={`#path2-${index}`} />
+                      </animateMotion>
+
+                      {/* Animate the width */}
+                      <animate
+                        attributeName="width"
+                        values="10;100;40"
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+
+                      {/* Animate the height */}
+                      <animate
+                        attributeName="height"
+                        values="10;100;40"
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+
+                      {/* Adjust vertical position of the images */}
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values={"0 -5; 0 -50; 0 -20"}
+                        keyTimes="0;0.5;1"
+                        dur="30s"
+                        repeatCount="indefinite"
+                        begin={`${i * 3.5 - 45}s`}
+                      />
+                    </>
+                  )}
+                </image>
+              </g>
+            );
+          })}
+
+          {/* Add logo at the center */}
+          <image
+            href={Logo}
+            width="140"
+            height="140"
+            x="725"
+            y="375"
+            className="z-[99999] opacity-100"
+            style={{ pointerEvents: "none" }}
           />
-        ))}
-
-        {/* Draw the paths Second */}
-        {pathData2.map((path2, index) => (
-          <path
-            key={`path2-${index}`}
-            id={`path2-${index}`}
-            d={path2}
-            fill="transparent"
-            stroke={`url(#gradient-${index})`}
-            strokeWidth="2.5"
-          />
-        ))}
-
-        {/* Render icons with the transition */}
-        {iconOrder.map((index, i) => {
-          return (
-            <g key={`icon1-${index}`}>
-              <image
-                href={iconUrls1[index % iconUrls1.length]}
-                width="100"
-                height="100"
-              >
-                {pathLengths1.length > 0 && (
-                  <>
-                    <animateMotion
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                      rotate="auto"
-                    >
-                      <mpath href={`#path1-${index}`} />
-                    </animateMotion>
-
-                    {/* Animate the width */}
-                    <animate
-                      attributeName="width"
-                      values="40;120;10"
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-
-                    {/* Animate the height */}
-                    <animate
-                      attributeName="height"
-                      values="40;120;10"
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-
-                    {/* Adjust vertical position of the images */}
-                    <animateTransform
-                      attributeName="transform"
-                      type="translate"
-                      values={"0 -20; 0 -60; 0 -5"}
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-                  </>
-                )}
-              </image>
-            </g>
-          );
-        })}
-
-        {/* Render icons with the transition */}
-        {iconOrder.map((index, i) => {
-          return (
-            <g key={`icon2-${index}`}>
-              <image
-                href={iconUrls2[index % iconUrls2.length]}
-                width="100"
-                height="100"
-              >
-                {pathLengths2.length > 0 && (
-                  <>
-                    <animateMotion
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                      rotate="auto"
-                    >
-                      <mpath href={`#path2-${index}`} />
-                    </animateMotion>
-
-                    {/* Animate the width */}
-                    <animate
-                      attributeName="width"
-                      values="10;120;40"
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-
-                    {/* Animate the height */}
-                    <animate
-                      attributeName="height"
-                      values="10;120;40"
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-
-                    {/* Adjust vertical position of the images */}
-                    <animateTransform
-                      attributeName="transform"
-                      type="translate"
-                      values={"0 -5; 0 -60; 0 -20"}
-                      keyTimes="0;0.5;1"
-                      dur="30s"
-                      repeatCount="indefinite"
-                      begin={`${i * 3.5 - 45}s`}
-                    />
-                  </>
-                )}
-              </image>
-            </g>
-          );
-        })}
-
-        {/* Add logo at the center */}
-        <image
-          href={Logo}
-          width="140"
-          height="140"
-          x="725"
-          y="375"
-          className="z-[99999] opacity-100"
-          style={{ pointerEvents: "none" }}
-        />
-      </svg>
-      <div className="absolute z-40 left-0 top-20 w-32 h-full bg-gradient-to-r from-[#021734] to-transparent"></div>
+        </svg>
+        <div className="absolute z-40 left-0 top-0 w-32 h-full bg-gradient-to-r from-[#021734] to-transparent"></div>
+      </div>
     </div>
   );
 };
