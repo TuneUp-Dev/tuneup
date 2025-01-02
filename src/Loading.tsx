@@ -31,22 +31,23 @@ const Loading = ({ videoRef }) => {
         {/* Mobile View */}
         <div
           onClick={handleMuteToggle}
-          className="fixed w-full h-full bg-black flex justify-center items-center overflow-hidden"
+          className="fixed cursor-pointer w-full h-full bg-black flex justify-center items-center overflow-hidden"
         >
-          <div className="relative block md:hidden w-full h-auto cursor-pointer">
-            <video
-              ref={videoRef}
-              className="w-full h-auto object-cover unselect"
-              autoPlay
-              loop
-              muted={isMuted}
-            >
-              <source
-                src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+          <video
+            ref={videoRef}
+            className="w-full h-auto object-cover unselect"
+            autoPlay
+            muted={isMuted}
+          >
+            <source
+              src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735649009/keovvbakhnlhuwyfqolv.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="fixed w-full h-full flex justify-center items-center">
+          <div className="w-full h-[50px] bg-gradient-to-t from-black to-transparent absolute mt-[260px]"></div>
+          <div className="w-full h-[50px] bg-gradient-to-b from-black to-transparent absolute mb-[260px]"></div>
         </div>
       </>
     );
