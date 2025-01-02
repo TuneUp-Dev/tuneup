@@ -175,7 +175,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
             className={`w-[110px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
             onClick={() => {
               scrollToTop();
-              hapticFeedback();
+              logoFeedback();
             }}
           >
             <img
