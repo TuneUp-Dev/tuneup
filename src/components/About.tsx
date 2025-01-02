@@ -45,8 +45,8 @@ const About = ({ linkFeedback }) => {
           </div>
           <div className="relative w-full h-full flex flex-col justify-end items-center sm:items-start lg:items-end top-5 lg:top-0">
             <p className="lg:absolute min-w-full lg:-left-[380px] xl:-left-[330px] lg:top-56 xl:top-60 Geist-normal text-slate-300 text-[12px] lg:text-[15.5px]">
-              <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[256px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
-                Make Impossible to I'm Possible
+              <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[276px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
+                We Make Impossible to I'm Possible
               </h1>
               At TuneUp Technologies, we are a leading software development
               company dedicated to delivering innovative, scalable, and
