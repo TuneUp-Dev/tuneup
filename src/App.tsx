@@ -20,7 +20,7 @@ function App() {
     const alreadyLoaded = sessionStorage.getItem("hasLoaded");
 
     if (alreadyLoaded) {
-      setIsVideoPlayed(true);
+      setIsVideoPlayed(false);
       setIsLoading(true);
       const spinnerTimeout = setTimeout(() => setIsLoading(false), 1500);
       return () => clearTimeout(spinnerTimeout);
