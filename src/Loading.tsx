@@ -33,7 +33,7 @@ const Loading = ({ videoRef }) => {
           <div className="relative block md:hidden w-full h-auto cursor-pointer">
             <video
               ref={videoRef}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover unselect"
               autoPlay
               loop
               muted={isMuted}
@@ -55,7 +55,7 @@ const Loading = ({ videoRef }) => {
         <div className="fixed w-full h-full bg-black flex justify-center items-center">
           <video
             ref={videoRef}
-            className="hidden md:block w-full h-auto max-h-full object-cover cursor-pointer"
+            className="hidden md:block w-full h-auto max-h-full object-cover cursor-pointer unselect"
             autoPlay
             muted={isMuted}
             onClick={handleMuteToggle}
