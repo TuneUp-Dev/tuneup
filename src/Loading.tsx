@@ -28,25 +28,30 @@ const Loading = ({ videoRef }) => {
   if (isMobile) {
     return (
       <>
+        {/* MObile View */}
         <div className="fixed w-full h-full bg-black flex justify-center items-center overflow-hidden">
-          <video
-            ref={videoRef}
-            className="block md:hidden w-auto h-full max-h-full object-cover cursor-pointer"
-            autoPlay
-            muted={isMuted}
-            onClick={handleMuteToggle}
-          >
-            <source
-              src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <div className="relative block md:hidden w-full h-auto cursor-pointer">
+            <video
+              ref={videoRef}
+              className="w-full h-auto object-cover"
+              autoPlay
+              loop
+              muted={isMuted}
+              onClick={handleMuteToggle}
+            >
+              <source
+                src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
         </div>
       </>
     );
   } else {
     return (
       <>
+        {/* Desktop View */}
         <div className="fixed w-full h-full bg-black flex justify-center items-center">
           <video
             ref={videoRef}

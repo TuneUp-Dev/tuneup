@@ -294,7 +294,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
                 .getElementById("about")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`hidden lg:block rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
+            className={`hidden lg:flex rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
           >
             <img
               className="unselect w-6 -ml-3 animate-right-left"
