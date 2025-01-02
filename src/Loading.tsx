@@ -28,8 +28,11 @@ const Loading = ({ videoRef }) => {
   if (isMobile) {
     return (
       <>
-        {/* MObile View */}
-        <div className="fixed w-full h-full bg-black flex justify-center items-center overflow-hidden">
+        {/* Mobile View */}
+        <div
+          onClick={handleMuteToggle}
+          className="fixed w-full h-full bg-black flex justify-center items-center overflow-hidden"
+        >
           <div className="relative block md:hidden w-full h-auto cursor-pointer">
             <video
               ref={videoRef}
@@ -37,7 +40,6 @@ const Loading = ({ videoRef }) => {
               autoPlay
               loop
               muted={isMuted}
-              onClick={handleMuteToggle}
             >
               <source
                 src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735751268/okpeoivyndeyldxkgxha.mp4"
@@ -52,13 +54,15 @@ const Loading = ({ videoRef }) => {
     return (
       <>
         {/* Desktop View */}
-        <div className="fixed w-full h-full bg-black flex justify-center items-center">
+        <div
+          onClick={handleMuteToggle}
+          className="fixed w-full h-full cursor-pointer bg-black flex justify-center items-center"
+        >
           <video
             ref={videoRef}
-            className="hidden md:block w-full h-auto max-h-full object-cover cursor-pointer unselect"
+            className="hidden md:block w-full h-auto max-h-full object-cover unselect"
             autoPlay
             muted={isMuted}
-            onClick={handleMuteToggle}
           >
             <source
               src="https://res.cloudinary.com/dwqiivnhx/video/upload/v1735649009/keovvbakhnlhuwyfqolv.mp4"
