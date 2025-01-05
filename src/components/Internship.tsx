@@ -4,8 +4,8 @@ import Code from "../assets/icons/Code_Blue.svg";
 
 // Popup Form Component
 const InternshipForm = ({ onClose, defaultCourse }) => (
-  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 px-7 py-100 sm:px-6 sm:py-8">
-    <div className="bg-white rounded-lg p-6 w-full max-w-md sm:max-w-lg lg:max-w-2xl">
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 px-4 sm:px-6">
+    <div className="bg-white rounded-lg p-6 w-full max-w-md sm:max-w-lg lg:max-w-2xl shadow-xl">
       <h2 className="text-xl font-semibold mb-4 text-center">Internship Registration</h2>
       <form>
         <label className="block mb-2">
@@ -38,25 +38,26 @@ const InternshipForm = ({ onClose, defaultCourse }) => (
           />
         </label>
         <div className="flex justify-center sm:justify-end gap-2 mt-4">
- 
-        <Button
-              className="bg-white order-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6">
-              Cancel
-              <img
-                className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
-                src={Code}
-                alt=""
-              />
-            </Button>
-            <Button className="bg-blue-500 border-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6">
-             Submit
-              <img
-                className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
-                src={Code}
-                alt=""
-              />
-            </Button>
-</div>
+          <Button
+            onClick={onClose}
+            className="bg-white border-[1.5px] py-2 px-4 border-slate-200 rounded-lg text-[13.5px] w-[120px] lg:w-[160px]"
+          >
+            Cancel
+            <img
+              className="unselect w-5 -ml-2 brightness-0 animate-left-right"
+              src={Code}
+              alt="Code Icon"
+            />
+          </Button>
+          <Button className="bg-blue-500 text-white border-[1.5px] py-2 px-4 border-slate-200 rounded-lg text-[13.5px] w-[120px] lg:w-[160px]">
+            Submit
+            <img
+              className="unselect w-5 -ml-2 brightness-0 animate-left-right"
+              src={Code}
+              alt="Code Icon"
+            />
+          </Button>
+        </div>
       </form>
     </div>
   </div>
@@ -154,6 +155,7 @@ const Internship = () => {
         </div>
       </div>
 
+      {/* Modal Form */}
       {isFormOpen && (
         <InternshipForm onClose={handleCloseForm} defaultCourse={selectedCourse} />
       )}

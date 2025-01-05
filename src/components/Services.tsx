@@ -41,10 +41,8 @@ const Services: React.FC<ServicesChildProps> = ({
         >
           {/* Contents */}
           <div className="w-full h-full">
-            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[210px]">
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[40px] xl:mt-[150px]">
               <div className="">
-                
-
                 <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
                   Custom <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
@@ -57,7 +55,7 @@ const Services: React.FC<ServicesChildProps> = ({
                 </p>
               </div>
 
-              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-5 xl:hidden">
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
               <Lottie
               loop
               animationData={softwareani}
@@ -66,7 +64,109 @@ const Services: React.FC<ServicesChildProps> = ({
             />
               </div>
             </div>
-            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[140px]">
+
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[40px] xl:mt-[150px]">
+              <div className="">
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  Web Application<br />
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  Development
+                  </span>
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                Responsive and feature-rich web applications that enhance your
+                  online presence.
+                </p>
+              </div>
+
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
+              <Lottie
+              loop
+              animationData={webani}
+              play
+              style={{ marginTop: "-50px" }}
+            />
+              </div>
+            </div>
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[40px] xl:mt-[150px]">
+              <div className="">
+                
+
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  Mobile Application <br />
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                   Development
+                  </span>
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                Intuitive and dynamic mobile apps for Android and iOS
+                  platforms.
+                </p>
+              </div>
+
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
+              <Lottie
+              loop
+              animationData={mobileani}
+              play
+              style={{ marginTop: "-50px" }}
+            />
+              </div>
+            </div>
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[40px] xl:mt-[150px]">
+              <div className="">
+                
+
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                Digital Marketing <br />
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                   Services
+                  </span>
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                Comprehensive strategies for social media management, SEO and
+                  online branding.
+                </p>
+              </div>
+
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
+              <Lottie
+              loop
+              animationData={markani}
+              play
+              style={{ marginTop: "-50px" }}
+            />
+              </div>
+            </div>
+            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[40px] xl:mt-[150px]">
+              <div className="">
+                
+
+                <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
+                  Digital <br />
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                    Services
+                  </span>
+                </h1>
+                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                From strategy to execution, we guide you on every step of your
+                  content creation journey.
+                </p>
+              </div>
+
+              <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
+              <Lottie
+              loop
+              animationData={mediaani}
+              play
+              style={{ marginTop: "-50px" }}
+            />
+              </div>
+            </div>
+
+
+            
+            {/* <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-16 lg:mt-[80px] xl:mt-[140px]">
               <div className="">
                 
 
@@ -90,8 +190,8 @@ const Services: React.FC<ServicesChildProps> = ({
               style={{ marginTop: "-50px" }}
             />
               </div>
-            </div>
-            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[80px] xl:mt-[140px]">
+            </div> */}
+            {/* <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] overflow-hidden pt-0.5 mt-10 lg:mt-[80px] xl:mt-[140px]">
               <div className="">
                 
 
@@ -115,8 +215,8 @@ const Services: React.FC<ServicesChildProps> = ({
               style={{ marginTop: "10px" }}
             />
               </div>
-            </div>
-            <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-auto overflow-hidden pt-0.5 lg:mt-[80px] xl:mt-[140px]">
+            </div> */}
+            {/* <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-auto overflow-hidden pt-0.5 lg:mt-[80px] xl:mt-[140px]">
               <div className="">
                 <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
@@ -138,8 +238,8 @@ const Services: React.FC<ServicesChildProps> = ({
               style={{ marginTop: "-20px" }}
             />
               </div>
-            </div>
-            <div className="sm:flex justify-between items-start mt-10 sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto  overflow-hidden pt-0.5 lg:mt-[80px] xl:mt-[140px]">
+            </div> */}
+            {/* <div className="sm:flex justify-between items-start mt-10 sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto  overflow-hidden pt-0.5 lg:mt-[80px] xl:mt-[140px]">
               <div className="">
                
 
@@ -163,7 +263,7 @@ const Services: React.FC<ServicesChildProps> = ({
               style={{ marginTop: "-20px",height:400}}
             />
               </div>
-            </div>
+            </div> */}
             {/* <div className="sm:flex justify-between  items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-full lg:h-[330px] overflow-hidden pt-0.5  lg:mt-[80px] xl:mt-[140px]">
               <div className="">
                 <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
@@ -267,10 +367,42 @@ const Services: React.FC<ServicesChildProps> = ({
               loop
               animationData={softwareani}
               play
-              style={{ marginTop: "-50px" }}
+              
             />
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <Lottie
+              loop
+              animationData={webani}
+              play
+           
+            />
+            </div>
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <Lottie
+              loop
+              animationData={mobileani}
+              play
+             
+            />
+            </div>
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <Lottie
+              loop
+              animationData={markani}
+              play
+              
+            />
+            </div>
+            <div className="w-full h-auto rounded-xl overflow-hidden mt-[100px]">
+            <Lottie
+              loop
+              animationData={mediaani}
+              play
+            
+            />
+            </div>
+            {/* <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
             <Lottie
               loop
               animationData={webani}
@@ -303,7 +435,7 @@ const Services: React.FC<ServicesChildProps> = ({
                 
                 { marginTop: "-40px" }}
             />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const WCU = () => {
   return (
     <>
       <div className="bg-white">
-        <div className="w-[90vw] max-w-[1440px] mx-auto lg:w-full lg:px-16 xl:px-28 pt-20">
+        <div className="w-[90vw] max-w-[1440px] mx-auto lg:w-full lg:px-16 xl:px-28 pt-20 mb-20">
           <span className="bg-slate-100 rounded-lg px-3 py-2 text-[#021734] text-[11.5px] lg:text-[13px] font-semibold uppercase">
             Why choose us
           </span>
