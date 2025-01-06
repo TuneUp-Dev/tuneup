@@ -145,7 +145,7 @@ const Services: React.FC<ServicesChildProps> = ({
                 <h1 className="text-[28px] lg:text-[40px] inter-medium text-white leading-9 lg:leading-[48px] mt-3">
                   Digital <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
-                    Services
+                    Support
                   </span>
                 </h1>
                 <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
@@ -362,44 +362,44 @@ const Services: React.FC<ServicesChildProps> = ({
           </div>
           {/* Images */}
           <div className="w-full h-full hidden xl:block">
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden ">
             <Lottie
               loop
               animationData={softwareani}
               play
-              
+              style={{ height: '500px', width: '500px' }}
             />
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden ">
             <Lottie
               loop
               animationData={webani}
               play
-           
+              style={{ height: '500px', width: '500px' }}
             />
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden ">
             <Lottie
               loop
               animationData={mobileani}
               play
-             
+              style={{ height: '500px', width: '500px' }}
             />
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[50px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden -mt-20">
             <Lottie
               loop
               animationData={markani}
               play
-              
+              style={{ height: '500px', width: '500px' }}
             />
             </div>
-            <div className="w-full h-auto rounded-xl overflow-hidden mt-[100px]">
+            <div className="w-full h-auto rounded-xl overflow-hidden">
             <Lottie
               loop
               animationData={mediaani}
               play
-            
+              style={{ height: '500px', width: '500px' }}
             />
             </div>
             {/* <div className="w-full h-auto rounded-xl overflow-hidden mt-[140px]">
