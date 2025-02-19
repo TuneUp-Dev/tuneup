@@ -1,11 +1,11 @@
 import { ReactComponent as Logo } from "../assets/icons/TuneUp_Favicon.svg";
 import React from "react";
-import Lottie from "react-lottie-player";
-import softwareani from "../animations/software.json";
-import webani from "../animations/website.json";
-import mobileani from "../animations/mobile.json";
-import markani from "../animations/marketing.json";
-import mediaani from "../animations/media.json";
+// import Lottie from "react-lottie-player";
+// import softwareani from "../animations/software.json";
+// import webani from "../animations/website.json";
+// import mobileani from "../animations/mobile.json";
+// import markani from "../animations/marketing.json";
+// import mediaani from "../animations/media.json";
 
 interface ServicesChildProps {
   pathRef: React.RefObject<SVGPathElement>;
@@ -37,7 +37,7 @@ const Services: React.FC<ServicesChildProps> = ({
         </div>
         <div
           id="timeline-services"
-          className="timeline-container -mt-5 md:-mt-10 relative mx-auto w-full lg:w-full min-h-[900px] max-h-[900px] sm:min-h-[780px] sm:max-h-[780px] md:max-h-[1000px] lg:min-h-[1800px] xl:min-h-[2400px] lg:max-h-[1800px] xl:max-h-[2400px] px-5 lg:px-10 sm:gap-x-5lex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start"
+          className="timeline-container -mt-5 md:-mt-10 relative mx-auto w-full lg:w-full min-h-[900px] max-h-[900px] sm:min-h-[780px] sm:max-h-[780px] md:max-h-[1000px] lg:min-h-[1800px] xl:min-h-[2400px] lg:max-h-[1800px] xl:max-h-[2400px] px-5 lg:px-14 xl:px-20 sm:gap-x-5lex gap-x-2 lg:gap-x-10 justify-center lg:justify-between items-center lg:items-start"
         >
           {/* Contents */}
           <div className="w-full h-full">
@@ -233,7 +233,7 @@ const Services: React.FC<ServicesChildProps> = ({
           </div>
           {/* Images */}
           <div className="w-full min-h-[2500px] overflow-hidden hidden lg:block">
-            <h1 className="lg:text-[90px] xl:text-[120px] text-white text-opacity-20 poppins-medium rotate-90 text-nowrap flex lg:mt-[200px] xl:mt-[250px] lg:ml-28 xl:ml-0 justify-start items-center">
+            <h1 className="lg:text-[90px] xl:text-[120px] text-white text-opacity-20 poppins-medium rotate-90 text-nowrap flex lg:mt-[200px] xl:mt-[230px] lg:ml-28 xl:ml-10 justify-start items-center">
               We Make Impossible to I'm Possible...
             </h1>
             {/* <div className="w-full h-auto rounded-xl overflow-hidden ">

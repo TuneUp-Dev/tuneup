@@ -43,45 +43,46 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
 
   return (
     <>
-      <div
-        id="contact"
-        className="w-[90vw] mx-auto lg:w-full pt-24 md:pt-32 md:py-16 lg:py-36 lg:px-16 xl:px-24 md:-mt-10 lg:mt-0"
-      >
-        <span className="bg-slate-100 rounded-xl px-3 py-2 text-[#021734] text-[11.5px] lg:text-[13px] font-semibold uppercase">
-          Contact us
-        </span>
-        <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
-          <div className="w-full flex flex-col md:justify-start mt-4 items-start">
-            <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[45px] xl:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
-              Let’s work together
-            </p>
-            <p className="mt-4 lg:mt-2 xl:mt-3 lg:w-[900px] text-[14px] lg:text-[13px] xl:text-[16px]">
-              Want to discuss an opportunity to create something great? I’m
-              ready when you are.
-            </p>
+      <div id="contact" className="bg-[#021734] pb-20">
+        <div className="bg-white rounded-b-[40px] md:rounded-b-[70px] shadow-[0px_25px_50px_-30px_#020810]">
+          <div className="w-[90vw] mx-auto lg:w-full pt-24 md:pt-32 md:py-16 lg:py-36 lg:px-16 xl:px-24 md:-mt-10 lg:mt-0">
+            <span className="bg-slate-100 rounded-xl px-3 py-2 text-[#021734] text-[11.5px] lg:text-[13px] font-semibold uppercase">
+              Contact us
+            </span>
+            <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
+              <div className="w-full flex flex-col md:justify-start mt-4 items-start">
+                <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[45px] xl:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
+                  Let’s work together
+                </p>
+                <p className="mt-4 lg:mt-2 xl:mt-3 lg:w-[900px] text-[14px] lg:text-[13px] xl:text-[16px]">
+                  Want to discuss an opportunity to create something great? I’m
+                  ready when you are.
+                </p>
 
-            <Button
-              className="bg-white border-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
-              onClick={() => {
-                setShowForm(true);
-                hapticFeedback();
-              }}
-            >
-              Get in touch
-              <img
-                className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
-                src={Code}
-                alt=""
-              />
-            </Button>
-          </div>
-          <div className="relative mx-auto hover:scale-[1.02] transition-all duration-200 ease-linear transform w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-400px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-300px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
-            <Lottie
-              loop
-              animationData={animationData}
-              play
-              style={{ marginTop: "-100px" }}
-            />
+                <Button
+                  className="bg-white border-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
+                  onClick={() => {
+                    setShowForm(true);
+                    hapticFeedback();
+                  }}
+                >
+                  Get in touch
+                  <img
+                    className="unselect w-5 lg:w-7 -ml-3 brightness-0 animate-left-right"
+                    src={Code}
+                    alt=""
+                  />
+                </Button>
+              </div>
+              <div className="relative mx-auto hover:scale-[1.02] transition-all duration-200 ease-linear transform w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-400px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-300px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
+                <Lottie
+                  loop
+                  animationData={animationData}
+                  play
+                  style={{ marginTop: "-100px" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

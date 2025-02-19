@@ -106,9 +106,12 @@ const AnimatedPath: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#021734] h-auto sm:min-h-[550px] md:min-h-[600px] lg:min-h-[1000px]">
+    <div
+      id="tech"
+      className="bg-[#021734] h-auto sm:min-h-[550px] md:min-h-[600px] lg:min-h-[1000px]"
+    >
       <div className="z-10">
-        <p className="text-[24px] sm:text-[34px] md:text-[40px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 sm:leading-10 md:leading-[50px] lg:leading-[60px] pt-14 sm:pt-20 lg:pt-28 xl:pt-36 inter-bold">
+        <p className="text-[24px] sm:text-[34px] md:text-[40px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 sm:leading-10 md:leading-[50px] lg:leading-[60px] -mt-6 sm:pt-0 lg:pt-8 xl:pt-16 inter-bold">
           Transforming Technology into Possibilities
         </p>
         <p className="w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
