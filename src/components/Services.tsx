@@ -43,7 +43,7 @@ const Services: React.FC<ServicesChildProps> = ({
           <div className="w-full h-full">
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
-                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
+                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Custom <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
                     Software Development
@@ -67,7 +67,7 @@ const Services: React.FC<ServicesChildProps> = ({
 
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
-                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
+                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Web Application
                   <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
@@ -91,7 +91,7 @@ const Services: React.FC<ServicesChildProps> = ({
             </div>
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
-                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
+                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Mobile Application <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
                     Development
@@ -114,7 +114,7 @@ const Services: React.FC<ServicesChildProps> = ({
             </div>
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
-                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
+                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Digital Marketing <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
                     Services
@@ -137,7 +137,7 @@ const Services: React.FC<ServicesChildProps> = ({
             </div>
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
-                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
+                <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Digital <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
                     Support
