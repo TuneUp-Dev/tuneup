@@ -16,7 +16,6 @@ root.render(
   <React.StrictMode>
     <NextUIProvider>
       <App />
-      {/* Add Vercel Analytics */}
       <Analytics />
     </NextUIProvider>
   </React.StrictMode>
