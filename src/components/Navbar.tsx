@@ -291,7 +291,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
             onClick={() => {
               hapticFeedback();
               document
-                .getElementById("about")
+                .getElementById("tech")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
             className={`hidden lg:flex rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
