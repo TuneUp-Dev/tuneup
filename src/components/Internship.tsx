@@ -184,7 +184,7 @@ const Internship = ({ hapticFeedback }) => {
             {videoData.map((data, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-2xl hover:shadow-[5px_5px_0px_3px_#2c4464] p-4 flex flex-col group transition-all transform ease-linear duration-200"
+                className="bg-white border rounded-2xl hover:shadow-[3px_3px_0px_3px_#2c4464] p-4 flex flex-col group transition-all transform ease-linear duration-200"
               >
                 <img
                   src={data.thumbnail}
