@@ -85,7 +85,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
       },
       {
         root: null,
-        threshold: isMobile ? 0.17 : 0.2, // Use 0.2 only for the 'services' section
+        threshold: isMobile ? 0.5 : 0.2,
       }
     );
 
@@ -103,7 +103,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
       },
       {
         root: null,
-        threshold: isMobile ? 0.5 : 0.5,
+        threshold: isMobile ? 0.3 : 0.7,
       }
     );
 

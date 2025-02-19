@@ -482,8 +482,6 @@ code {
   justify-content: center;
   align-items: start;
   width: 100%;
-  height: 2800px;
-  /* height: 1500px; */
   position: relative;
   overflow: hidden;
 }

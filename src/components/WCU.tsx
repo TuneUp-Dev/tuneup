@@ -5,7 +5,7 @@ const WCU = () => {
   return (
     <>
       <div className="bg-white">
-        <div className="w-[90vw] max-w-[1440px] mx-auto lg:w-full lg:px-16 xl:px-28 pt-20 mb-20">
+        <div className="w-[90vw] max-w-[1440px] mx-auto lg:w-full lg:px-16 xl:px-28 pt-20">
           <span className="bg-slate-100 rounded-lg px-3 py-2 text-[#021734] text-[11.5px] lg:text-[13px] font-semibold uppercase">
             Why choose us
           </span>
@@ -22,39 +22,39 @@ const WCU = () => {
             Here’s why businesses and institutions choose us.
           </p>
           <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[180px] flex flex-col lg:flex-row justify-between lg:items-start items-center gap-y-5 gap-x-7">
-            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
+            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
               <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   Expertise and Innovation{" "}
                 </h1>
-                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px]">
+                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
                   Our team of skilled professionals stays ahead of industry
                   trends, delivering cutting-edge solutions tailored to your
                   unique needs.
                 </p>
               </div>
             </div>
-            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
+            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
               <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   Customized Approach
                 </h1>
-                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px]">
+                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
                   We understand that every business is different. Our solutions
                   are personalized to align with your goals and drive measurable
                   success.
                 </p>
               </div>
             </div>
-            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5">
+            <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
               <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
               <div className="">
                 <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                   End-to-End Support
                 </h1>
-                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px]">
+                <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
                   From ideation to deployment and beyond, we provide
                   comprehensive support at every step of your digital journey.
                 </p>

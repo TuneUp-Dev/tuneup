@@ -45,7 +45,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
     <>
       <div
         id="contact"
-        className="w-[90vw] mx-auto lg:w-full pt-24 md:pt-32 md:py-16 lg:py-36 lg:px-28 md:-mt-10 lg:mt-0"
+        className="w-[90vw] mx-auto lg:w-full pt-24 md:pt-32 md:py-16 lg:py-36 lg:px-16 xl:px-24 md:-mt-10 lg:mt-0"
       >
         <span className="bg-slate-100 rounded-xl px-3 py-2 text-[#021734] text-[11.5px] lg:text-[13px] font-semibold uppercase">
           Contact us
@@ -75,7 +75,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
               />
             </Button>
           </div>
-          <div className="relative mx-auto w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-350px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-200px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
+          <div className="relative mx-auto hover:scale-[1.02] transition-all duration-200 ease-linear transform w-full lg:-top-[50px] sm:w-[400px] md:w-[400px] lg:min-w-[380px] lg:ml-[-400px] lg:max-w-[3280px] xl:min-w-[480px] xl:ml-[-300px] xl:max-w-[480px] md:h-[100px] lg:h-[135px] xl:h-[190px] flex flex-col md:flex-row justify-center items-center md:justify-end md:items-start brightness-[90%]">
             <Lottie
               loop
               animationData={animationData}
