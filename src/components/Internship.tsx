@@ -117,7 +117,7 @@ const Internship = ({ hapticFeedback }) => {
   const videoData = [
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1739959981/dyk6tehq0wdiqlmbv6ow.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038742/d3pflerjqc5oaabxluuh.png",
       gradientText: "Flutter ",
       afterGradient: "Development",
       description:
@@ -125,7 +125,7 @@ const Internship = ({ hapticFeedback }) => {
     },
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1739959982/ve5nkeghokq34suxosqj.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038566/yiplqpf3ipikn5tcgsds.png",
       gradientText: "MERN Stack ",
       afterGradient: "Development",
       description:
@@ -133,7 +133,7 @@ const Internship = ({ hapticFeedback }) => {
     },
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1739959982/qqjaib5kcuqhmh822wad.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038742/taqdmgyzlxcps4vlrchm.png",
       gradientText: "UI/UX ",
       afterGradient: "Designing",
       description:
@@ -141,7 +141,7 @@ const Internship = ({ hapticFeedback }) => {
     },
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1739959982/hy6mm4viwtcc2u3y3kbm.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038742/obyr4fincdtp8jj8encq.png",
       gradientText: "Digital ",
       afterGradient: "Marketing",
       description:
@@ -189,7 +189,7 @@ const Internship = ({ hapticFeedback }) => {
                 <img
                   src={data.thumbnail}
                   alt="Video Thumbnail"
-                  className="w-full h-auto object-cover rounded-lg unselect"
+                  className="w-full h-auto object-cover rounded-lg hover:outline-5 outline-[#021734]"
                 />
                 <h3 className="text-lg font-semibold mt-4">
                   {data.gradientText}

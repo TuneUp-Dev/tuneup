@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="w-full bg-[#021734] lg:pt-10 -mt-3">
+      <footer className="w-full bg-gradient-to-b from-[#021734] to-[#010c1b] lg:pt-10 -mt-3">
         {/* Links and Pages */}
         {/* <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between py-8 md:py-12 lg:py-16 xl:py-20">
           <div>
