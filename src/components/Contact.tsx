@@ -51,7 +51,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
             </span>
             <div className="flex flex-col md:flex-row justify-between md:items-end gap-y-28 gap-x-12">
               <div className="w-full flex flex-col md:justify-start mt-4 items-start">
-                <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-[#2c4464] to-[#021734] text-[45px] lg:text-[45px] xl:text-[52px] w-full leading-[52px] md:leading-0 lg:leading-[60px] inter-bold">
+                <p className="h-auto bg-clip-text text-transparent bg-gradient-to-r from-[#021734] to-[#679de5] text-[35px] md:text-[45px] lg:text-[45px] xl:text-[52px] w-auto leading-[40px] md:leading-[52px] lg:leading-[60px] inter-bold">
                   Let’s work together
                 </p>
                 <p className="mt-4 lg:mt-2 xl:mt-3 lg:w-[900px] text-[14px] lg:text-[13px] xl:text-[16px]">
@@ -94,7 +94,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
         >
           <div className="bg-white p-4 lg:p-5 rounded-2xl lg:rounded-3xl shadow-lg relative w-[90vw] lg:w-[900px] max-h-[88%] lg:max-h-[72vh] h-auto lg:min-h-[570px] lg:h-[570px]">
             <button
-              className="absolute top-2.5 right-2.5 lg:top-4 lg:right-5 text-slate-500 w-6 h-6 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-slate-100 hover:text-slate-800"
+              className="absolute top-2.5 right-2.5 lg:top-4 lg:right-4 text-slate-500 w-6 h-6 rounded-full flex items-center font-semibold justify-center text-[12px] shadow-sm border-[1px] border-slate-200 bg-slate-100 hover:text-slate-800"
               onClick={() => {
                 setShowForm(false);
                 hapticFeedback();

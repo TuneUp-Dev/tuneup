@@ -14,6 +14,9 @@ const Home = () => {
   const [iconPosition, setIconPosition] = useState({ x: 0, y: 0 });
   const [tailOffset, setTailOffset] = useState(0);
   const [tailLength, setTailLength] = useState(150);
+  const [audioFiles, setAudioFiles] = useState<{
+    [key: string]: HTMLAudioElement;
+  }>({});
 
   const animationFrameRef = useRef<number | null>(null);
 
@@ -130,40 +133,64 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Haptic Feedback
-  const playAudioWithVibration = (audioUrl: string, volume: number = 1) => {
-    const audio = new Audio(audioUrl);
-    audio.load();
-    audio.volume = volume;
-    audio.play();
+  useEffect(() => {
+    const hapticFeedbackAudioUrl =
+      localStorage.getItem("hapticFeedbackAudio") ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754240/iknggfs6ed1jir5cv5bq.mp3";
+    const logoFeedbackAudioUrl =
+      localStorage.getItem("logoFeedbackAudio") ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754823/lmuj0al8mbadtaaacgoo.wav";
+    const linkFeedbackAudioUrl =
+      localStorage.getItem("linkFeedbackAudio") ||
+      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754239/q0buu5k7pssyejpomxhd.mp3";
 
-    if (navigator.vibrate) {
-      navigator.vibrate(30);
+    const hapticFeedbackAudio = new Audio(hapticFeedbackAudioUrl);
+    const logoFeedbackAudio = new Audio(logoFeedbackAudioUrl);
+    const linkFeedbackAudio = new Audio(linkFeedbackAudioUrl);
+
+    Promise.all([
+      new Promise((resolve) => {
+        hapticFeedbackAudio.onloadeddata = resolve;
+      }),
+      new Promise((resolve) => {
+        logoFeedbackAudio.onloadeddata = resolve;
+      }),
+      new Promise((resolve) => {
+        linkFeedbackAudio.onloadeddata = resolve;
+      }),
+    ]).then(() => {
+      setAudioFiles({
+        hapticFeedback: hapticFeedbackAudio,
+        logoFeedback: logoFeedbackAudio,
+        linkFeedback: linkFeedbackAudio,
+      });
+    });
+  }, []);
+
+  // Haptic Feedback
+  const playAudioWithVibration = (audioKey: string, volume: number = 1) => {
+    const audio = audioFiles[audioKey];
+    if (audio) {
+      audio.volume = Math.min(volume * 10, 1);
+      audio.currentTime = 0;
+      audio.play();
+
+      if (navigator.vibrate) {
+        navigator.vibrate(30);
+      }
     }
   };
 
   const hapticFeedback = () => {
-    const storedAudio = localStorage.getItem("hapticFeedbackAudio");
-    const audioUrl =
-      storedAudio ||
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754240/iknggfs6ed1jir5cv5bq.mp3";
-    playAudioWithVibration(audioUrl);
+    playAudioWithVibration("hapticFeedback");
   };
 
   const logoFeedback = () => {
-    const storedAudio = localStorage.getItem("logoFeedbackAudio");
-    const audioUrl =
-      storedAudio ||
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754823/lmuj0al8mbadtaaacgoo.wav";
-    playAudioWithVibration(audioUrl, 0.5);
+    playAudioWithVibration("logoFeedback", 0.02);
   };
 
   const linkFeedback = () => {
-    const storedAudio = localStorage.getItem("linkFeedbackAudio");
-    const audioUrl =
-      storedAudio ||
-      "https://res.cloudinary.com/dwqiivnhx/video/upload/v1735754239/q0buu5k7pssyejpomxhd.mp3";
-    playAudioWithVibration(audioUrl, 0.5);
+    playAudioWithVibration("linkFeedback", 0.2);
   };
 
   return (

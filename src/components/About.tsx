@@ -44,8 +44,8 @@ const About = ({ linkFeedback }) => {
             </div>
           </div>
           <div className="relative w-full h-full flex flex-col justify-end items-center sm:items-start lg:items-end top-5 lg:top-0">
-            <p className="lg:absolute min-w-full lg:-left-[380px] xl:-left-[330px] lg:top-56 xl:top-60 Geist-normal text-slate-300 text-[12px] lg:text-[15.5px]">
-              <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[320px] text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
+            <p className="lg:absolute min-w-full lg:-left-[380px] xl:-left-[330px] lg:top-56 xl:top-60 Geist-normal text-justify text-slate-300 text-[12px] lg:text-[15.5px]">
+              <h1 className="bg-white border-[#021734] border-opacity-60 border-[1.5px] text-[#021734] w-[270px] sm:w-[320px] text-[12.5px] sm:text-[15px] Geist-medium rounded-full mb-2 flex justify-center items-center py-1">
                 Crafting Digital Experiences That Inspire.
               </h1>
               At TuneUp Technologies, we are a leading software development
