@@ -117,7 +117,7 @@ const Internship = ({ hapticFeedback }) => {
   const videoData = [
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038742/d3pflerjqc5oaabxluuh.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740039268/aw3vkw7l56zyysfdtlt5.png",
       gradientText: "Flutter ",
       afterGradient: "Development",
       description:
@@ -125,7 +125,7 @@ const Internship = ({ hapticFeedback }) => {
     },
     {
       thumbnail:
-        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740038566/yiplqpf3ipikn5tcgsds.png",
+        "https://res.cloudinary.com/dwqiivnhx/image/upload/v1740039497/quzdnzyx2w7m6mazrwat.png",
       gradientText: "MERN Stack ",
       afterGradient: "Development",
       description:
