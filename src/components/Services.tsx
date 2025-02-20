@@ -45,7 +45,7 @@ const Services: React.FC<ServicesChildProps> = ({
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Custom <br />
-                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Software Development
                   </span>
                 </h1>
@@ -70,7 +70,7 @@ const Services: React.FC<ServicesChildProps> = ({
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Web Application
                   <br />
-                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Development
                   </span>
                 </h1>
@@ -93,7 +93,7 @@ const Services: React.FC<ServicesChildProps> = ({
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Mobile Application <br />
-                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Development
                   </span>
                 </h1>
@@ -116,7 +116,7 @@ const Services: React.FC<ServicesChildProps> = ({
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Digital Marketing <br />
-                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Services
                   </span>
                 </h1>
@@ -139,7 +139,7 @@ const Services: React.FC<ServicesChildProps> = ({
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
                   Digital <br />
-                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600">
+                  <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Support
                   </span>
                 </h1>

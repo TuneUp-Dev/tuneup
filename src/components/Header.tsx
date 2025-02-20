@@ -47,9 +47,8 @@ const Header = ({ hapticFeedback }) => {
             </span>
           </h1>
           <p className="nunito-medium mt-5 w-[90vw] sm:w-[80vw] lg:w-[680px] mx-auto text-[#021734] text-[12px] lg:text-[16px] lg:leading-[26px]">
-            TuneUp Technologies is a dynamic SaaS product development company
-            providing innovative digital solutions designed to empower startups
-            and enterprises.
+            TuneUp Technologies is a dynamic SaaS company providing innovative
+            digital solutions designed to empower startups and enterprises.
           </p>
           {/* Updated button with anchor link for smooth scroll */}
 

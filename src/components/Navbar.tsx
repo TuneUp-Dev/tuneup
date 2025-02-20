@@ -172,7 +172,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
         <div className="w-full max-w-[1440px] mx-auto max-h-[50px] lg:max-h-[68px] flex items-center justify-between px-5 md:px-10 lg:px-16 xl:px-36">
           {/* Logo Section */}
           <div
-            className={`w-[110px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-2.5 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+            className={`w-[120px] lg:w-[130px] cursor-pointer max-h-[50px] lg:max-h-[44px] py-0.5 lg:py-1.5 px-3.5 md:px-3 lg:px-4 flex justify-between lg:justify-center items-center overflow-hidden rounded-full transition-colors duration-500 ${bgColor} hover:bg-opacity-75 border-[1.5px] border-opacity-10 border-blue-500`}
             onClick={() => {
               scrollToTop();
               logoFeedback();
@@ -193,11 +193,13 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
               hapticFeedback();
             }}
           >
-            <button className="flex items-center">
+            <button className="flex items-center overflow-hidden">
               <img src={Arrow} className="unselect w-9" alt="" />
               <p
-                className={`-ml-1.5 mr-2 text-[12px] text-blue-500 nunito-extrabold transition-all duration-500 ${
-                  showMenuText ? "block translate-x-0" : "hidden -translate-x-2"
+                className={`-ml-1.5 mr-2 text-[12px] text-[#4288e3] nunito-extrabold transform transition-all duration-500 ease-linear ${
+                  showMenuText
+                    ? "opacity-100 translate-x-0 w-[30px]"
+                    : "opacity-0 translate-x-1 w-[0px]"
                 }`}
               >
                 Menu
@@ -261,9 +263,10 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
               Let's Tune Yourself! ✨
             </div>
           </ul>
+
           {/* Desktop View Nav Link */}
           <ul
-            className={`hidden lg:flex gap-x-9 lg:ml-4 py-2 px-8 rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} border-[1.5px] border-opacity-10 border-blue-500`}
+            className={`hidden lg:flex gap-x-9 lg:ml-4 py-2 px-8 rounded-full transition-colors duration-500 ${bgColor} border-[1.5px] border-opacity-10 border-blue-500 hover:bg-opacity-75`}
           >
             {links.map((link) => (
               <li
@@ -284,7 +287,6 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
           </ul>
 
           {/* Button Section */}
-
           <Button
             color="primary"
             variant="bordered"
@@ -294,7 +296,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
                 .getElementById("tech")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className={`hidden lg:flex rounded-full transition-colors duration-500 backdrop-blur-[10px] ${bgColor} h-[46px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
+            className={`hidden lg:flex rounded-full transition-colors duration-500 ${bgColor} h-[44px] border-[1.5px] border-opacity-10 text-blue-950 nunito-medium`}
           >
             <img
               className="unselect w-6 -ml-3 animate-right-left"
