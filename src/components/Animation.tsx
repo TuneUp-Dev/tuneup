@@ -111,7 +111,7 @@ const AnimatedPath: React.FC = () => {
       className="bg-[#021734] h-auto sm:min-h-[550px] md:min-h-[600px] lg:min-h-[1000px]"
     >
       <div className="z-10">
-        <p className="text-[24px] sm:text-[34px] md:text-[40px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 sm:leading-10 md:leading-[50px] lg:leading-[60px] -mt-6 sm:pt-0 lg:pt-8 xl:pt-16 inter-bold">
+        <p className="text-[24px] sm:text-[34px] md:text-[40px] lg:text-[58px] text-white w-[90vw] lg:w-[700px] mx-auto text-center leading-8 sm:leading-10 md:leading-[50px] lg:leading-[60px] -mt-6 sm:pt-0 lg:pt-8 xl:pt-28 inter-bold">
           Transforming Technology into Possibilities
         </p>
         <p className="w-[90vw] sm:w-[600px] md:w-[700px] lg:w-[800px] text-center mt-4 lg:mt-10 text-white text-[11px] lg:text-[16px] mx-auto text-opacity-70">
@@ -121,7 +121,7 @@ const AnimatedPath: React.FC = () => {
         </p>
       </div>
 
-      <div className="relative lg:-mt-20 xl:-mt-32 w-full h-[260px] sm:h-[440px] md:h-[600px] lg:h-[700px] xl:h-[900px] overflow-hidden">
+      <div className="relative lg:-mt-20 xl:-mt-40 w-full h-[260px] sm:h-[440px] md:h-[600px] lg:h-[700px] xl:h-[900px] overflow-hidden">
         <div className="absolute z-40 right-0 top-0 w-32 h-full bg-gradient-to-l from-[#021734] to-transparent"></div>
         <svg
           ref={svgRef}
