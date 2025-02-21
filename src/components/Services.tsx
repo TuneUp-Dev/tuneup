@@ -219,7 +219,7 @@ const Services: React.FC<ServicesChildProps> = ({
               />
 
               <g
-                className="timeline-logo unselect"
+                className="unselect"
                 style={{
                   transform: `translate(${iconPosition.x - 21}px, ${
                     iconPosition.y - 21
