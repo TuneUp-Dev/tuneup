@@ -16,7 +16,7 @@ const Navbar = ({ hapticFeedback, logoFeedback }) => {
   const links = [
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Intern", id: "internship" },
+    { name: "Careers", id: "careers" },
     { name: "Contact", id: "contact" },
   ];
 

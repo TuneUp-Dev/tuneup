@@ -414,8 +414,8 @@ const RoleSelectionPopup = ({ onClose, onSelectRole }) => {
   );
 };
 
-// Internship Component
-const Internship = ({ hapticFeedback }) => {
+// Careers Component
+const Careers = ({ hapticFeedback }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isRoleSelectionOpen, setIsRoleSelectionOpen] = useState(false);
   const [isRequirementsOpen, setIsRequirementsOpen] = useState(false);
@@ -464,7 +464,7 @@ const Internship = ({ hapticFeedback }) => {
         </div>
       )}
 
-      <div id="internship" className="pt-24 pb-2 -my-1 bg-white">
+      <div id="careers" className="pt-24 pb-2 -my-1 bg-white">
         <div className="px-5 sm:px-6 md:px-10 lg:px-16 pt-12 pb-16 lg:py-16 w-full bg-[#021734] hover:shadow-[0px_0px_0px_5px_#2c4464] hover:scale-[0.9935] rounded-[40px] lg:rounded-[70px] transform transition-all ease-linear duration-300">
           <div className="text-center mb-8">
             <span className="bg-slate-100 rounded-lg px-3 py-2 text-[#021734] text-sm font-semibold uppercase">
@@ -520,4 +520,4 @@ const Internship = ({ hapticFeedback }) => {
   );
 };
 
-export default Internship;
+export default Careers;

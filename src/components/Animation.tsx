@@ -23,6 +23,19 @@ import Icon18 from "../assets/icons/8.svg";
 import Icon19 from "../assets/icons/9.svg";
 import Icon20 from "../assets/icons/10.svg";
 
+const iconPageUrls = [
+  "https://kasthurimedicalmission.in/",
+  "https://mspbharathivizha.com/",
+  "https://wevahaphotography.in/",
+  "https://ecococoproduct.com/",
+  "https://enreachglobal.vercel.app/",
+  "https://kieronrodriguez.com/",
+  "https://kieron-rodriguez.vercel.app/",
+  "https://coreverse.in/",
+  "https://krishstationerysalem.in",
+  "https://theclimax.in/",
+];
+
 const pathData1 = [
   "M0,0 C200,252 600,422 795,432",
   "M0,100 C200,310 600,426 795,436",
@@ -234,57 +247,57 @@ const AnimatedPath: React.FC = () => {
 
           {/* Render icons with the transition */}
           {iconOrder.map((index, i) => {
+            const iconIndex = index % iconUrls2.length;
             return (
               <g key={`icon2-${index}`}>
-                <image
-                  href={iconUrls2[index % iconUrls2.length]}
-                  width="100"
-                  height="100"
+                <a
+                  target="_blank"
+                  href={iconPageUrls[iconIndex]}
+                  rel="noreferrer"
                 >
-                  {pathLengths2.length > 0 && (
-                    <>
-                      <animateMotion
-                        dur="30s"
-                        repeatCount="indefinite"
-                        begin={`${i * 3.5 - 45}s`}
-                        rotate="auto"
-                      >
-                        <mpath href={`#path2-${index}`} />
-                      </animateMotion>
+                  <image href={iconUrls2[iconIndex]} width="100" height="100">
+                    {pathLengths2.length > 0 && (
+                      <>
+                        <animateMotion
+                          dur="30s"
+                          repeatCount="indefinite"
+                          begin={`${i * 3.5 - 45}s`}
+                          rotate="auto"
+                        >
+                          <mpath href={`#path2-${index}`} />
+                        </animateMotion>
 
-                      {/* Animate the width */}
-                      <animate
-                        attributeName="width"
-                        values="10;100;40"
-                        keyTimes="0;0.5;1"
-                        dur="30s"
-                        repeatCount="indefinite"
-                        begin={`${i * 3.5 - 45}s`}
-                      />
+                        <animate
+                          attributeName="width"
+                          values="10;100;40"
+                          keyTimes="0;0.5;1"
+                          dur="30s"
+                          repeatCount="indefinite"
+                          begin={`${i * 3.5 - 45}s`}
+                        />
 
-                      {/* Animate the height */}
-                      <animate
-                        attributeName="height"
-                        values="10;100;40"
-                        keyTimes="0;0.5;1"
-                        dur="30s"
-                        repeatCount="indefinite"
-                        begin={`${i * 3.5 - 45}s`}
-                      />
+                        <animate
+                          attributeName="height"
+                          values="10;100;40"
+                          keyTimes="0;0.5;1"
+                          dur="30s"
+                          repeatCount="indefinite"
+                          begin={`${i * 3.5 - 45}s`}
+                        />
 
-                      {/* Adjust vertical position of the images */}
-                      <animateTransform
-                        attributeName="transform"
-                        type="translate"
-                        values={"0 -5; 0 -50; 0 -20"}
-                        keyTimes="0;0.5;1"
-                        dur="30s"
-                        repeatCount="indefinite"
-                        begin={`${i * 3.5 - 45}s`}
-                      />
-                    </>
-                  )}
-                </image>
+                        <animateTransform
+                          attributeName="transform"
+                          type="translate"
+                          values={"0 -5; 0 -50; 0 -20"}
+                          keyTimes="0;0.5;1"
+                          dur="30s"
+                          repeatCount="indefinite"
+                          begin={`${i * 3.5 - 45}s`}
+                        />
+                      </>
+                    )}
+                  </image>
+                </a>
               </g>
             );
           })}
