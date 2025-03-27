@@ -48,27 +48,6 @@ const BlobAnimation: React.FC = () => {
           </svg>
         </div>
       </div>
-
-      <div className="switcher">
-        {[1, 2, 3, 4, 5, 6].map((palette) => (
-          <div
-            key={palette}
-            className={`switch-button palette-${palette}`}
-            data-palette={palette}
-          >
-            <div className="blobs">
-              <svg viewBox="0 0 1200 1200">
-                {[1, 2, 3, 4].map((index) => (
-                  <React.Fragment key={index}>
-                    {renderBlob(index)}
-                    {renderBlob(index, true)}
-                  </React.Fragment>
-                ))}
-              </svg>
-            </div>
-          </div>
-        ))}
-      </div>
     </>
   );
 };
