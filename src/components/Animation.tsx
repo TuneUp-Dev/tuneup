@@ -12,16 +12,16 @@ import Icon9 from "../assets/icons/40.svg";
 import Icon10 from "../assets/icons/41.svg";
 
 // Additional icons for the transition
-import Icon11 from "../assets/icons/42.svg";
-import Icon12 from "../assets/icons/43.svg";
-import Icon13 from "../assets/icons/44.svg";
-import Icon14 from "../assets/icons/45.svg";
-import Icon15 from "../assets/icons/46.svg";
-import Icon16 from "../assets/icons/47.svg";
-import Icon17 from "../assets/icons/48.svg";
-import Icon18 from "../assets/icons/49.svg";
-import Icon19 from "../assets/icons/50.svg";
-import Icon20 from "../assets/icons/51.svg";
+import Icon11 from "../assets/icons/1.svg";
+import Icon12 from "../assets/icons/2.svg";
+import Icon13 from "../assets/icons/3.svg";
+import Icon14 from "../assets/icons/4.svg";
+import Icon15 from "../assets/icons/5.svg";
+import Icon16 from "../assets/icons/6.svg";
+import Icon17 from "../assets/icons/7.svg";
+import Icon18 from "../assets/icons/8.svg";
+import Icon19 from "../assets/icons/9.svg";
+import Icon20 from "../assets/icons/10.svg";
 
 const pathData1 = [
   "M0,0 C200,252 600,422 795,432",
