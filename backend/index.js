@@ -45,11 +45,12 @@ app.post("/api/apply", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: email,
       subject: "Application Received",
-      text: `Dear ${name},
-Thank you for applying for the ${applyingFor} developer role. Our team will review your application and contact you soon.
-      
-      \nBest Regards,
-TuneUp Technologies.`,
+      html: `
+      <p>Dear ${name},</p>
+      <p>Thank you for applying for the ${applyingFor} developer role. Our team will review your application and contact you soon.</p>
+      <br>
+      <p><strong>Best Regards,</strong></p>
+      <p>TuneUp Technologies.</p>`,
     };
 
     // Email to the admin with all details
@@ -59,17 +60,18 @@ TuneUp Technologies.`,
       from: process.env.EMAIL_USER,
       to: adminEmail,
       subject: "New Application Received",
-      text: `A new application has been received from ${name},
-
-        Name: ${name}
-        Email: ${email}
-        Gender: ${gender}
-        Mobile: ${mobile}
-        Institution: ${institution}
-        Degree: ${degree}
-        Year: ${year}
-        Graduation Year: ${graduationYear}
-        Applying For: ${applyingFor}`,
+      html: `
+      <p>A new application has been received from ${name},</p>
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Gender: ${gender}</p>
+        <p>Mobile: ${mobile}</p>
+        <p>Institution: ${institution}</p>
+        <p>Degree: ${degree}</p>
+        <p>Year: ${year}</p>
+        <p>Graduation Year: ${graduationYear}</p>
+        <p>Applying For: ${applyingFor}</p>
+    `,
     };
 
     // Send emails
