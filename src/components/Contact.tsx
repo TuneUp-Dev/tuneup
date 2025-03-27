@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Alert, Button } from "@nextui-org/react";
 import Lottie from "react-lottie-player";
 import animationData from "../animations/Animation.json";
 import Code from "../assets/icons/Code.svg";
@@ -18,6 +18,20 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
   const [showForm, setShowForm] = useState(false);
   const [fadeClass, setFadeClass] = useState("fade-in");
   const formRef = useRef<HTMLFormElement>(null);
+  const [alert, setAlert] = useState<{
+    show: boolean;
+    type: "default" | "success" | "error" | "warning" | "danger";
+    message: string;
+  }>({ show: false, type: "default", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+
+  if (10 < 0) {
+    console.log(submitStatus);
+  }
 
   useEffect(() => {
     let timer;
@@ -41,8 +55,73 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
     };
   }, [showForm]);
 
+  const showAlert = (
+    type: "default" | "success" | "error" | "warning" | "danger",
+    message: string
+  ) => {
+    setAlert({ show: true, type, message });
+    setTimeout(() => {
+      setAlert({ ...alert, show: false });
+    }, 3000);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    hapticFeedback();
+
+    const formData = new FormData(formRef.current!);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: formData.get("message") as string,
+    };
+
+    showAlert("default", "Sending your message...");
+
+    try {
+      const response = await fetch("http://localhost:5003/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        formRef.current?.reset();
+      } else {
+        showAlert("error", result.message || "Failed to send message");
+      }
+      showAlert("success", "Message sent successfully!");
+    } catch (error) {
+      showAlert(
+        "danger",
+        "Network error. Please check your connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
+      {alert.show && (
+        <div className="fixed z-[999999] top-5 right-5">
+          <Alert
+            color={alert.type}
+            className="mb-4"
+            onClose={() => setAlert({ ...alert, show: false })}
+          >
+            {alert.message}
+          </Alert>
+        </div>
+      )}
+
       <div id="contact" className="bg-[#021734] pb-20">
         <div className="bg-white rounded-b-[40px] md:rounded-b-[70px] shadow-[0px_25px_50px_-30px_#020810]">
           <div className="w-[90vw] mx-auto lg:w-full pt-24 md:pt-32 md:py-16 lg:py-36 lg:px-16 xl:px-24 md:-mt-10 lg:mt-0">
@@ -61,7 +140,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
 
                 <Button
                   className="bg-white border-[1.5px] py-3 border-slate-200 rounded-lg text-[13.5px] lg:text-[13px] xl:text-[15px] w-[120px] lg:w-[160px] h-9 lg:h-12 mt-4 lg:mt-6"
-                  onClick={() => {
+                  onPress={() => {
                     setShowForm(true);
                     hapticFeedback();
                   }}
@@ -223,17 +302,20 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
               <form
                 ref={formRef}
                 className="lg:p-4 w-full flex flex-col gap-y-4"
+                onSubmit={handleSubmit}
               >
                 <div className="flex flex-col gap-y-1">
                   <label
                     htmlFor="name"
                     className="text-sm font-semibold text-gray-700"
                   >
-                    Name
+                    Name*
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
+                    required
                     placeholder="Enter your name"
                     className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
                   />
@@ -243,11 +325,13 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
                     htmlFor="email"
                     className="text-sm font-semibold text-gray-700"
                   >
-                    Email
+                    Email*
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
+                    required
                     placeholder="Enter your email"
                     className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
                   />
@@ -261,6 +345,7 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
                   </label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     placeholder="Enter your phone number"
                     className="px-3 lg:px-4 py-2 lg:py-3 text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all"
@@ -268,13 +353,15 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
                 </div>
                 <div className="flex flex-col gap-y-1">
                   <label
-                    htmlFor="phone"
+                    htmlFor="message"
                     className="text-sm font-semibold text-gray-700"
                   >
-                    Message
+                    Message*
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    required
                     placeholder="Write message here"
                     className="px-3 lg:px-4 py-2 lg:py-3 h-[100px] lg:h-[130px] text-[13px] rounded-lg border border-gray-300 shadow-sm focus:outline-none transition-all resize-none"
                   />
@@ -283,13 +370,16 @@ const Contact = ({ hapticFeedback, linkFeedback }) => {
                 <Button
                   type="submit"
                   className="w-full mt-3 py-3 bg-gradient-to-r text-[17px] sm:text-[15px] lg:text-[17px] from-blue-500 via-[#021734] to-blue-500 text-white rounded-lg shadow-md hover:opacity-90 transition-all duration-500 ease-linear"
+                  disabled={isSubmitting}
                 >
-                  Submit
-                  <img
-                    className="unselect w-7 -ml-3 animate-left-right"
-                    src={Code}
-                    alt=""
-                  />
+                  {isSubmitting ? "Sending..." : "Submit"}
+                  {!isSubmitting && (
+                    <img
+                      className="unselect w-7 -ml-3 animate-left-right"
+                      src={Code}
+                      alt=""
+                    />
+                  )}
                 </Button>
               </form>
             </div>

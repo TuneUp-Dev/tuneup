@@ -37,18 +37,18 @@ const Header = ({ hapticFeedback }) => {
             Tune Up Yourself with TuneUp
           </p>
           <h1 className="poppins-bold text-[#021734] text-[22px] sm:text-[30px] lg:text-[60px] mx-auto w-[320px] sm:w-[400px] lg:w-[850px] lg:leading-[83px] mt-2.5 sm:mt-3 lg:mt-5">
-            We make{" "}
+            We Turn{" "}
             <span className="bg-[#021734] px-4 lg:px-6 py-[1.5px] lg:py-0 text-blue-50 rounded-full">
               Impossible
             </span>
             <br />
             <span className="ml-5 py-[1.5px] lg:py-0 bg-[#021734] text-white px-4 lg:px-6 rounded-full">
-              to I'm Possible.
+              into I'm Possible.
             </span>
           </h1>
           <p className="nunito-medium mt-5 w-[90vw] sm:w-[80vw] lg:w-[680px] mx-auto text-[#021734] text-[12px] lg:text-[16px] lg:leading-[26px]">
-            TuneUp Technologies is a dynamic SaaS company providing innovative
-            digital solutions designed to empower startups and enterprises.
+            TuneUp Technologies is a premier software firm crafting high-caliber
+            web, mobile, and desktop solutions that drive digital excellence.
           </p>
           {/* Updated button with anchor link for smooth scroll */}
 

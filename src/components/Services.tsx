@@ -44,15 +44,16 @@ const Services: React.FC<ServicesChildProps> = ({
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
-                  Custom <br />
+                  MERN Web Application
+                  <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
-                    Software Development
+                    Development
                   </span>
                 </h1>
-                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                {/* <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
                   Tailored software solutions designed to meet your unique
                   business requirements.
-                </p>
+                </p> */}
               </div>
 
               {/* <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
@@ -68,16 +69,16 @@ const Services: React.FC<ServicesChildProps> = ({
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
-                  Web Application
+                  Flutter Mobile Application
                   <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Development
                   </span>
                 </h1>
-                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                {/* <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
                   Responsive and feature-rich web applications that enhance your
                   online presence.
-                </p>
+                </p> */}
               </div>
 
               {/* <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">
@@ -92,15 +93,16 @@ const Services: React.FC<ServicesChildProps> = ({
             <div className="sm:flex justify-between items-start sm:items-center xl:items-start sm:gap-x-5 md:gap-x-7 lg:gap-x-10 xl:gap-x-0 w-full h-auto lg:h-[330px] pt-0.5 mt-5 md:mt-10 lg:mt-[40px] xl:mt-[150px] p-4 border-[#2c4464] rounded-3xl border-1 lg:border-0 hover:shadow-[2px_2px_0px_2px_#2c4464] lg:hover:shadow-none">
               <div className="">
                 <h1 className="text-[25px] md:text-[28px] lg:text-[38px] xl:text-[40px] inter-medium text-white leading-8 md:leading-9 lg:leading-[44px] flex-nowrap mt-3">
-                  Mobile Application <br />
+                  Flutter Desktop Application
+                  <br />
                   <span className="bg-clip-text flex mr-3 text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-sky-600 brightness-90">
                     Development
                   </span>
                 </h1>
-                <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
+                {/* <p className="text-[13.5px] lg:text-[16px] text-gray-300 text-opacity-85 mt-2 lg:mt-4">
                   Intuitive and dynamic mobile apps for Android and iOS
                   platforms.
-                </p>
+                </p> */}
               </div>
 
               {/* <div className="w-full sm:min-w-[250px] sm:max-w-[250px] md:min-w-[300px] md:max-w-[300px] lg:min-w-[400px] lg:max-w-[400px] h-auto rounded-xl overflow-hidden mt-10 xl:hidden">

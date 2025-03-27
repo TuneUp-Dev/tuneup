@@ -23,42 +23,62 @@ const WCU = () => {
               digital excellence. Here’s why businesses and institutions choose
               us.
             </p>
-            <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[180px] flex flex-col lg:flex-row justify-between lg:items-start items-center gap-y-5 gap-x-7">
-              <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
-                <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
+            <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[240px] flex flex-col lg:flex-row justify-between lg:items-start items-center gap-y-5 gap-x-7">
+              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
-                  <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
-                    Expertise and Innovation{" "}
-                  </h1>
-                  <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
-                    Our team of skilled professionals stays ahead of industry
-                    trends, delivering cutting-edge solutions tailored to your
-                    unique needs.
+                  <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
+                    <img
+                      className="unselect w-7 lg:w-14"
+                      src={Verified}
+                      alt=""
+                    />
+                    <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
+                      Vision:
+                    </h1>
+                  </div>
+                  <p className="mt-2 lg:mt-3 text-slate-700 text-[13px] lg:text-[14px] leading-[22px]">
+                    To transcend boundaries and redefine digital accessibility,
+                    ensuring that world- class technology solutions are within
+                    reach for businesses of all scales.
                   </p>
                 </div>
               </div>
-              <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
-                <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
+              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
-                  <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
-                    Customized Approach
-                  </h1>
-                  <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
-                    We understand that every business is different. Our
-                    solutions are personalized to align with your goals and
-                    drive measurable success.
+                  <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
+                    <img
+                      className="unselect w-7 lg:w-14"
+                      src={Verified}
+                      alt=""
+                    />
+                    <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
+                      Mission:
+                    </h1>
+                  </div>
+                  <p className="mt-2 lg:mt-3 text-slate-700 text-[13px] lg:text-[14px] leading-[22px]">
+                    To orchestrate impeccable digital experiences by crafting
+                    sophisticated, high- performance websites and applications
+                    that epitomize accessibility, fluidity, and an enduring
+                    legacy of excellence.
                   </p>
                 </div>
               </div>
-              <div className="w-full h-full bg-blue-50 rounded-2xl flex justify-start items-start p-4 lg:p-5 gap-x-4 lg:gap-x-5 border-0 hover:border-x-5 border-b-1 border-b-[#c5cfdb] border-l-[#021734] border-r-[#021734] transition-all duration-200 ease-linear">
-                <img className="unselect w-7 lg:w-9" src={Verified} alt="" />
+              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
-                  <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
-                    End-to-End Support
-                  </h1>
-                  <p className="mt-2 lg:mt-3 text-slate-700 text-[14px] lg:text-[15px] leading-[22px]">
-                    From ideation to deployment and beyond, we provide
-                    comprehensive support at every step of your digital journey.
+                  <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
+                    <img
+                      className="unselect w-7 lg:w-14"
+                      src={Verified}
+                      alt=""
+                    />
+                    <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
+                      Purpose:
+                    </h1>
+                  </div>
+                  <p className="mt-2 lg:mt-3 text-slate-700 text-[13px] lg:text-[14px] leading-[22px]">
+                    To bridge the gap between ideas and execution by delivering
+                    innovative, scalable, and future-ready digital solutions
+                    that empower businesses to grow effortlessly.
                   </p>
                 </div>
               </div>
