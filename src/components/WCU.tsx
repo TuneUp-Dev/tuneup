@@ -1,5 +1,5 @@
 import React from "react";
-import Verified from "../assets/icons/Verified.svg";
+import BlobAnimation from "./BlobAnimation";
 
 const WCU = () => {
   return (
@@ -23,15 +23,11 @@ const WCU = () => {
               digital excellence. Here’s why businesses and institutions choose
               us.
             </p>
-            <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[240px] flex flex-col lg:flex-row justify-between lg:items-start items-center gap-y-5 gap-x-7">
-              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
+            <div className="mt-10 lg:mt-14 w-full h-auto lg:h-auto xl:h-[240px] flex flex-col lg:flex-row justify-between lg:items-end items-center gap-y-5 gap-x-7">
+              <div className="w-full h-full xl:h-[218px] rounded-2xl rounded-tl-[60px] flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
                   <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
-                    <img
-                      className="unselect w-7 lg:w-14"
-                      src={Verified}
-                      alt=""
-                    />
+                    <BlobAnimation />
                     <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                       Vision:
                     </h1>
@@ -43,14 +39,10 @@ const WCU = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
+              <div className="w-full h-full rounded-b-2xl rounded-t-[40px] flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
                   <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
-                    <img
-                      className="unselect w-7 lg:w-14"
-                      src={Verified}
-                      alt=""
-                    />
+                    <BlobAnimation />
                     <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                       Mission:
                     </h1>
@@ -63,14 +55,10 @@ const WCU = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-full h-full rounded-2xl flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
+              <div className="w-full h-full xl:h-[218px] rounded-2xl rounded-tr-[60px] flex justify-start items-start p-5 lg:p-8 gap-x-4 lg:gap-x-5 border-1 border-[#c5cfdb] transition-all duration-200 ease-linear">
                 <div className="">
                   <div className="flex justify-start items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
-                    <img
-                      className="unselect w-7 lg:w-14"
-                      src={Verified}
-                      alt=""
-                    />
+                    <BlobAnimation />
                     <h1 className="font-semibold text-[16.5px] lg:text-[20px]">
                       Purpose:
                     </h1>
