@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import WCU from "../components/WCU";
-import Internship from "../components/Internship";
+import Careers from "../components/Careers";
 import Services from "../components/Services";
 import About from "../components/About";
 
@@ -209,7 +209,7 @@ const Home = () => {
           tailLength={tailLength}
         />
         <WCU />
-        <Internship hapticFeedback={hapticFeedback} />
+        <Careers hapticFeedback={hapticFeedback} />
         <Contact hapticFeedback={hapticFeedback} linkFeedback={linkFeedback} />
         <AnimatedPath />
         <Footer />
