@@ -33,7 +33,6 @@ const ApplicationForm = ({ onClose, selectedRole, onAlert }) => {
     });
   };
 
-  // Special handler for RadioGroup since it uses different event structure
   const handleRadioChange = (value) => {
     setFormData({
       ...formData,
@@ -46,7 +45,7 @@ const ApplicationForm = ({ onClose, selectedRole, onAlert }) => {
     onAlert("default", "Application is submitting...");
     try {
       const response = await axios.post(
-        "http://localhost:5003/api/apply",
+        "https://tuneup-backend.vercel.app/api/apply",
         formData
       );
       onAlert("success", "Application submitted successfully!");
